@@ -1,0 +1,75 @@
+# Korkodilos website — handover for the next chat
+
+> Paste into a new chat: **"Read `CREATIVE CODING/korkodilos-site/HANDOVER.md` and continue the Korkodilos website (design amendments + new content)."**
+> Written 11 Oct 2026, end of the setup chat. The design history (why things look the way they do) is in `CREATIVE CODING/korkodilos-website/HANDOVER.md` — read §3–4h there only when a design question comes up.
+
+## 1. Where we are (in one paragraph)
+The site is **live at https://korkonew.netlify.app** (Greek at `/`, English at `/en/`), built by Netlify from the **public GitHub repo github.com/sbilionis/korkodilos-site** every time something is pushed. **Alex** (owner, Αλέξανδρος Ντούρας) will edit texts, prices, the weekly programme, workshops, tutors and photos himself at **https://korkonew.netlify.app/admin** (Sveltia CMS, GitHub login). **Enquiry forms** (Corporate / Clay Party / Contact) arrive by email at korkodilos20@gmail.com. Stavros (Ogust) is the designer; we work on design changes together in chat. The **booking system** (students + "Korkodilos HQ") is a separate project for the coming weeks: `CREATIVE CODING/korkodilos website booking/HANDOVER-NEXT-CHAT.md`.
+
+## 2. Stavros's working rules (important)
+- **Show before applying.** For any design change: make options, show them (side-by-side desktop + 375px), let Stavros pick, apply only the picks. Direct, explicit requests ("make X smaller") can be applied straight away.
+- **Simple, straightforward site.** No extra features without asking.
+- **Audit every round:** navigation, UX rough edges, responsiveness at 360–1680px (incl. 390/430 iPhone, and in-between widths like 640/880). Check text never runs into images.
+- Explain in plain words. Stavros is a designer, not a developer: say what each step does, do as much as possible yourself (his Mac + his Chrome), and only hand him the steps that need his login/approval.
+- Never handle secrets (passwords, tokens, the GitHub client secret): Stavros pastes those himself.
+
+## 3. Accounts & services (what each one does)
+| Service | What it is for us | Details |
+|---|---|---|
+| **GitHub** `sbilionis/korkodilos-site` | The "box" with every file + history | **Public** on purpose: Netlify bills private-repo committers as "Git contributors"; public = free. No secrets or fonts in it. |
+| **Netlify** project `korkonew` (team OGUST, paid) | Builds + hosts the site, receives forms | Deploys `main` automatically (~30 s). Forms: `contact`, `enquiry` → email korkodilos20@gmail.com. Netlify GitHub app limited to this one repo. |
+| **Netlify** project `unrivaled-queijadas-404cd2` | Serves the **licensed fonts** only | https://unrivaled-queijadas-404cd2.netlify.app/fonts/… — source folder `CREATIVE CODING/korkodilos-fonts` (drag onto that project's Deploys page to update). Copy of fonts + note in `~/Downloads/Korkodilos fonts`. Production visibility = public, previews private. |
+| **GitHub OAuth app** "Korkodilos admin" (Client ID `Ov23li57Fr3wE3Wu9A2P`) | Lets people sign in to /admin | Installed in Netlify → korkonew → Configuration → Security → OAuth → GitHub. Callback `https://api.netlify.com/auth/done`. |
+| **gh CLI** on Stavros's Mac | Lets Claude push from the terminal | Installed with Homebrew, logged in as `sbilionis`. |
+
+## 4. How a change gets live
+- **Design/code change (Claude):** `git pull` FIRST (Alex may have saved in the admin) → edit in `korkodilos-site/` → `npm run build` → preview with launch config **`korkodilos-site`** (serves `_site/` on http://localhost:8052; rebuild after each change) → show Stavros → when OK: commit + `git push` → live in ~30 s. Commit messages end with the Co-Authored-By line.
+- **Content change (Alex/Stavros):** /admin → edit → Save → commits to GitHub → live in ~1 min.
+- **Preview on a phone before going live (optional, not set up yet):** turn on Netlify branch deploys (korkonew → Configuration → Build & deploy → Branches), push to a branch like `preview`, Netlify gives a `preview--korkonew.netlify.app` link.
+
+## 5. The code (where things are)
+| What | Where |
+|---|---|
+| Templates (one per page, built in el + en) | `src/index.njk`, `studio.njk`, `classes.njk`, `calendar.njk`, `contact.njk`, `thanks.njk`; frame `src/_includes/layouts/base.njk`; partials in `src/_includes/partials/` (K symbol, paragraphs, form) |
+| **Content** (what the admin edits) | `src/_data/{home,studio,classes,calendar,contact,programme,tutors}.json` — each `{ "el": {...}, "en": {...} }`; `site.json` (email/phone/socials, not bilingual) |
+| Interface words (buttons, day names, form labels, "nothing special" message) | `src/_data/ui.json` — **not in the admin yet** (only Claude edits it) |
+| Admin config | `src/admin/config.yml` (Sveltia CMS **0.221.1**, pinned in `src/admin/index.html`) |
+| Photos (admin media library) | `src/assets/img/uploads/` (40 photos; the film photos are `kNN.jpg` = photo NN of `Desktop/1. CURRENT PROJECTS/111. KORKO/05. PHOTOS/KORKO WEB PHOTOS`, sorted, resized ≤1600px) |
+| Logo, map, icons, animated K | `src/assets/img/` (`korko-mouth.svg` + `korko-mouth-HANDOFF.md`: use exactly as delivered, only rename the clip id per copy) |
+| Styles / scripts | `src/css/site.css` (one file, sections by round), `src/js/site.js` (header/footer/the mouth/book pill/dialogs, GR/EN strings), `src/js/programme.js` (hides past specials, adds weekdays) |
+| Build config | `eleventy.config.mjs` (filters `mdi` markdown-inline, `imgsize`, `ratio`), `netlify.toml`, `package.json` (Eleventy 3.1.6, markdown-it 14.1.0, image-size 2.0.2 — exact versions) |
+
+## 6. Gotchas we hit (don't repeat)
+- **Sveltia i18n:** every file entry needs `i18n: true` (not just the collection), otherwise the admin shows empty fields — and **saving then would wipe the content**. If the admin ever looks empty: don't save, check config.
+- Admin YAML is written out in full (no anchors/merges); validate with `node -e` + `js-yaml` (in node_modules) before pushing, and check every data key has a field.
+- **Fonts never go into the repo** (`src/assets/fonts/` is in `.gitignore`). Font URLs point to the fonts project.
+- Netlify "pending review / Git contributor" emails: don't approve (would add a paid seat). Only happened while the repo was private.
+- Eleventy doesn't clean `_site/`: `rm -rf _site` before a final check.
+- In-app browser preview: screenshots/rAF/IntersectionObserver are throttled when the pane is hidden → measure with JS before "fixing".
+- iOS: the closed oval menu must stay `visibility:hidden` (it caused sideways panning); `html,body{overflow-x:clip}`; the mobile menu uses `svh`.
+- Never end a page on an ink section (KORKO/–DILOS are ink); keep the space above –DILOS inside the last section.
+- `CREATIVE CODING/.claude/launch.json` holds many projects — add entries with Edit, never overwrite. (`korkodilos-netlify-check` is obsolete.)
+
+## 7. Open items / next steps
+**Setup leftovers**
+1. **Make a fresh GitHub client secret** (the current one appeared in a screenshot in chat): GitHub → Settings → Developer settings → OAuth Apps → Korkodilos admin → *Generate a new client secret* → Netlify → korkonew → Security → OAuth → GitHub → edit → paste → then delete the old secret on GitHub. Stavros does the copy/paste.
+2. **Invite Alex:** he makes a free GitHub account → repo Settings → Collaborators → add him (Write). He signs in at /admin.
+3. **Greek one-page guide for Alex** (log in, change a text, Greek↔English switch top-left of the form, add a workshop, change the weekly programme, change a photo). Offered, not written yet.
+4. Real domain (korkodilos.gr / korkodilosathens.gr) when ready: Netlify → Domain management; then update `site_url`/`display_url` in `src/admin/config.yml` and the OAuth app's Homepage URL.
+
+**Design decisions still open (ask Stavros)**
+- Studio layout: A = text + photo side by side alternating, B = two-column grid (see `korkodilos-website/_proposals/round5.html`).
+- Calendar: remove the pink "all levels" band and fold the line into the intro?
+- "Τι κάνουμε": which photos go in the three grey boxes (Alex can set them in the admin: Αρχική → Τι κάνουμε → Φωτογραφία).
+- "Ειδικά" when empty: keep the message (current) or hide the section; and should Alex be able to edit that message (move `ui.json` strings into the admin)?
+- Audit leftovers: event-specific booking box; burger menu has no Home / repeats the top menu on desktop; dead ends at the end of Studio/Contact; swallow effect on phones.
+
+**Content still placeholder (from Alex)**
+Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX), tutor bios + photos (Ariadni, Georgia), the 7 copy issues in `korkodilos-website/ALEX-CONTENT-2026-10-11.md`, approval of the shortened Greek texts and of the English translation, Aeonik web licence check.
+
+**Booking system** (separate project, coming weeks): students + studio ("Korkodilos HQ"); needs a shared database + real logins + emails; the website's "Κλείσε μάθημα" pill (placeholder dialog in `site.js`) and the "Κλείσε θέση" buttons on Calendar will link to it.
+
+## 8. Calendar (how it works now)
+- Weekly programme = `programme.json → week.{mon…sun}`: list of `{time, title}`. Title "Monthly 4×3" shows time only; **any other title shows its name under the time in a pink slot** (added 11 Oct, for new weekly classes). Alex edits it in *Πρόγραμμα & Ειδικά → Εβδομαδιαίο πρόγραμμα*.
+- Specials = `programme.json → specials[]` {type workshop|event|series, date, price, time, title, text}. Past dates hide themselves (browser-side); none left → "nothing special right now… Instagram" message.
+- Hours set by Stavros: Mon–Thu 19–22, Fri 11–14, Sat–Sun 12–15 & 18–21.
