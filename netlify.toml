@@ -54,3 +54,29 @@
   for = "/admin/index.html"
   [headers.values]
     Cache-Control = "no-cache"
+
+# old WordPress addresses (korkodilosathens.gr before Oct 2026) → new pages, so Google results and old links keep working
+[[redirects]]
+  from = "/studio/"
+  to = "/studio.html"
+  status = 301
+[[redirects]]
+  from = "/classes/"
+  to = "/classes.html"
+  status = 301
+[[redirects]]
+  from = "/calendar/"
+  to = "/calendar.html"
+  status = 301
+[[redirects]]
+  from = "/contact/"
+  to = "/contact.html"
+  status = 301
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/admin/"
+  status = 301
