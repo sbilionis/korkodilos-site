@@ -109,3 +109,9 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Jaw "swallow" is now ONE band (`.jaw-veil`, painted with the colours of the sections behind it) instead of moving masks on every paragraph/photo (that made iPhone scrolling heavy).
 - Caching (netlify.toml): photos 1 week, CSS/JS 1 year with `?v=` build number (`src/_data/build.js`), pages 2 min + stale-while-revalidate; admin always no-cache (rule kept LAST — last matching rule wins).
 - site.js fetches the menu pages in the background after load (skipped with Save-Data) → menu taps open instantly. First photo of Home/Studio has fetchpriority=high.
+
+## 14. Photos: build-time versions (11 Oct 2026, late) — replaces the Netlify Image CDN
+- The on-the-fly Netlify Image CDN added ~0.5 s per photo and its cache reset on every deploy → slower on phones. Removed.
+- Now `eleventy.config.mjs` makes 480/800/1200/1600px WebP versions of every file in `src/assets/img/uploads` with **sharp 0.35.4** (devDependency, exact) into `.cache/img` (git-ignored) → copied to `/assets/img/r/`. Build ~4 s. Works for Alex's uploads automatically.
+- The `imgsizes` transform adds width/height + srcset to every uploads `<img>`; templates give their own `sizes` (strips 70vw/30vw, tutors 50vw/30vw, pop-ups 100vw/220px, Classes section photos 100vw/560px; default 100vw/60vw).
+- Phone (375px) photo weight: Home ≈ 0.5 MB, Studio ≈ 0.1 MB, Classes ≈ 0.25 MB.
