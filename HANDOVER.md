@@ -73,3 +73,10 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Weekly programme = `programme.json → week.{mon…sun}`: list of `{time, title}`. Title "Monthly 4×3" shows time only; **any other title shows its name under the time in a pink slot** (added 11 Oct, for new weekly classes). Alex edits it in *Πρόγραμμα & Ειδικά → Εβδομαδιαίο πρόγραμμα*.
 - Specials = `programme.json → specials[]` {type workshop|event|series, date, price, time, title, text}. Past dates hide themselves (browser-side); none left → "nothing special right now… Instagram" message.
 - Hours set by Stavros: Mon–Thu 19–22, Fri 11–14, Sat–Sun 12–15 & 18–21.
+
+## 9. Round 6 (11 Oct 2026, later)
+- Options page: `_proposals/round6.html` (git-ignored; copy into `_site/_proposals/` after a build to view it at localhost:8052/_proposals/round6.html). Picks: 1B, 2B, 3A, 4A (burger stays on desktop), 5B (Home oval), 6B.
+- Alex's email applied: €190 / €265 + "everything included, 24% VAT" note, φιλιέρα, Wed 11:00–14:00, mobile +30 698 796 4159, 5′ from both metros, new "all levels" sentence (now in the Calendar intro).
+- New photos from `~/Downloads/KORKO NEW PHOTOS` → `uploads/korko-NNNN.jpg` (NNNN = DSCF number), turned upright + resized to 1600px with a small Swift helper (no ImageMagick on this Mac).
+- **Every interface word is now in the admin:** new collection "Κείμενα μενού & κουμπιών" = `ui.json` (incl. `chrome`: menu labels, booking pill, footer). `site.js` reads them from `#ui-json` in `base.njk`; phone/email/maps/socials come from `site.json`.
+- Specials: when all dates have passed, the whole section hides itself (no message any more).
