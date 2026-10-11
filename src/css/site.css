@@ -629,3 +629,11 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 @media (max-width:768px){.calendar-end .calendar-bottom{aspect-ratio:4/5}}
 /* privacy / terms pages */
 .legal{min-height:60vh;padding-bottom:var(--sec)}
+/* pop-ups: drop the browser's own max-width (it is "100% - 2em", and 1em is 50px on this site → 100px lost) */
+.cv{max-width:none}
+/* phones: pop-ups use almost the whole screen width, tighter inside */
+@media (max-width:768px){
+  .cv{width:calc(100% - 16px);max-height:calc(100svh - 16px);border-radius:22px}
+  .cv__inner{padding:18px 18px 24px;gap:20px}
+  .cv__close{top:10px;right:10px}
+}
