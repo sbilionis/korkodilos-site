@@ -321,6 +321,16 @@ collections:
                     label: Τιμή
                     widget: string
                     i18n: duplicate
+              - name: image
+                label: Φωτογραφία (κενό = χωρίς)
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
               - name: note
                 label: Σημείωση κάτω από τις τιμές (κενό = καμία)
                 widget: string
@@ -369,6 +379,16 @@ collections:
                   name: p
                   label: Παράγραφος
                   widget: text
+              - name: image
+                label: Φωτογραφία (κενό = χωρίς)
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
               - name: cta
                 label: Κουμπί (ανοίγει τη φόρμα)
                 widget: string
@@ -390,6 +410,16 @@ collections:
                   name: p
                   label: Παράγραφος
                   widget: text
+              - name: image
+                label: Φωτογραφία (κενό = χωρίς)
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
               - name: cta
                 label: Κουμπί (ανοίγει τη φόρμα)
                 widget: string

@@ -284,7 +284,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .special h3{font-weight:300;font-size:var(--fs-l);line-height:1.1}
 .special p{font-size:var(--fs-m);line-height:1.35;margin-top:6px;max-width:640px}
 .special__side{text-align:right;display:grid;gap:12px;justify-items:end}
-.special__side span{font-size:var(--fs-m)}
+.special__side > span{font-size:var(--fs-m)}   /* the price only — it used to enlarge the button text too */
 
 @media (max-width:1024px){
 }
@@ -533,3 +533,17 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 /* Home: the orange "Τι κάνουμε" box sits on the pink, which runs down to –DILOS (its top margin used to leak out as a grey stripe) */
 .section:has(> .container > .ti-block){display:flow-root}
 .ti-block{margin-top:0}
+/* Classes: one photo per section (Alex sets it in /admin; empty = none) + the photo strip under "all levels" */
+.sec-photo{margin:50px 0 44px}
+.sec-photo img{width:min(100%,560px);height:auto}
+#monthly .sec-photo{margin-top:0}
+.film--classes{margin:var(--sec) 0 0}
+@media (max-width:768px){.sec-photo{margin:34px 0 30px}}
+/* Studio: first photo keeps a calm landscape shape on desktop, portrait on phones (whatever photo Alex picks) */
+.page-studio main > section:first-of-type .content--top img{width:100%;aspect-ratio:3/2;object-fit:cover}
+@media (max-width:768px){.page-studio main > section:first-of-type .content--top img{aspect-ratio:4/5}}
+/* phones: "Κλείσε θέση" is a small pill on the price line, lighter than the floating "Κλείσε μάθημα" */
+@media (max-width:768px){
+  .special__side{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%}
+  .special .btn{padding:7px 12px;font-size:11px;gap:6px}
+}

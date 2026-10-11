@@ -20,6 +20,9 @@ file: classes.html
       <li><span>{{ k.label }}</span><b>{{ k.price }}</b></li>
       {%- endfor %}
     </ul>
+    {%- if t.monthly.image %}{% set sz = t.monthly.image | imgsize %}
+    <div class="sec-photo swallow"><img src="{{ t.monthly.image }}" alt="{{ t.monthly.image_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}"></div>
+    {%- endif %}
     <div class="actions swallow">
       <a class="btn" href="calendar.html"><span class="gr">{{ u.see_programme }}</span> →</a>
       {%- if t.monthly.note %}
@@ -33,10 +36,14 @@ file: classes.html
     <div class="content">
       {% set paras = t.levels.paragraphs %}{% set label = "" %}{% include "partials/paras.njk" %}
     </div>
-    <div class="photos">
+    <div class="film film--classes swallow" data-film>
+      <div class="film__track" tabindex="0" aria-label="{{ u.film_label }}">
       {%- for ph in t.levels.photos %}{% set sz = ph.image | imgsize %}
-      <img style="--ar:{{ ph.image | ratio }}" src="{{ ph.image }}" alt="{{ ph.alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}">
+      <img src="{{ ph.image }}" alt="{{ ph.alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}">
       {%- endfor %}
+      </div>
+      <button class="film__btn film__prev" type="button" aria-label="{{ u.prev_photos }}">←</button>
+      <button class="film__btn film__next" type="button" aria-label="{{ u.next_photos }}">→</button>
     </div>
   </div>
 </section>
@@ -45,6 +52,9 @@ file: classes.html
     <div class="content">
       {% set paras = t.corporate.paragraphs %}{% set label = t.corporate.label %}{% include "partials/paras.njk" %}
     </div>
+    {%- if t.corporate.image %}{% set sz = t.corporate.image | imgsize %}
+    <div class="sec-photo swallow"><img src="{{ t.corporate.image }}" alt="{{ t.corporate.image_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}"></div>
+    {%- endif %}
     <div class="actions swallow"><button class="btn btn--light" type="button" data-cv="form-corporate"><span class="gr">{{ t.corporate.cta }}</span> →</button></div>
   </div>
 </section>
@@ -53,6 +63,9 @@ file: classes.html
     <div class="content">
       {% set paras = t.parties.paragraphs %}{% set label = t.parties.label %}{% include "partials/paras.njk" %}
     </div>
+    {%- if t.parties.image %}{% set sz = t.parties.image | imgsize %}
+    <div class="sec-photo swallow"><img src="{{ t.parties.image }}" alt="{{ t.parties.image_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}"></div>
+    {%- endif %}
     <div class="actions swallow"><button class="btn" type="button" data-cv="form-party"><span class="gr">{{ t.parties.cta }}</span> →</button></div>
   </div>
 </section>
