@@ -1,0 +1,93 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}studio.html"
+layout: layouts/base.njk
+pageKey: studio
+file: studio.html
+---
+{%- set t = studio[lang] -%}{%- set u = ui[lang] -%}
+<h1 class="visually-hidden">{{ t.h1 }}</h1>
+<section class="section section--fit section--top bg-orange">
+  <div class="container">
+    <div class="content content--top">
+      <img src="{{ t.hero_image }}" alt="{{ t.hero_alt }}" loading="lazy">
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-brown">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.intro.paragraphs %}{% set label = t.intro.label %}{% set cls = "" %}{% include "partials/paras.njk" %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="photo-k">{% set sz = t.k_photo | imgsize %}
+      <img style="--ar:{{ t.k_photo | ratio }}" src="{{ t.k_photo }}" alt="{{ t.k_photo_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}">
+      <div class="photo-k__k" aria-hidden="true">{% set kid = "studio" %}{% include "partials/k.njk" %}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-green">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.table.paragraphs %}{% set label = t.table.label %}{% include "partials/paras.njk" %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-pink">
+  <div class="container">
+    <div class="content">
+      {%- if t.clay.image %}{% set sz = t.clay.image | imgsize %}
+      <p><img class="offset-top aligncenter" src="{{ t.clay.image }}" alt="{{ t.clay.image_alt }}" loading="lazy" width="414" height="{{ (414 * sz[1] / sz[0]) | round }}"></p>
+      {%- endif %}
+      {% set paras = t.clay.paragraphs %}{% set label = t.clay.label %}{% include "partials/paras.njk" %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.tools.paragraphs %}{% set label = t.tools.label %}{% include "partials/paras.njk" %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-green" id="who">
+  <div class="container">
+    <div class="content"><p><em>{{ t.team.label }}</em> {{ t.team.text | mdi | safe }}</p></div>
+    <div class="tutors swallow">
+      {%- for p in tutors[lang].people %}
+      <button class="tutor" type="button" data-cv="cv-{{ p.id }}">
+        <span class="tutor__img">{% if p.photo %}<img src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "t" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</span>
+        <span class="tutor__name">{{ p.name }}</span>
+        <span class="tutor__role">{{ p.role }}</span>
+        <span class="tutor__cv">{{ u.bio }}</span>
+      </button>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- for p in tutors[lang].people %}
+<dialog class="cv" id="cv-{{ p.id }}" aria-labelledby="cv-{{ p.id }}-h">
+  <div class="cv__inner">
+    <div class="cv__img">{% if p.photo %}<img src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "c" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</div>
+    <div>
+      <h2 id="cv-{{ p.id }}-h" tabindex="-1" autofocus>{{ p.name }}</h2>
+      <p class="cv__role">{{ p.role }}</p>
+      <ul>
+        {%- for c in p.cv %}
+        <li>{{ c.label }} — <span{% if p.cv_is_placeholder %} class="ph"{% endif %}>{{ c.value }}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- if p.cv_is_placeholder %}
+      <p class="ph-note" style="margin-top:22px">{{ u.bio_placeholder }}</p>
+      {%- endif %}
+    </div>
+  </div>
+  <button class="cv__close" type="button">{{ u.close }}</button>
+</dialog>
+{%- endfor %}

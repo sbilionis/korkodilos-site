@@ -1,0 +1,162 @@
+{
+  "el": {
+    "title": "Korkodilos — Εργαστήριο κεραμικής στον Κεραμεικό",
+    "description": "Εργαστήριο κεραμικής στον Κεραμεικό, Αθήνα. Μηνιαία μαθήματα για όλα τα επίπεδα (4×3), corporate bonding και clay parties.",
+    "h1": "Korkodilos — εργαστήριο κεραμικής στον Κεραμεικό",
+    "film": [
+      {
+        "image": "/assets/img/uploads/k14.jpg",
+        "alt": "Το κοινό τραπέζι με τα φωτιστικά και τα φυτά"
+      },
+      {
+        "image": "/assets/img/uploads/k69.jpg",
+        "alt": "Από ψηλά: μαθητές δουλεύουν γύρω από το τραπέζι"
+      },
+      {
+        "image": "/assets/img/uploads/k20.jpg",
+        "alt": "Μαθήτρια δουλεύει τον πηλό"
+      },
+      {
+        "image": "/assets/img/uploads/k62.jpg",
+        "alt": "Ράφι με έργα από πηλό"
+      },
+      {
+        "image": "/assets/img/uploads/k70.jpg",
+        "alt": "Χέρια βουτηγμένα σε υγρό πηλό"
+      },
+      {
+        "image": "/assets/img/uploads/k52.jpg",
+        "alt": "Κεραμικές φιγούρες πάνω στο τραπέζι"
+      },
+      {
+        "image": "/assets/img/uploads/k37.jpg",
+        "alt": "Ράφια με έργα και ξερά φυτά"
+      },
+      {
+        "image": "/assets/img/uploads/k21.jpg",
+        "alt": "Ο νεροχύτης με τα σχέδια στον τοίχο"
+      }
+    ],
+    "intro": "Ο **Korkodilos** είναι ένα εργαστήριο κεραμικής στον Κεραμεικό. Φίλοι γύρω από ένα ξύλινο τραπέζι, με τα χέρια στον πηλό. Αρχάριοι και έμπειροι, ο καθένας με τον ρυθμό του.",
+    "philosophy": {
+      "label": "Η φιλοσοφία μας",
+      "lead": "Μαθαίνουμε παίζοντας: με αυθορμητισμό, ανεμελιά και λίγη παιδικότητα.",
+      "image": "/assets/img/uploads/korko-alex-1.jpg",
+      "image_alt": "Ο Αλέξανδρος Ντούρας κρατά μια πήλινη μάσκα μπροστά στο πρόσωπό του",
+      "caption": "Αλέξανδρος Ντούρας, εικαστικός — ιδρυτής του Korkodilos",
+      "paragraphs": [
+        "Τα χέρια στον πηλό ακονίζουν την παρατήρηση και τη φαντασία, και σε μαθαίνουν να σκέφτεσαι αλλιώς.",
+        "Δεν μαθαίνουμε μόνο τεχνικές. Μέσα από ασκήσεις και ερεθίσματα, ο καθένας βρίσκει σιγά σιγά τη δική του γλώσσα: τι τον ενδιαφέρει, τι θέλει να εξερευνήσει, πώς δένεται με αυτό που φτιάχνει."
+      ]
+    },
+    "offers": {
+      "label": "Τι κάνουμε",
+      "items": [
+        {
+          "title": "Monthly 4×3",
+          "text": "Ένα τρίωρο την εβδομάδα, για τέσσερις εβδομάδες. Διαλέγεις τη μέρα σου.",
+          "price": "από €100 / μήνα",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#monthly"
+        },
+        {
+          "title": "Corporate Bonding",
+          "text": "Η ομάδα σας γύρω από τον πηλό, στον χώρο μας ή στον δικό σας.",
+          "price": "κατόπιν επικοινωνίας",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#corporate"
+        },
+        {
+          "title": "Clay Parties",
+          "text": "Κλείνεις τον χώρο και τον δάσκαλο, φέρνεις drinks και καλή διάθεση.",
+          "price": "κατόπιν επικοινωνίας",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#parties"
+        }
+      ]
+    }
+  },
+  "en": {
+    "title": "Korkodilos — Ceramic studio in Kerameikos, Athens",
+    "description": "Ceramic studio in Kerameikos, Athens. Monthly classes for all levels (4×3), corporate bonding and clay parties.",
+    "h1": "Korkodilos — ceramic studio in Kerameikos, Athens",
+    "film": [
+      {
+        "image": "/assets/img/uploads/k14.jpg",
+        "alt": "The shared table with the lamps and plants"
+      },
+      {
+        "image": "/assets/img/uploads/k69.jpg",
+        "alt": "From above: students working around the table"
+      },
+      {
+        "image": "/assets/img/uploads/k20.jpg",
+        "alt": "A student working the clay"
+      },
+      {
+        "image": "/assets/img/uploads/k62.jpg",
+        "alt": "A shelf of clay pieces"
+      },
+      {
+        "image": "/assets/img/uploads/k70.jpg",
+        "alt": "Hands dipped in liquid clay"
+      },
+      {
+        "image": "/assets/img/uploads/k52.jpg",
+        "alt": "Ceramic figures on the table"
+      },
+      {
+        "image": "/assets/img/uploads/k37.jpg",
+        "alt": "Shelves with work and dried plants"
+      },
+      {
+        "image": "/assets/img/uploads/k21.jpg",
+        "alt": "The sink with the drawings on the wall"
+      }
+    ],
+    "intro": "**Korkodilos** is a ceramic studio in Kerameikos, Athens. Friends around a wooden table, hands in the clay. Beginners and experienced makers, each at their own pace.",
+    "philosophy": {
+      "label": "Our philosophy",
+      "lead": "We learn by playing: with spontaneity, lightness and a little childishness.",
+      "image": "/assets/img/uploads/korko-alex-1.jpg",
+      "image_alt": "Alexandros Douras holding a clay mask in front of his face",
+      "caption": "Alexandros Douras, artist — founder of Korkodilos",
+      "paragraphs": [
+        "Hands in clay sharpen observation and imagination, and teach you to think differently.",
+        "We don’t only learn techniques. Through exercises and prompts, everyone slowly finds their own language: what interests them, what they want to explore, how they connect with what they make."
+      ]
+    },
+    "offers": {
+      "label": "What we do",
+      "items": [
+        {
+          "title": "Monthly 4×3",
+          "text": "One three-hour class a week, for four weeks. You choose your day.",
+          "price": "from €100 / month",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#monthly"
+        },
+        {
+          "title": "Corporate Bonding",
+          "text": "Your team around the clay, at our studio or at yours.",
+          "price": "on request",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#corporate"
+        },
+        {
+          "title": "Clay Parties",
+          "text": "Book the space and a teacher, bring drinks and a good mood.",
+          "price": "on request",
+          "image": "",
+          "image_alt": "",
+          "link": "classes.html#parties"
+        }
+      ]
+    }
+  }
+}

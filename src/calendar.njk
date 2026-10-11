@@ -1,0 +1,55 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}calendar.html"
+layout: layouts/base.njk
+pageKey: calendar
+file: calendar.html
+---
+{%- set t = calendar[lang] -%}{%- set u = ui[lang] -%}{%- set pr = programme[lang] -%}
+<h1 class="visually-hidden">{{ t.h1 }}</h1>
+<section class="section section--fit bg-green">
+  <div class="container">
+    <div class="content content--top content--sm">
+      <p><em>{{ t.intro.label }}</em> {{ t.intro.text | mdi | safe }}</p>
+    </div>
+    <div class="cal cal--days swallow">
+      {%- for key in ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] %}
+      <div class="cal-day">
+        <div class="cal__h"><span class="l">{{ u.days[loop.index0] }}</span><span class="s">{{ u.days_short[loop.index0] }}</span></div>
+        <div class="cal__d">
+          {%- for s in pr.week[key] %}<span class="cal__s"><span class="l">{{ s.time }}</span><span class="s">{{ s.time | replace(":00", "") }}</span></span>{% endfor -%}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="cal-note swallow">{{ t.note }}</p>
+  </div>
+</section>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="content content--sm"><p><em>{{ t.specials.label }}</em> {{ t.specials.text | mdi | safe }}</p></div>
+    <div class="specials swallow" data-specials>
+      {%- for s in pr.specials | sort(false, false, "date") %}
+      {%- set dp = s.date.split("-") %}
+      <article class="special" data-date="{{ s.date }}">
+        <div class="special__date">{{ dp[2] | int }} {{ u.months[(dp[1] | int) - 1] }}<small data-weekday>{{ s.time }}</small></div>
+        <div><span class="special__type special__type--{{ s.type }}">{{ u.types[s.type] }}</span><h3>{{ s.title }}</h3><p>{{ s.text | mdi | safe }}</p></div>
+        <div class="special__side"><span>{{ s.price }}</span><a class="btn" href="#book"><span class="gr">{{ u.book_place }}</span> →</a></div>
+      </article>
+      {%- endfor %}
+      <p class="empty-note" data-empty hidden>{{ u.no_specials | replace("[Instagram]", '<a href="' + site.instagram + '" target="_blank" rel="noopener">Instagram</a>') | safe }}</p>
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-pink">
+  <div class="container">
+    <div class="content">
+      <p>{{ t.closing | mdi | safe }}</p>
+    </div>
+  </div>
+</section>
+<img class="calendar-bottom" src="{{ t.bottom_image }}" alt="{{ t.bottom_alt }}" loading="lazy">
+<script type="application/json" id="days-json">{{ u.days | dump | safe }}</script>

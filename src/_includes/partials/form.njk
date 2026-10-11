@@ -1,0 +1,20 @@
+{#- Netlify Forms: detected at build time from this HTML. fname = form name, kind = corporate|party|contact -#}
+<form class="kform" name="{{ fname }}" method="POST" action="{{ '/thanks.html' if lang == 'el' else '/en/thanks.html' }}" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="{{ fname }}">
+  <input type="hidden" name="type" value="{{ kind }}">
+  <input type="hidden" name="language" value="{{ lang }}">
+  <p class="kform__hp" aria-hidden="true"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <label class="kform__f"><span>{{ u.form.name }} *</span><input name="name" required autocomplete="name"></label>
+  <label class="kform__f"><span>{{ u.form.email }} *</span><input type="email" name="email" required autocomplete="email"></label>
+  {%- if kind != "contact" %}
+  <label class="kform__f"><span>{{ u.form.phone }}</span><input type="tel" name="phone" autocomplete="tel"></label>
+  {%- if kind == "corporate" %}
+  <label class="kform__f"><span>{{ u.form.company }}</span><input name="company" autocomplete="organization"></label>
+  {%- endif %}
+  <label class="kform__f kform__f--half"><span>{{ u.form.group }}</span><input type="number" name="group_size" min="1" inputmode="numeric"></label>
+  <label class="kform__f kform__f--half"><span>{{ u.form.date }}</span><input name="preferred_date" placeholder="{{ 'π.χ. Σάββατο 15/11' if lang == 'el' else 'e.g. Saturday 15/11' }}"></label>
+  {%- endif %}
+  <label class="kform__f kform__f--wide"><span>{{ u.form.message }}{% if kind == "contact" %} *{% endif %}</span><textarea name="message" rows="4"{% if kind == "contact" %} required{% endif %}></textarea></label>
+  <p class="kform__note">{{ u.form.privacy }}</p>
+  <button class="btn" type="submit"><span class="gr">{{ u.form.send }}</span> →</button>
+</form>

@@ -1,0 +1,20 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}thanks.html"
+layout: layouts/base.njk
+pageKey: thanks
+file: thanks.html
+---
+{%- set u = ui[lang] -%}
+<h1 class="visually-hidden">{{ u.thanks_title }}</h1>
+<section class="section section--fit bg-pink">
+  <div class="container">
+    <div class="content content--top content--sm">
+      <p><em>{{ u.thanks_title }}</em> {{ u.thanks_text }}</p>
+      <p><a class="btn" href="index.html"><span class="gr">{{ u.thanks_back }}</span> →</a></p>
+    </div>
+  </div>
+</section>

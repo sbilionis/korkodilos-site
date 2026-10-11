@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="89.34 70.78 344 344">
+  <style>
+    .jaw{transform-box:view-box;transform-origin:211.14px 242.78px;animation:var(--korko-duration,4s) infinite both}
+    .up{animation-name:korko-up}
+    .lo{animation-name:korko-lo}
+    @keyframes korko-up{
+      0%{transform:rotate(0deg);animation-timing-function:ease-in-out}
+      25%{transform:rotate(-2.5deg);animation-timing-function:ease-in-out}
+      50%{transform:rotate(0deg);animation-timing-function:ease-out}
+      55%{transform:rotate(-5deg);animation-timing-function:cubic-bezier(.55,0,1,.45)}
+      57%{transform:rotate(27.96deg);animation-timing-function:linear}
+      59%{transform:rotate(27.96deg);animation-timing-function:cubic-bezier(.2,0,.3,1)}
+      63%{transform:rotate(-6deg);animation-timing-function:ease-in-out}
+      66.5%{transform:rotate(2.5deg);animation-timing-function:ease-in-out}
+      69.5%{transform:rotate(-1deg);animation-timing-function:ease-in-out}
+      72%,100%{transform:rotate(0deg)}
+    }
+    @keyframes korko-lo{
+      0%{transform:rotate(0deg);animation-timing-function:ease-in-out}
+      25%{transform:rotate(2.5deg);animation-timing-function:ease-in-out}
+      50%{transform:rotate(0deg);animation-timing-function:ease-out}
+      55%{transform:rotate(5deg);animation-timing-function:cubic-bezier(.55,0,1,.45)}
+      57%{transform:rotate(-27.96deg);animation-timing-function:linear}
+      59%{transform:rotate(-27.96deg);animation-timing-function:cubic-bezier(.2,0,.3,1)}
+      63%{transform:rotate(6deg);animation-timing-function:ease-in-out}
+      66.5%{transform:rotate(-2.5deg);animation-timing-function:ease-in-out}
+      69.5%{transform:rotate(1deg);animation-timing-function:ease-in-out}
+      72%,100%{transform:rotate(0deg)}
+    }
+    .seam{opacity:0;animation:korko-seam var(--korko-duration,4s) infinite step-end both}
+    @keyframes korko-seam{0%{opacity:0}57%{opacity:1}59%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){.jaw,.seam{animation:none}}
+  </style>
+  <defs>
+    <clipPath id="korko-clip-{{ kid }}"><rect x="120.363" y="0" width="400" height="500"/></clipPath>
+  </defs>
+  <g class="korko" fill="currentColor">
+    <polygon points="120.363 93.81 177.99 93.81 177.99 195.133 211.14 242.78 177.99 290.436 177.99 391.759 120.363 391.759"/>
+    <g clip-path="url(#korko-clip-{{ kid }})">
+      <polygon class="jaw up" points="88.23 242.78 375.29 90.4 402.31 141.3 272.084 210.431 277.465 255.54 244.81 224.91 211.14 242.78"/>
+      <polygon class="jaw lo" points="88.23 242.78 211.14 242.78 402.31 344.27 375.29 395.17"/>
+      <rect class="seam" x="200" y="240.3" width="227" height="5"/>
+    </g>
+  </g>
+</svg>

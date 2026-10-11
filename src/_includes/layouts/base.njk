@@ -1,0 +1,33 @@
+{%- set all = { home: home, studio: studio, classes: classes, calendar: calendar, contact: contact } -%}
+{%- set t = all[pageKey][lang] if all[pageKey] else { title: ui[lang].thanks_title + ' — Korkodilos', description: ui[lang].thanks_text } -%}
+{%- set u = ui[lang] -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ t.title }}</title>
+<meta name="description" content="{{ t.description }}">
+<meta property="og:title" content="{{ t.title }}">
+<meta property="og:description" content="{{ t.description }}">
+<meta property="og:image" content="{{ site.og_image }}">
+<link rel="alternate" hreflang="el" href="/{{ file }}">
+<link rel="alternate" hreflang="en" href="/en/{{ file }}">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/Canela-Light-Gr-Web.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/MonumentGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body class="page-{{ pageKey }}" data-page="{{ pageKey }}">
+<div data-jaw="top"></div>
+<main id="main">
+{{ content | safe }}
+</main>
+<div data-jaw="bottom"></div>
+<script src="/js/site.js"></script>
+{%- if pageKey == "calendar" %}
+<script src="/js/programme.js"></script>
+{%- endif %}
+</body>
+</html>

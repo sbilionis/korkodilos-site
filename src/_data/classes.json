@@ -1,0 +1,114 @@
+{
+  "el": {
+    "title": "Classes — Korkodilos",
+    "description": "Monthly 4×3 για όλα τα επίπεδα: ένα τρίωρο μάθημα την εβδομάδα για τέσσερις εβδομάδες. Corporate bonding και clay parties στον Korkodilos.",
+    "h1": "Classes",
+    "monthly": {
+      "label": "Monthly 4×3",
+      "paragraphs": [
+        "Ένα τρίωρο μάθημα την εβδομάδα, για τέσσερις εβδομάδες: το **4×3**. Διαλέγεις μέρα και έρχεσαι κάθε εβδομάδα την ίδια μέρα και ώρα.",
+        "Κάνεις έναν μήνα ή συνεχίζεις από μήνα σε μήνα. Για να κρατήσεις τη θέση σου για περισσότερο, υπάρχουν πακέτα δύο και τριών μηνών."
+      ],
+      "packages": [
+        {
+          "label": "1 μήνας",
+          "price": "€100"
+        },
+        {
+          "label": "2 μήνες",
+          "price": "€XX"
+        },
+        {
+          "label": "3 μήνες",
+          "price": "€XX"
+        }
+      ],
+      "note": "2–3 months: price to confirm"
+    },
+    "levels": {
+      "paragraphs": [
+        "Δεν χωρίζουμε σε επίπεδα. Αρχάριοι και έμπειροι στο ίδιο τραπέζι, ο καθένας με το δικό του έργο. Μαθαίνεις να στήνεις μόνος σου ένα **project**, σαν να είσαι στο δικό σου εργαστήριο, με τους δασκάλους δίπλα σου."
+      ],
+      "photos": [
+        {
+          "image": "/assets/img/uploads/R1-07089-0032-713x475-c.jpg",
+          "alt": "Μεταφορά πηλού στο εργαστήριο"
+        },
+        {
+          "image": "/assets/img/uploads/R1-07088-0031-460x311-c.jpg",
+          "alt": "Κεραμικές φιγούρες μαθητών σε ξύλινο πάγκο"
+        }
+      ]
+    },
+    "corporate": {
+      "label": "Corporate Bonding",
+      "paragraphs": [
+        "Ο πηλός φέρνει τους ανθρώπους κοντά. Σχεδιάζουμε εργαστήρια για εταιρείες και ομάδες κάθε μεγέθους, στον χώρο μας ή στον δικό σας, πάνω στους στόχους σας."
+      ],
+      "cta": "Ζήτησε προσφορά"
+    },
+    "parties": {
+      "label": "Clay Parties",
+      "paragraphs": [
+        "Κλείνεις τον χώρο και τον δάσκαλο, διαλέγεις θέμα αν θες, φέρνεις drinks και καλή διάθεση. Ένα **private event** με πηλό: γενέθλια, bachelorette ή απλώς μια παρέα."
+      ],
+      "cta": "Οργάνωσε το party σου"
+    }
+  },
+  "en": {
+    "title": "Classes — Korkodilos",
+    "description": "Monthly 4×3 for all levels: one three-hour class a week for four weeks. Corporate bonding and clay parties at Korkodilos.",
+    "h1": "Classes",
+    "monthly": {
+      "label": "Monthly 4×3",
+      "paragraphs": [
+        "One three-hour class a week, for four weeks: the **4×3**. You choose a day and come every week on the same day and time.",
+        "Do one month or keep going month to month. To hold your place for longer, there are two- and three-month packages."
+      ],
+      "packages": [
+        {
+          "label": "1 month",
+          "price": "€100"
+        },
+        {
+          "label": "2 months",
+          "price": "€XX"
+        },
+        {
+          "label": "3 months",
+          "price": "€XX"
+        }
+      ],
+      "note": "2–3 months: price to confirm"
+    },
+    "levels": {
+      "paragraphs": [
+        "We don’t split people into levels. Beginners and experienced makers share the table, each with their own work. You learn to set up a **project** on your own, as if in your own studio, with the teachers beside you."
+      ],
+      "photos": [
+        {
+          "image": "/assets/img/uploads/R1-07089-0032-713x475-c.jpg",
+          "alt": "Carrying clay in the studio"
+        },
+        {
+          "image": "/assets/img/uploads/R1-07088-0031-460x311-c.jpg",
+          "alt": "Students’ ceramic figures on a wooden bench"
+        }
+      ]
+    },
+    "corporate": {
+      "label": "Corporate Bonding",
+      "paragraphs": [
+        "Clay brings people together. We design workshops for companies and teams of any size, at our studio or at yours, around your goals."
+      ],
+      "cta": "Ask for a quote"
+    },
+    "parties": {
+      "label": "Clay Parties",
+      "paragraphs": [
+        "Book the space and a teacher, pick a theme if you like, bring drinks and a good mood. A **private event** with clay: a birthday, a bachelorette or just friends."
+      ],
+      "cta": "Plan your party"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "korkodilos-site",
+  "private": true,
+  "description": "Korkodilos ceramic studio website (Ogust). Eleventy + Sveltia CMS on Netlify.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port 8052"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "image-size": "2.0.2",
+    "markdown-it": "14.1.0"
+  },
+  "engines": { "node": ">=20" }
+}

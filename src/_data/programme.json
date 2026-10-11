@@ -1,0 +1,162 @@
+{
+  "el": {
+    "week": {
+      "mon": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "tue": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "wed": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "thu": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "fri": [
+        {
+          "time": "11:00–14:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "sat": [
+        {
+          "time": "12:00–15:00",
+          "title": "Monthly 4×3"
+        },
+        {
+          "time": "18:00–21:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "sun": [
+        {
+          "time": "12:00–15:00",
+          "title": "Monthly 4×3"
+        },
+        {
+          "time": "18:00–21:00",
+          "title": "Monthly 4×3"
+        }
+      ]
+    },
+    "specials": [
+      {
+        "type": "workshop",
+        "date": "2026-10-24",
+        "price": "€XX",
+        "time": "11:00–15:00",
+        "title": "Καλούπια από γύψο",
+        "text": "Ένα πρωινό για να φτιάξεις το δικό σου γύψινο καλούπι και να βγάλεις τα πρώτα κομμάτια."
+      },
+      {
+        "type": "series",
+        "date": "2026-11-02",
+        "price": "€XX",
+        "time": "Δευτέρες 19:00–22:00",
+        "title": "Νέα σειρά: Πορσελάνη 4×3",
+        "text": "Τέσσερις Δευτέρες με πορσελάνη: λεπτά τοιχώματα, φως και διαφάνεια."
+      },
+      {
+        "type": "event",
+        "date": "2026-11-06",
+        "price": "€XX",
+        "time": "19:30–22:30",
+        "title": "Clay & wine night",
+        "text": "Βραδινό μάθημα με ποτό, κεριά και ατμόσφαιρα. Για όλους, ακόμα και πρώτη φορά."
+      }
+    ]
+  },
+  "en": {
+    "week": {
+      "mon": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "tue": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "wed": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "thu": [
+        {
+          "time": "19:00–22:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "fri": [
+        {
+          "time": "11:00–14:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "sat": [
+        {
+          "time": "12:00–15:00",
+          "title": "Monthly 4×3"
+        },
+        {
+          "time": "18:00–21:00",
+          "title": "Monthly 4×3"
+        }
+      ],
+      "sun": [
+        {
+          "time": "12:00–15:00",
+          "title": "Monthly 4×3"
+        },
+        {
+          "time": "18:00–21:00",
+          "title": "Monthly 4×3"
+        }
+      ]
+    },
+    "specials": [
+      {
+        "type": "workshop",
+        "date": "2026-10-24",
+        "price": "€XX",
+        "time": "11:00–15:00",
+        "title": "Plaster moulds",
+        "text": "A morning to make your own plaster mould and cast your first pieces."
+      },
+      {
+        "type": "series",
+        "date": "2026-11-02",
+        "price": "€XX",
+        "time": "Mondays 19:00–22:00",
+        "title": "New series: Porcelain 4×3",
+        "text": "Four Mondays with porcelain: thin walls, light and translucency."
+      },
+      {
+        "type": "event",
+        "date": "2026-11-06",
+        "price": "€XX",
+        "time": "19:30–22:30",
+        "title": "Clay & wine night",
+        "text": "An evening class with drinks, candles and atmosphere. For everyone, even first-timers."
+      }
+    ]
+  }
+}

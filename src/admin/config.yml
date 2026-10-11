@@ -1,0 +1,752 @@
+# Korkodilos — admin for Alex (Sveltia CMS, Decap-compatible).
+# Saving in the admin commits to GitHub; Netlify rebuilds the site in ~1 minute.
+# Expanded (no YAML anchors/merges) so any YAML parser reads it the same way.
+# Repository: github.com/sbilionis/korkodilos-site (private).
+backend:
+  name: github
+  repo: sbilionis/korkodilos-site
+  branch: main
+site_url: https://korkonew.netlify.app
+display_url: https://korkonew.netlify.app
+locale: en
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+i18n:
+  structure: single_file
+  locales:
+    - el
+    - en
+  default_locale: el
+collections:
+  - name: pages
+    label: Σελίδες
+    label_singular: Σελίδα
+    format: json
+    i18n: true
+    files:
+      - name: home
+        label: Αρχική
+        file: src/_data/home.json
+        fields:
+          - name: title
+            label: Τίτλος καρτέλας (SEO)
+            widget: string
+            i18n: true
+          - name: description
+            label: Περιγραφή για Google (SEO)
+            widget: text
+            i18n: true
+          - name: h1
+            label: Κρυφός τίτλος σελίδας (για Google/αναγνώστες οθόνης)
+            widget: string
+            i18n: true
+          - name: film
+            label: Φωτογραφίες στην αρχή (σειρά που σύρεται)
+            widget: list
+            i18n: true
+            summary: "{{fields.alt}}"
+            fields:
+              - name: image
+                label: Φωτογραφία
+                widget: image
+                i18n: duplicate
+              - name: alt
+                label: Περιγραφή φωτογραφίας (για τυφλούς/Google)
+                widget: string
+                i18n: true
+          - name: intro
+            label: Εισαγωγή (με **έντονα** για bold)
+            widget: text
+            i18n: true
+          - name: philosophy
+            label: Η φιλοσοφία μας
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: lead
+                label: Πρώτη πρόταση
+                widget: text
+                i18n: true
+              - name: image
+                label: Φωτογραφία
+                widget: image
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                i18n: true
+              - name: caption
+                label: Λεζάντα
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: offers
+            label: Τι κάνουμε
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: items
+                label: Οι τρεις προτάσεις
+                widget: list
+                i18n: true
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                summary: "{{fields.title}}"
+                fields:
+                  - name: title
+                    label: Τίτλος
+                    widget: string
+                    i18n: true
+                  - name: text
+                    label: Κείμενο
+                    widget: text
+                    i18n: true
+                  - name: price
+                    label: Τιμή
+                    widget: string
+                    i18n: true
+                  - name: image
+                    label: Φωτογραφία (κενό = γκρι κουτί)
+                    widget: image
+                    required: false
+                    i18n: duplicate
+                  - name: image_alt
+                    label: Περιγραφή φωτογραφίας
+                    widget: string
+                    required: false
+                    i18n: true
+                  - name: link
+                    label: Σύνδεσμος
+                    widget: hidden
+                    i18n: duplicate
+      - name: studio
+        label: Studio
+        file: src/_data/studio.json
+        fields:
+          - name: title
+            label: Τίτλος καρτέλας (SEO)
+            widget: string
+            i18n: true
+          - name: description
+            label: Περιγραφή για Google (SEO)
+            widget: text
+            i18n: true
+          - name: h1
+            label: Κρυφός τίτλος σελίδας
+            widget: string
+            i18n: true
+          - name: hero_image
+            label: Πρώτη φωτογραφία
+            widget: image
+            i18n: duplicate
+          - name: hero_alt
+            label: Περιγραφή πρώτης φωτογραφίας
+            widget: string
+            i18n: true
+          - name: intro
+            label: Ο χώρος
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: k_photo
+            label: Φωτογραφία δίπλα στο K
+            widget: image
+            i18n: duplicate
+          - name: k_photo_alt
+            label: Περιγραφή φωτογραφίας δίπλα στο K
+            widget: string
+            i18n: true
+          - name: table
+            label: Το τραπέζι
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: clay
+            label: Ο πηλός
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: image
+                label: Φωτογραφία
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: tools
+            label: Tools
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: team
+            label: Who we are (τίτλος ενότητας)
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: text
+                label: Κείμενο
+                widget: string
+                i18n: true
+      - name: classes
+        label: Classes
+        file: src/_data/classes.json
+        fields:
+          - name: title
+            label: Τίτλος καρτέλας (SEO)
+            widget: string
+            i18n: true
+          - name: description
+            label: Περιγραφή για Google (SEO)
+            widget: text
+            i18n: true
+          - name: h1
+            label: Κρυφός τίτλος σελίδας
+            widget: string
+            i18n: true
+          - name: monthly
+            label: Monthly 4×3
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+              - name: packages
+                label: Πακέτα & τιμές
+                widget: list
+                i18n: true
+                summary: "{{fields.label}} — {{fields.price}}"
+                fields:
+                  - name: label
+                    label: Πακέτο
+                    widget: string
+                    i18n: true
+                  - name: price
+                    label: Τιμή
+                    widget: string
+                    i18n: duplicate
+              - name: note
+                label: Σημείωση κάτω από τις τιμές (κενό = καμία)
+                widget: string
+                required: false
+                i18n: true
+          - name: levels
+            label: Όλα τα επίπεδα
+            widget: object
+            i18n: true
+            fields:
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+              - name: photos
+                label: Φωτογραφίες
+                widget: list
+                i18n: true
+                fields:
+                  - name: image
+                    label: Φωτογραφία
+                    widget: image
+                    i18n: duplicate
+                  - name: alt
+                    label: Περιγραφή
+                    widget: string
+                    i18n: true
+          - name: corporate
+            label: Corporate Bonding
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+              - name: cta
+                label: Κουμπί (ανοίγει τη φόρμα)
+                widget: string
+                i18n: true
+          - name: parties
+            label: Clay Parties
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+              - name: cta
+                label: Κουμπί (ανοίγει τη φόρμα)
+                widget: string
+                i18n: true
+      - name: calendar
+        label: Calendar (κείμενα)
+        file: src/_data/calendar.json
+        fields:
+          - name: title
+            label: Τίτλος καρτέλας (SEO)
+            widget: string
+            i18n: true
+          - name: description
+            label: Περιγραφή για Google (SEO)
+            widget: text
+            i18n: true
+          - name: h1
+            label: Κρυφός τίτλος σελίδας
+            widget: string
+            i18n: true
+          - name: intro
+            label: Εισαγωγή
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: text
+                label: Κείμενο
+                widget: text
+                i18n: true
+          - name: note
+            label: Σημείωση κάτω από το πρόγραμμα
+            widget: string
+            i18n: true
+          - name: specials
+            label: Ειδικά (τίτλος ενότητας)
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: text
+                label: Κείμενο
+                widget: string
+                i18n: true
+          - name: closing
+            label: Κείμενο στο τέλος
+            widget: text
+            i18n: true
+          - name: bottom_image
+            label: Φωτογραφία στο τέλος
+            widget: image
+            i18n: duplicate
+          - name: bottom_alt
+            label: Περιγραφή φωτογραφίας
+            widget: string
+            i18n: true
+      - name: contact
+        label: Contact
+        file: src/_data/contact.json
+        fields:
+          - name: title
+            label: Τίτλος καρτέλας (SEO)
+            widget: string
+            i18n: true
+          - name: description
+            label: Περιγραφή για Google (SEO)
+            widget: text
+            i18n: true
+          - name: h1
+            label: Κρυφός τίτλος σελίδας
+            widget: string
+            i18n: true
+          - name: intro
+            label: Εισαγωγή (διεύθυνση)
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Μικρός τίτλος
+                widget: string
+                i18n: true
+              - name: text
+                label: Κείμενο
+                widget: string
+                i18n: true
+          - name: contact_label
+            label: Τίτλος "Επικοινωνία"
+            widget: string
+            i18n: true
+          - name: getting_here
+            label: Πώς θα έρθεις
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Τίτλος
+                widget: string
+                i18n: true
+              - name: lines
+                label: Γραμμές
+                widget: list
+                i18n: true
+                field:
+                  name: l
+                  label: Γραμμή
+                  widget: string
+              - name: maps_link
+                label: Κείμενο συνδέσμου Google Maps
+                widget: string
+                i18n: true
+          - name: hours
+            label: Ώρες
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Τίτλος
+                widget: string
+                i18n: true
+              - name: lines
+                label: Γραμμές ([κείμενο](calendar.html) για σύνδεσμο)
+                widget: list
+                i18n: true
+                field:
+                  name: l
+                  label: Γραμμή
+                  widget: string
+          - name: form
+            label: Φόρμα επικοινωνίας
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Τίτλος φόρμας
+                widget: string
+                i18n: true
+  - name: programme
+    label: Πρόγραμμα & Ειδικά
+    format: json
+    i18n: true
+    files:
+      - name: programme
+        label: Πρόγραμμα & Ειδικά
+        file: src/_data/programme.json
+        fields:
+          - name: week
+            label: Εβδομαδιαίο πρόγραμμα (Monthly 4×3)
+            widget: object
+            i18n: duplicate
+            fields:
+              - name: mon
+                label: Δευτέρα
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: tue
+                label: Τρίτη
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: wed
+                label: Τετάρτη
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: thu
+                label: Πέμπτη
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: fri
+                label: Παρασκευή
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: sat
+                label: Σάββατο
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+              - name: sun
+                label: Κυριακή
+                widget: list
+                required: false
+                summary: "{{fields.time}}"
+                fields:
+                  - name: time
+                    label: Ώρα (π.χ. 19:00–22:00)
+                    widget: string
+                  - name: title
+                    label: Μάθημα
+                    widget: string
+                    default: Monthly 4×3
+          - name: specials
+            label: Ειδικά — workshops, events, νέες σειρές (όσα έχουν περάσει κρύβονται μόνα τους)
+            widget: list
+            i18n: true
+            summary: "{{fields.date}} · {{fields.title}}"
+            fields:
+              - name: type
+                label: Είδος
+                widget: select
+                i18n: duplicate
+                options:
+                  - label: Workshop
+                    value: workshop
+                  - label: Event
+                    value: event
+                  - label: Νέα σειρά
+                    value: series
+              - name: date
+                label: Ημερομηνία
+                widget: datetime
+                time_format: false
+                date_format: YYYY-MM-DD
+                format: YYYY-MM-DD
+                picker_utc: true
+                i18n: duplicate
+              - name: time
+                label: Ώρα (π.χ. 11:00–15:00 ή «Δευτέρες 19:00–22:00»)
+                widget: string
+                i18n: true
+              - name: title
+                label: Τίτλος
+                widget: string
+                i18n: true
+              - name: text
+                label: Περιγραφή
+                widget: text
+                i18n: true
+              - name: price
+                label: Τιμή
+                widget: string
+                i18n: duplicate
+  - name: team
+    label: Δάσκαλοι
+    format: json
+    i18n: true
+    files:
+      - name: tutors
+        label: Δάσκαλοι
+        file: src/_data/tutors.json
+        fields:
+          - name: people
+            label: Δάσκαλοι
+            widget: list
+            i18n: true
+            summary: "{{fields.name}}"
+            fields:
+              - name: id
+                label: Κωδικός (λατινικά, χωρίς κενά — π.χ. alex)
+                widget: string
+                i18n: duplicate
+                pattern:
+                  - ^[a-z0-9-]+$
+                  - μόνο μικρά λατινικά, αριθμοί και -
+              - name: name
+                label: Όνομα
+                widget: string
+                i18n: true
+              - name: role
+                label: Ρόλος
+                widget: string
+                i18n: true
+              - name: photo
+                label: Φωτογραφία (κενό = σήμα K)
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: photo_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
+              - name: cv
+                label: Βιογραφικό
+                widget: list
+                i18n: true
+                summary: "{{fields.label}}"
+                fields:
+                  - name: label
+                    label: Θέμα
+                    widget: string
+                  - name: value
+                    label: Κείμενο
+                    widget: string
+              - name: cv_is_placeholder
+                label: Το βιογραφικό είναι ακόμα δείγμα
+                widget: boolean
+                default: false
+                i18n: duplicate
+  - name: settings
+    label: Ρυθμίσεις
+    format: json
+    files:
+      - name: site
+        label: Στοιχεία επικοινωνίας
+        file: src/_data/site.json
+        i18n: false
+        fields:
+          - name: email
+            label: Email
+            widget: string
+          - name: phone
+            label: Τηλέφωνο
+            widget: string
+          - name: phone_is_placeholder
+            label: Το τηλέφωνο είναι ακόμα δείγμα
+            widget: boolean
+            default: false
+          - name: instagram
+            label: Instagram (σύνδεσμος)
+            widget: string
+          - name: facebook
+            label: Facebook (σύνδεσμος)
+            widget: string
+          - name: maps
+            label: Google Maps (σύνδεσμος)
+            widget: string
+          - name: og_image
+            label: Φωτογραφία όταν μοιράζεται ο σύνδεσμος
+            widget: image

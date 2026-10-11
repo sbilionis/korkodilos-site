@@ -1,0 +1,58 @@
+{
+  "el": {
+    "title": "Contact — Korkodilos",
+    "description": "Korkodilos, Πλαταιών 56, Κεραμεικός, Αθήνα. Email, Instagram, πώς θα έρθεις με το μετρό.",
+    "h1": "Contact",
+    "intro": {
+      "label": "Contact",
+      "text": "Πλαταιών 56, Κεραμεικός, 104 35 Αθήνα"
+    },
+    "contact_label": "Επικοινωνία",
+    "getting_here": {
+      "label": "Πώς θα έρθεις",
+      "lines": [
+        "Μετρό Κεραμεικός, περίπου 8′ με τα πόδια.",
+        "Μετρό Μεταξουργείο, περίπου 9′."
+      ],
+      "maps_link": "Οδηγίες στο Google Maps ↗"
+    },
+    "hours": {
+      "label": "Ώρες",
+      "lines": [
+        "Τα μαθήματα γίνονται σύμφωνα με το [πρόγραμμα](calendar.html).",
+        "Επισκέψεις κατόπιν ραντεβού."
+      ]
+    },
+    "form": {
+      "label": "Γράψε μας"
+    }
+  },
+  "en": {
+    "title": "Contact — Korkodilos",
+    "description": "Korkodilos, 56 Plataion, Kerameikos, Athens. Email, Instagram, how to get here by metro.",
+    "h1": "Contact",
+    "intro": {
+      "label": "Contact",
+      "text": "56 Plataion, Kerameikos, 104 35 Athens"
+    },
+    "contact_label": "Get in touch",
+    "getting_here": {
+      "label": "How to get here",
+      "lines": [
+        "Kerameikos metro, about 8′ on foot.",
+        "Metaxourgeio metro, about 9′."
+      ],
+      "maps_link": "Directions on Google Maps ↗"
+    },
+    "hours": {
+      "label": "Hours",
+      "lines": [
+        "Classes follow the [programme](calendar.html).",
+        "Visits by appointment."
+      ]
+    },
+    "form": {
+      "label": "Write to us"
+    }
+  }
+}

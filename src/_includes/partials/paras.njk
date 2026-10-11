@@ -1,0 +1,4 @@
+{#- paragraphs with an optional small label on the first one; cls = extra class -#}
+{%- for p in paras -%}
+<p{% if cls %} class="{{ cls }}"{% endif %}>{% if loop.first and label %}<em>{{ label }}</em> {% endif %}{{ p | mdi | safe }}</p>
+{% endfor -%}

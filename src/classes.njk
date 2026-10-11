@@ -1,0 +1,68 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}classes.html"
+layout: layouts/base.njk
+pageKey: classes
+file: classes.html
+---
+{%- set t = classes[lang] -%}{%- set u = ui[lang] -%}
+<h1 class="visually-hidden">{{ t.h1 }}</h1>
+<section class="section section--fit section--top bg-orange" id="monthly">
+  <div class="container">
+    <div class="content content--top">
+      {% set paras = t.monthly.paragraphs %}{% set label = t.monthly.label %}{% set cls = "" %}{% include "partials/paras.njk" %}
+    </div>
+    <ul class="packages swallow">
+      {%- for k in t.monthly.packages %}
+      <li><span>{{ k.label }}</span><b>{{ k.price }}</b></li>
+      {%- endfor %}
+    </ul>
+    <div class="actions swallow">
+      <a class="btn" href="calendar.html"><span class="gr">{{ u.see_programme }}</span> →</a>
+      {%- if t.monthly.note %}
+      <span class="ph-note">{{ t.monthly.note }}</span>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.levels.paragraphs %}{% set label = "" %}{% include "partials/paras.njk" %}
+    </div>
+    <div class="photos">
+      {%- for ph in t.levels.photos %}{% set sz = ph.image | imgsize %}
+      <img style="--ar:{{ ph.image | ratio }}" src="{{ ph.image }}" alt="{{ ph.alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}">
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-brown" id="corporate">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.corporate.paragraphs %}{% set label = t.corporate.label %}{% include "partials/paras.njk" %}
+    </div>
+    <div class="actions swallow"><button class="btn btn--light" type="button" data-cv="form-corporate"><span class="gr">{{ t.corporate.cta }}</span> →</button></div>
+  </div>
+</section>
+<section class="section section--fit bg-pink" id="parties">
+  <div class="container">
+    <div class="content">
+      {% set paras = t.parties.paragraphs %}{% set label = t.parties.label %}{% include "partials/paras.njk" %}
+    </div>
+    <div class="actions swallow"><button class="btn" type="button" data-cv="form-party"><span class="gr">{{ t.parties.cta }}</span> →</button></div>
+  </div>
+</section>
+{%- for f in [["corporate", t.corporate], ["party", t.parties]] %}
+<dialog class="cv form-dlg" id="form-{{ f[0] }}" aria-labelledby="form-{{ f[0] }}-h">
+  <div class="cv__inner"><div>
+    <h2 id="form-{{ f[0] }}-h" tabindex="-1" autofocus>{{ f[1].label }}</h2>
+    <p class="cv__role">{{ f[1].cta }}</p>
+    {% set fname = "enquiry" %}{% set kind = f[0] %}{% include "partials/form.njk" %}
+  </div></div>
+  <button class="cv__close" type="button">{{ u.close }}</button>
+</dialog>
+{%- endfor %}

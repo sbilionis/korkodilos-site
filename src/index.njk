@@ -1,0 +1,56 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}index.html"
+layout: layouts/base.njk
+pageKey: home
+file: index.html
+---
+{%- set t = home[lang] -%}{%- set u = ui[lang] -%}
+<h1 class="visually-hidden">{{ t.h1 }}</h1>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="content content--top">
+      <div class="film" data-film>
+        <div class="film__track" tabindex="0" aria-label="{{ u.film_label }}">
+        {%- for ph in t.film %}{% set sz = ph.image | imgsize %}
+        <img src="{{ ph.image }}" alt="{{ ph.alt }}" width="{{ sz[0] }}" height="{{ sz[1] }}"{% if loop.index > 3 %} loading="lazy"{% endif %}>
+        {%- endfor %}
+        </div>
+        <button class="film__btn film__prev" type="button" aria-label="{{ u.prev_photos }}">←</button>
+        <button class="film__btn film__next" type="button" aria-label="{{ u.next_photos }}">→</button>
+      </div>
+      <p class="hero__intro">{{ t.intro | mdi | safe }}</p>
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-pink">
+  <div class="container">
+    <div class="content">
+      <p><em>{{ t.philosophy.label }}</em> {{ t.philosophy.lead | mdi | safe }}</p>
+    </div>
+    <div class="portrait">
+      <figure class="swallow">{% set sz = t.philosophy.image | imgsize %}
+        <img src="{{ t.philosophy.image }}" alt="{{ t.philosophy.image_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}">
+        <figcaption>{{ t.philosophy.caption }}</figcaption>
+      </figure>
+      <div class="content" style="padding-top:0">
+        {% set paras = t.philosophy.paragraphs %}{% set label = "" %}{% set cls = "lead-small" %}{% include "partials/paras.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--fit bg-base">
+  <div class="container">
+    <div class="ti-block swallow">
+      <p class="ti-block__label">{{ t.offers.label }}</p>
+      <div class="ti-block__cols">
+        {%- for o in t.offers.items %}
+        <a class="ti-col" href="{{ o.link }}">{% if o.image %}<img src="{{ o.image }}" alt="{{ o.image_alt }}" loading="lazy">{% else %}<span class="ph-img" aria-hidden="true">{{ u.image }}</span>{% endif %}<b>{{ o.title }}</b><span class="ti-col__p">{{ o.text | mdi | safe }}</span><span class="ti-col__x">{{ o.price }} <i>→</i></span></a>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,166 @@
+{
+  "el": {
+    "people": [
+      {
+        "id": "alex",
+        "name": "Αλέξανδρος Ντούρας",
+        "role": "Εικαστικός · Ιδρυτής",
+        "photo": "/assets/img/uploads/korko-alex-1.jpg",
+        "photo_alt": "Ο Αλέξανδρος Ντούρας με πήλινη μάσκα",
+        "cv": [
+          {
+            "label": "Σπουδές",
+            "value": "σχολή, χρονιά"
+          },
+          {
+            "label": "Εκθέσεις / συνεργασίες",
+            "value": "2–3 επιλεγμένες"
+          },
+          {
+            "label": "Στον Korkodilos από",
+            "value": "χρονιά"
+          },
+          {
+            "label": "Διδάσκει",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      },
+      {
+        "id": "ariadni",
+        "name": "Αριάδνη Στρογγυλά",
+        "role": "Δασκάλα",
+        "photo": "",
+        "photo_alt": "",
+        "cv": [
+          {
+            "label": "Σπουδές",
+            "value": "σχολή, χρονιά"
+          },
+          {
+            "label": "Εκθέσεις / συνεργασίες",
+            "value": "2–3 επιλεγμένες"
+          },
+          {
+            "label": "Στον Korkodilos από",
+            "value": "χρονιά"
+          },
+          {
+            "label": "Διδάσκει",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      },
+      {
+        "id": "georgia",
+        "name": "Γεωργία Πιλάλη",
+        "role": "Δασκάλα",
+        "photo": "",
+        "photo_alt": "",
+        "cv": [
+          {
+            "label": "Σπουδές",
+            "value": "σχολή, χρονιά"
+          },
+          {
+            "label": "Εκθέσεις / συνεργασίες",
+            "value": "2–3 επιλεγμένες"
+          },
+          {
+            "label": "Στον Korkodilos από",
+            "value": "χρονιά"
+          },
+          {
+            "label": "Διδάσκει",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      }
+    ]
+  },
+  "en": {
+    "people": [
+      {
+        "id": "alex",
+        "name": "Alexandros Douras",
+        "role": "Artist · Founder",
+        "photo": "/assets/img/uploads/korko-alex-1.jpg",
+        "photo_alt": "Alexandros Douras with a clay mask",
+        "cv": [
+          {
+            "label": "Studies",
+            "value": "school, year"
+          },
+          {
+            "label": "Exhibitions / collaborations",
+            "value": "2–3 selected"
+          },
+          {
+            "label": "At Korkodilos since",
+            "value": "year"
+          },
+          {
+            "label": "Teaches",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      },
+      {
+        "id": "ariadni",
+        "name": "Ariadni Strongyla",
+        "role": "Teacher",
+        "photo": "",
+        "photo_alt": "",
+        "cv": [
+          {
+            "label": "Studies",
+            "value": "school, year"
+          },
+          {
+            "label": "Exhibitions / collaborations",
+            "value": "2–3 selected"
+          },
+          {
+            "label": "At Korkodilos since",
+            "value": "year"
+          },
+          {
+            "label": "Teaches",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      },
+      {
+        "id": "georgia",
+        "name": "Georgia Pilali",
+        "role": "Teacher",
+        "photo": "",
+        "photo_alt": "",
+        "cv": [
+          {
+            "label": "Studies",
+            "value": "school, year"
+          },
+          {
+            "label": "Exhibitions / collaborations",
+            "value": "2–3 selected"
+          },
+          {
+            "label": "At Korkodilos since",
+            "value": "year"
+          },
+          {
+            "label": "Teaches",
+            "value": "Monthly 4×3, workshops…"
+          }
+        ],
+        "cv_is_placeholder": true
+      }
+    ]
+  }
+}

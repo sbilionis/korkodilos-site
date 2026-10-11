@@ -1,0 +1,36 @@
+{
+  "el": {
+    "title": "Calendar — Korkodilos",
+    "description": "Το εβδομαδιαίο πρόγραμμα του Korkodilos και τα επόμενα workshops, events και νέες σειρές μαθημάτων.",
+    "h1": "Calendar",
+    "intro": {
+      "label": "Calendar",
+      "text": "Ο **Korkodilos** έχει πρόγραμμα αλλά όχι ρουτίνα. Κάθε εβδομάδα, αυτές τις μέρες, το τραπέζι είναι στρωμένο."
+    },
+    "note": "Monthly 4×3, για όλα τα επίπεδα",
+    "specials": {
+      "label": "Ειδικά",
+      "text": "Workshops, events και νέες σειρές."
+    },
+    "closing": "Όλα τα μαθήματα είναι για όλα τα επίπεδα, ακόμα και για πρώτη φορά.",
+    "bottom_image": "/assets/img/uploads/R1-07087-0011-1920x920-c.jpg",
+    "bottom_alt": "Κισσός σε κεραμική γλάστρα"
+  },
+  "en": {
+    "title": "Calendar — Korkodilos",
+    "description": "The Korkodilos weekly programme and upcoming workshops, events and new class series.",
+    "h1": "Calendar",
+    "intro": {
+      "label": "Calendar",
+      "text": "**Korkodilos** has a programme but no routine. Every week, on these days, the table is set."
+    },
+    "note": "Monthly 4×3, for all levels",
+    "specials": {
+      "label": "Specials",
+      "text": "Workshops, events and new series."
+    },
+    "closing": "All classes are for all levels, even for first-timers.",
+    "bottom_image": "/assets/img/uploads/R1-07087-0011-1920x920-c.jpg",
+    "bottom_alt": "Ivy in a ceramic pot"
+  }
+}

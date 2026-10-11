@@ -1,0 +1,39 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}contact.html"
+layout: layouts/base.njk
+pageKey: contact
+file: contact.html
+---
+{%- set t = contact[lang] -%}{%- set u = ui[lang] -%}
+<h1 class="visually-hidden">{{ t.h1 }}</h1>
+<section class="section section--fit bg-pink">
+  <div class="container">
+    <div class="content content--top content--sm">
+      <p><em>{{ t.intro.label }}</em> {{ t.intro.text | mdi | safe }}</p>
+    </div>
+    <div class="contact-grid swallow">
+      <div>
+        <h2>{{ t.contact_label }}</h2>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        <a href="tel:{{ site.phone | replace(' ', '') }}"{% if site.phone_is_placeholder %} class="ph" title="placeholder — real number needed"{% endif %}>{{ site.phone }}</a><br>
+        <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram ↗</a> · <a href="{{ site.facebook }}" target="_blank" rel="noopener">Facebook ↗</a></p>
+      </div>
+      <div>
+        <h2>{{ t.getting_here.label }}</h2>
+        <p>{% for l in t.getting_here.lines %}{{ l | mdi | safe }}<br>{% endfor %}<a href="{{ site.maps }}" target="_blank" rel="noopener">{{ t.getting_here.maps_link }}</a></p>
+      </div>
+      <div>
+        <h2>{{ t.hours.label }}</h2>
+        <p>{% for l in t.hours.lines %}{{ l | mdi | safe }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+      </div>
+    </div>
+    <div class="contact-form swallow">
+      <h2 class="contact-form__h">{{ t.form.label }}</h2>
+      {% set fname = "contact" %}{% set kind = "contact" %}{% include "partials/form.njk" %}
+    </div>
+  </div>
+</section>
