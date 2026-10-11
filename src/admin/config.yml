@@ -1067,6 +1067,18 @@ collections:
             label: "Σελίδα «Ευχαριστούμε»: σύνδεσμος επιστροφής"
             widget: string
             i18n: true
+          - name: notfound_title
+            label: "Σελίδα «δεν βρέθηκε»: τίτλος"
+            widget: string
+            i18n: true
+          - name: notfound_text
+            label: "Σελίδα «δεν βρέθηκε»: κείμενο"
+            widget: text
+            i18n: true
+          - name: notfound_back
+            label: "Σελίδα «δεν βρέθηκε»: κουμπί"
+            widget: string
+            i18n: true
         i18n: true
   - name: settings
     label: Ρυθμίσεις
