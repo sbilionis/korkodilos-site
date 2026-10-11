@@ -115,3 +115,15 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Now `eleventy.config.mjs` makes 480/800/1200/1600px WebP versions of every file in `src/assets/img/uploads` with **sharp 0.35.4** (devDependency, exact) into `.cache/img` (git-ignored) → copied to `/assets/img/r/`. Build ~4 s. Works for Alex's uploads automatically.
 - The `imgsizes` transform adds width/height + srcset to every uploads `<img>`; templates give their own `sizes` (strips 70vw/30vw, tutors 50vw/30vw, pop-ups 100vw/220px, Classes section photos 100vw/560px; default 100vw/60vw).
 - Phone (375px) photo weight: Home ≈ 0.5 MB, Studio ≈ 0.1 MB, Classes ≈ 0.25 MB.
+
+## 15. Domain (checked 11 Oct 2026 from public DNS — no logins used)
+- **korkodilosathens.gr** = the current WordPress site (by Bracket). Registered at **Papaki** (Alex's account), but its **DNS is at Cloudflare** (nameservers harlee/felipe.ns.cloudflare.com) — so DNS changes are made in Cloudflare unless the nameservers are changed in Papaki.
+- It has **email** at MXroute — keep these records whatever we do:
+  - MX 10 witcher.mxrouting.net · MX 20 witcher-relay.mxrouting.net
+  - CNAME mail → witcher.mxrouting.net · CNAME webmail → witcher.mxrouting.net · CNAME autodiscover → autodiscover.mxroute.com
+  - TXT @ "v=spf1 include:mxroute.com -all"
+  - TXT x._domainkey "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8VCs+MhARmkxlF8hLBcu2CRCW8IXVykqQs7RV1DpxoIOQpMeJRTYw8AaRuoIuM7pSgN8gJa16yyFRRBanQDmpACG3cJiSN3trQxR8jw9GxRBK17TgIfAWA+1FuhDb5XyHUnbDT/7a8ZEvcs0LvEbyRWsjBepn9/lFpAx3puakbCuf4WtqPWl4aqtbJkjRPgXOkL/ac/L4car4K0d7rQThmHEs7bU58wb80hcySGxkju7ofg+QuCG2pb8qlEoc7F/PXCrZ3h8G06iX5gWK3jxUWYG5Vdhbpwy4B5rBKnJp7I3ftYXZGYxbYQrIRj56IDQgDMjIJsQmATo4MbuegwZDQIDAQAB"
+- Website records to set (DNS only / grey cloud in Cloudflare): A @ → 75.2.60.5 · CNAME www → korkonew.netlify.app. Then Netlify → korkonew → Domain management → add korkodilosathens.gr (+ www), make it primary; HTTPS is automatic.
+- After the switch: site.json `url`, admin `site_url`/`display_url`, GitHub OAuth app Homepage URL → https://korkodilosathens.gr; remove /_proposals.
+- Old WordPress addresses already redirect (/studio/ /classes/ /calendar/ /contact/ /author/* /wp-admin/*).
+- Not ours: korkodilosathens.com (now a casino site), korkodilos.com (someone else). korkodilos.gr has no DNS (maybe free to register).
