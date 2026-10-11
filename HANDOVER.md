@@ -96,3 +96,11 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Privacy policy / Terms pages (`legal.json`, el/en, empty) linked in the footer.
 - Option pages are published at /_proposals/ (noindex) — remove before the real domain goes live.
 - NEXT: domain details from Stavros → QA/debug pass → switch domain.
+
+## 12. QA pass (11 Oct 2026, evening) — done by Claude, on korkonew
+- Scanned 12 pages × 12 widths (320–1680): no sideways scroll, nothing off-screen, no text over photos. All internal links + language switches OK; no console errors.
+- Added: 404.html (el+en, `<base href="/">`), robots.txt, sitemap.xml (`site.url` in site.json → change it with the domain), absolute og:image/og:url, canonical, noindex on thanks/404.
+- Photos: Eleventy transform adds width/height to every `<img>`; on Netlify builds (`NETLIFY=true`) photos go through the Netlify Image CDN with srcset (Home 5.5 MB → ~0.9 MB on a phone). Local builds keep the plain files.
+- Facebook link updated (old one redirects to /people/Korkodilos/100066326360344/). Privacy link under every form.
+- 3 test form messages sent to korkodilos20@gmail.com ("TEST Claude QA …") — waiting for Stavros/Alex to confirm they arrived.
+- Admin validator now also walks lists and exits non-zero on any missing field — run it before every push.
