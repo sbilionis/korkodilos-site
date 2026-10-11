@@ -80,3 +80,10 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - New photos from `~/Downloads/KORKO NEW PHOTOS` → `uploads/korko-NNNN.jpg` (NNNN = DSCF number), turned upright + resized to 1600px with a small Swift helper (no ImageMagick on this Mac).
 - **Every interface word is now in the admin:** new collection "Κείμενα μενού & κουμπιών" = `ui.json` (incl. `chrome`: menu labels, booking pill, footer). `site.js` reads them from `#ui-json` in `base.njk`; phone/email/maps/socials come from `site.json`.
 - Specials: when all dates have passed, the whole section hides itself (no message any more).
+
+## 10. Round 7 (11 Oct 2026) — pushed to korkonew.netlify.app
+- Options: `_proposals/round7.html` (candidates in `_proposals/cand/`, both git-ignored). Picks: green stays #006837; Studio first photo = DSCF4929 (Alex may change it); Classes = photo per section (`monthly/corporate/parties.image`, in admin) + photo strip (`levels.photos`).
+- Direct fixes: specials button smaller (bug: `.special__side span` enlarged the button text — now `> span`), desktop oval menu fills the screen, no "Developed by", Home pink runs to –DILOS, Studio first photo always cropped 3:2 / 4:5.
+- **Typesetting transform** in `eleventy.config.mjs`: short words (ο, και, με, the…) glue to the next word with a no-break space; the last word of p/h/li never sits alone. `text-wrap:pretty` in CSS.
+- **OPEN: title/text size scale** — options A/B/C in round7 §1 (recommended A). Stavros decides after checking on his phone.
+- Specials prices still €XX (Alex's email only had the 2/3-month package prices). English translation: OK for now.
