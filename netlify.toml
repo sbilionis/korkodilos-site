@@ -10,3 +10,9 @@
   for = "/admin/*"
   [headers.values]
     Cache-Control = "no-cache"
+
+# design option pages: not for Google
+[[headers]]
+  for = "/_proposals/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

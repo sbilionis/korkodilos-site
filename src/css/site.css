@@ -563,3 +563,23 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
   .offcanvas a:hover,.offcanvas a:focus-visible{--rot:0deg}
 }
 @media (prefers-reduced-motion:reduce){.offcanvas a::before,.offcanvas a>span{transition:none}}
+/* desktop: the five ovals fill the screen from under the menu row to the bottom edge, evenly overlapped,
+   so each word sits in its own oval (h = oval height, neighbours overlap by h/4) */
+@media (min-width:769px){
+  .offcanvas{--mh:calc((100vh - 130px) / 3.75);--mh:calc((100svh - 130px) / 3.75);justify-content:center;padding:100px 0 30px}
+  .offcanvas a{width:min(600px,70vw);max-width:none;height:var(--mh);margin:calc(var(--mh) / -8) auto;font-size:clamp(26px,calc(var(--mh) * .2),40px)}
+  .offcanvas a:nth-child(odd){--rot:7deg}
+  .offcanvas a:nth-child(even){--rot:-7deg}
+  .offcanvas a:hover,.offcanvas a:focus-visible{--rot:0deg}
+}
+/* opening (option B): the page fades to the menu, the ovals drop in one after another with a small bounce */
+.offcanvas{transform:none!important;opacity:0;transition:opacity .28s ease,visibility 0s linear .28s!important}
+.menu-open .offcanvas{opacity:1;transition:opacity .28s ease!important}
+.offcanvas a{opacity:0;translate:0 -70px;transition:opacity .25s,translate .55s cubic-bezier(.3,1.55,.5,1)}
+.menu-open .offcanvas a{opacity:1;translate:none}
+.menu-open .offcanvas a:nth-child(1){transition-delay:.08s}
+.menu-open .offcanvas a:nth-child(2){transition-delay:.14s}
+.menu-open .offcanvas a:nth-child(3){transition-delay:.2s}
+.menu-open .offcanvas a:nth-child(4){transition-delay:.26s}
+.menu-open .offcanvas a:nth-child(5){transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){.offcanvas,.offcanvas a{transition:none!important;translate:none}}
