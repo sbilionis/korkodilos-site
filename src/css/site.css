@@ -489,3 +489,8 @@ main>img:last-child{margin-bottom:40px}
 .contact-form{max-width:760px;padding-top:var(--sec)}
 .contact-form__h{font-family:var(--sans);font-weight:400;font-size:var(--fs-xs);letter-spacing:.05em;text-transform:uppercase}
 @media (max-width:768px){.kform{grid-template-columns:1fr}.kform__f--half{grid-column:1/-1}}
+
+/* calendar: a weekly class other than Monthly 4×3 shows its name under the time (set in /admin) */
+.cal__t{display:block;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.03em;text-transform:uppercase;margin-top:6px;opacity:.75}
+.cal__s--other{background:var(--pink)}
+@media (max-width:768px){.cal-day .cal__s--other{border-radius:12px}}

@@ -545,7 +545,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: tue
@@ -558,7 +558,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: wed
@@ -571,7 +571,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: thu
@@ -584,7 +584,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: fri
@@ -597,7 +597,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: sat
@@ -610,7 +610,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
               - name: sun
@@ -623,7 +623,7 @@ collections:
                     label: Ώρα (π.χ. 19:00–22:00)
                     widget: string
                   - name: title
-                    label: Μάθημα
+                    label: "Μάθημα (αν δεν είναι Monthly 4×3, το όνομα φαίνεται στο πρόγραμμα)"
                     widget: string
                     default: Monthly 4×3
           - name: specials
