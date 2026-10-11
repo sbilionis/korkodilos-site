@@ -542,3 +542,24 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
   .special__side{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%}
   .special .btn{padding:7px 12px;font-size:11px;gap:6px}
 }
+
+/* ==========================================================================
+   ROUND 8 — oval menu: every word stays on top of all the ovals
+   (each oval is drawn behind the words, so a lower oval never covers the word above it)
+   ========================================================================== */
+.offcanvas a{background:none!important;transform:none!important;position:relative}
+.offcanvas a::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--oc);transform:rotate(var(--rot));transition:transform .6s ease .3s;z-index:-1}
+.offcanvas a>span{display:block;transform:rotate(var(--rot));transition:transform .6s ease .3s}
+.offcanvas a:nth-child(1){--oc:var(--ink);--rot:10deg}
+.offcanvas a:nth-child(2){--oc:var(--orange);--rot:-10deg}
+.offcanvas a:nth-child(3){--oc:var(--brown);--rot:10deg}
+.offcanvas a:nth-child(4){--oc:var(--green);--rot:-10deg}
+.offcanvas a:nth-child(5){--oc:var(--pink);--rot:10deg}
+.offcanvas a:hover,.offcanvas a:focus-visible{--rot:0deg}
+.offcanvas a:hover::before,.offcanvas a:hover>span,.offcanvas a:focus-visible::before,.offcanvas a:focus-visible>span{transition-delay:0s}
+@media (max-width:768px){
+  .offcanvas a:nth-child(odd){--rot:6deg}
+  .offcanvas a:nth-child(even){--rot:-6deg}
+  .offcanvas a:hover,.offcanvas a:focus-visible{--rot:0deg}
+}
+@media (prefers-reduced-motion:reduce){.offcanvas a::before,.offcanvas a>span{transition:none}}

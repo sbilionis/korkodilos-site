@@ -83,11 +83,11 @@
     <div class="jaw-top__lang"><a href="${BASE}${FILE}" lang="el"${EN ? '' : ' aria-current="true"'}>GR</a><a href="${BASE}en/${FILE}" lang="en"${EN ? ' aria-current="true"' : ''}>EN</a></div>
     <div class="jaw-top__mouth"><a href="index.html" class="jaw-top__logo" aria-label="Korkodilos — home"><span></span></a></div>
     <nav class="offcanvas" id="offcanvas" aria-label="Menu" inert>
-      <a href="index.html" class="offcanvas__home"${cur('home')}>${M.home}</a>
-      <a href="studio.html"${cur('studio')}>${M.studio}</a>
-      <a href="classes.html"${cur('classes')}>${M.classes}</a>
-      <a href="calendar.html"${cur('calendar')}>${M.calendar}</a>
-      <a href="contact.html"${cur('contact')}>${M.contact}</a>
+      <a href="index.html" class="offcanvas__home"${cur('home')}><span>${M.home}</span></a>
+      <a href="studio.html"${cur('studio')}><span>${M.studio}</span></a>
+      <a href="classes.html"${cur('classes')}><span>${M.classes}</span></a>
+      <a href="calendar.html"${cur('calendar')}><span>${M.calendar}</span></a>
+      <a href="contact.html"${cur('contact')}><span>${M.contact}</span></a>
     </nav>
   </header>`;
 
