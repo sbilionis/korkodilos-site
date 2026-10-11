@@ -104,3 +104,8 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Facebook link updated (old one redirects to /people/Korkodilos/100066326360344/). Privacy link under every form.
 - 3 test form messages sent to korkodilos20@gmail.com ("TEST Claude QA …") — waiting for Stavros/Alex to confirm they arrived.
 - Admin validator now also walks lists and exits non-zero on any missing field — run it before every push.
+
+## 13. Mobile speed (11 Oct 2026, late)
+- Jaw "swallow" is now ONE band (`.jaw-veil`, painted with the colours of the sections behind it) instead of moving masks on every paragraph/photo (that made iPhone scrolling heavy).
+- Caching (netlify.toml): photos 1 week, CSS/JS 1 year with `?v=` build number (`src/_data/build.js`), pages 2 min + stale-while-revalidate; admin always no-cache (rule kept LAST — last matching rule wins).
+- site.js fetches the menu pages in the background after load (skipped with Save-Data) → menu taps open instantly. First photo of Home/Studio has fetchpriority=high.
