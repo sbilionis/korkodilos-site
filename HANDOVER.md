@@ -128,8 +128,9 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Old WordPress addresses already redirect (/studio/ /classes/ /calendar/ /contact/ /author/* /wp-admin/*).
 - Not ours: korkodilosathens.com (now a casino site), korkodilos.com (someone else). korkodilos.gr has no DNS (maybe free to register).
 
-## 16. Domain switch — IN PROGRESS (11 Oct 2026, 21:03)
+## 16. Domain switch — DONE: LIVE at https://korkodilosathens.gr (11 Oct 2026, 22:29)
 - Netlify: korkodilosathens.gr added to project korkonew as primary (www redirects), Netlify DNS zone created → nameservers dns1–dns4.p03.nsone.net. Tested: the zone answers with Netlify's servers and serves the new site.
 - Papaki (Alex's account AN784-PK — the domain is only visible in the **old panel**: "Τα παλιά σου προϊόντα" → www2.papaki.com/cp2): nameservers changed by Stavros to dns1–dns4.p03.nsone.net at ~21:03. The .gr WHOIS shows them (last updated 11-10-2026), but the .gr registry's published DNS still showed Cloudflare at 21:19 — the .gr zone is republished periodically, then resolvers cache for up to ~3 h.
-- Local commit "Go live on korkodilosathens.gr" (site.json url, admin site_url/display_url, /_proposals no longer published) is **NOT pushed yet** — push it once `dig NS korkodilosathens.gr @gr-at.ics.forth.gr` shows nsone, then check https in Netlify (Domain management → HTTPS → Verify DNS / Provision certificate) and test every page on the new domain.
+- .gr registry switched 22:05; go-live commit pushed (site.json url, admin site_url/display_url, /_proposals no longer published — copies kept locally, git-ignored). Let's Encrypt certificate issued 22:29 (auto-renews). Tested over https: all pages el/en, http→https, www→apex, old WP links, 404, admin, sitemap/robots/canonical/og.
+- korkonew.netlify.app still works too. The project is now shown in Netlify as "korkodilosathens.gr".
 - After: Alex can cancel the old WordPress hosting (Bracket/Marios), the Cloudflare account and the old SSL product in Papaki.
