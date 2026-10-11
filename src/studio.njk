@@ -62,7 +62,7 @@ file: studio.html
     <div class="tutors swallow">
       {%- for p in tutors[lang].people %}
       <button class="tutor" type="button" data-cv="cv-{{ p.id }}">
-        <span class="tutor__img">{% if p.photo %}<img src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "t" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</span>
+        <span class="tutor__img">{% if p.photo %}<img sizes="(max-width: 768px) 50vw, 30vw" src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "t" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</span>
         <span class="tutor__name">{{ p.name }}</span>
         <span class="tutor__role">{{ p.role }}</span>
         <span class="tutor__cv">{{ u.bio }}</span>
@@ -77,7 +77,7 @@ file: studio.html
 {%- for p in tutors[lang].people %}
 <dialog class="cv" id="cv-{{ p.id }}" aria-labelledby="cv-{{ p.id }}-h">
   <div class="cv__inner">
-    <div class="cv__img">{% if p.photo %}<img src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "c" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</div>
+    <div class="cv__img">{% if p.photo %}<img sizes="(max-width: 768px) 100vw, 220px" src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "c" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</div>
     <div>
       <h2 id="cv-{{ p.id }}-h" tabindex="-1" autofocus>{{ p.name }}</h2>
       <p class="cv__role">{{ p.role }}</p>

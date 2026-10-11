@@ -16,7 +16,7 @@ file: index.html
       <div class="film" data-film>
         <div class="film__track" tabindex="0" aria-label="{{ u.film_label }}">
         {%- for ph in t.film %}{% set sz = ph.image | imgsize %}
-        <img src="{{ ph.image }}" alt="{{ ph.alt }}" width="{{ sz[0] }}" height="{{ sz[1] }}"{% if loop.index > 3 %} loading="lazy"{% elif loop.first %} fetchpriority="high"{% endif %}>
+        <img src="{{ ph.image }}" sizes="(max-width: 768px) 70vw, 30vw" alt="{{ ph.alt }}" width="{{ sz[0] }}" height="{{ sz[1] }}"{% if loop.index > 3 %} loading="lazy"{% elif loop.first %} fetchpriority="high"{% endif %}>
         {%- endfor %}
         </div>
         <button class="film__btn film__prev" type="button" aria-label="{{ u.prev_photos }}">←</button>
@@ -48,7 +48,7 @@ file: index.html
       <p class="ti-block__label">{{ t.offers.label }}</p>
       <div class="ti-block__cols">
         {%- for o in t.offers.items %}
-        <a class="ti-col" href="{{ o.link }}">{% if o.image %}<img src="{{ o.image }}" alt="{{ o.image_alt }}" loading="lazy">{% else %}<span class="ph-img" aria-hidden="true">{{ u.image }}</span>{% endif %}<b>{{ o.title }}</b><span class="ti-col__p">{{ o.text | mdi | safe }}</span><span class="ti-col__x">{{ o.price }} <i>→</i></span></a>
+        <a class="ti-col" href="{{ o.link }}">{% if o.image %}<img src="{{ o.image }}" sizes="(max-width: 768px) 100vw, 30vw" alt="{{ o.image_alt }}" loading="lazy">{% else %}<span class="ph-img" aria-hidden="true">{{ u.image }}</span>{% endif %}<b>{{ o.title }}</b><span class="ti-col__p">{{ o.text | mdi | safe }}</span><span class="ti-col__x">{{ o.price }} <i>→</i></span></a>
         {%- endfor %}
       </div>
     </div>

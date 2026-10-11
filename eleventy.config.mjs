@@ -76,20 +76,44 @@ export default function (eleventyConfig) {
     });
   });
 
-  // every <img> of ours gets its real width/height (no jumping while photos load), and — on Netlify —
-  // responsive sizes from the Netlify Image CDN, so phones download small photos (also for Alex's uploads)
-  const CDN = process.env.NETLIFY === "true";
-  const cdn = (src, w) => `/.netlify/images?url=${encodeURIComponent(src)}&w=${w}&q=78`;
+  // photos: small versions are made once at build time (480/800/1200/1600px WebP, in .cache/img → /assets/img/r/),
+  // so phones download small files that are served as plain, fast files (also for photos Alex uploads).
+  // Every <img> also gets its real width/height, so the page doesn't jump while photos load.
+  const WIDTHS = [480, 800, 1200, 1600];
+  const CACHE = ".cache/img";
+  const variant = (src, w) => `/assets/img/r/${path.basename(src).replace(/\.[^.]+$/, "")}-${w}.webp`;
+  eleventyConfig.addPassthroughCopy({ [CACHE]: "assets/img/r" });
+  eleventyConfig.on("eleventy.before", async () => {
+    const { default: sharp } = await import("sharp");
+    const dir = "src/assets/img/uploads";
+    fs.mkdirSync(CACHE, { recursive: true });
+    const jobs = [];
+    for (const f of fs.readdirSync(dir)) {
+      if (!/\.(jpe?g|png|webp)$/i.test(f)) continue;
+      const file = path.join(dir, f), mtime = fs.statSync(file).mtimeMs;
+      let width;
+      try { width = imageSize(fs.readFileSync(file)).width; } catch (e) { continue; }
+      for (const w of WIDTHS.filter((w) => w < width).concat(Math.min(width, 2000))) {
+        const out = path.join(CACHE, `${f.replace(/\.[^.]+$/, "")}-${w}.webp`);
+        if (fs.existsSync(out) && fs.statSync(out).mtimeMs >= mtime) continue;
+        jobs.push(() => sharp(file).rotate().resize({ width: w, withoutEnlargement: true }).webp({ quality: 74 }).toFile(out));
+      }
+    }
+    for (let i = 0; i < jobs.length; i += 8) await Promise.all(jobs.slice(i, i + 8).map((j) => j()));
+    if (jobs.length) console.log(`[img] made ${jobs.length} small photo versions`);
+  });
+  const SIZES = "(max-width: 768px) 100vw, 60vw";   // default; templates can give their own sizes="…"
   eleventyConfig.addTransform("imgsizes", function (html) {
     if (!(this.page.outputPath || "").endsWith(".html")) return html;
-    return html.replace(/<img\b([^>]*?)\ssrc="(\/assets\/img\/[^"]+\.(?:jpe?g|png|webp))"([^>]*)>/g, (m, a, src, b) => {
+    return html.replace(/<img\b([^>]*?)\ssrc="(\/assets\/img\/uploads\/[^"]+\.(?:jpe?g|png|webp))"([^>]*)>/g, (m, a, src, b) => {
       let d;
       try { d = imageSize(fs.readFileSync(path.join("src", src))); } catch (e) { return m; }
-      const size = /\swidth=/.test(a + b) ? "" : ` width="${d.width}" height="${d.height}"`;
-      if (!CDN) return `<img${a} src="${src}"${size}${b}>`;
-      const ws = [480, 800, 1200, 1600, 2000].filter((w) => w < d.width).concat(d.width);
-      const set = ws.map((w) => `${cdn(src, w)} ${w}w`).join(", ");
-      return `<img${a} src="${cdn(src, Math.min(1200, d.width))}" srcset="${set}" sizes="(max-width: 768px) 100vw, 60vw"${size}${b}>`;
+      const attrs = a + b;
+      const size = /\swidth=/.test(attrs) ? "" : ` width="${d.width}" height="${d.height}"`;
+      const ws = WIDTHS.filter((w) => w < d.width).concat(Math.min(d.width, 2000));
+      const set = ws.map((w) => `${variant(src, w)} ${w}w`).join(", ");
+      const sizes = /\ssizes=/.test(attrs) ? "" : ` sizes="${SIZES}"`;
+      return `<img${a} src="${src}" srcset="${set}"${sizes}${size}${b}>`;
     });
   });
 

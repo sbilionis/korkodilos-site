@@ -47,7 +47,7 @@ file: calendar.html
 {%- for s in pr.specials | sort(false, false, "date") %}{%- set dp = s.date.split("-") %}
 <dialog class="cv sp-dlg" id="sp-{{ loop.index }}" aria-labelledby="sp-{{ loop.index }}-h" data-date="{{ s.date }}">
   <div class="cv__inner{% if not s.image %} cv__inner--text{% endif %}">
-    {%- if s.image %}<div class="cv__img"><img src="{{ s.image }}" alt="{{ s.image_alt }}" loading="lazy"></div>{% endif %}
+    {%- if s.image %}<div class="cv__img"><img sizes="(max-width: 768px) 100vw, 220px" src="{{ s.image }}" alt="{{ s.image_alt }}" loading="lazy"></div>{% endif %}
     <div>
       <span class="special__type special__type--{{ s.type }}">{{ u.types[s.type] }}</span>
       <h2 id="sp-{{ loop.index }}-h" tabindex="-1" autofocus>{{ s.title }}</h2>
