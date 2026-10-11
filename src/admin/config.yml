@@ -707,6 +707,21 @@ collections:
                 label: Τιμή
                 widget: string
                 i18n: duplicate
+              - name: details
+                label: "Περισσότερα (στο παράθυρο που ανοίγει· κενή γραμμή = νέα παράγραφος)"
+                widget: text
+                required: false
+                i18n: true
+              - name: image
+                label: Φωτογραφία στο παράθυρο (κενό = χωρίς)
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
         i18n: true
   - name: team
     label: Δάσκαλοι

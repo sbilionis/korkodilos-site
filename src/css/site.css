@@ -583,3 +583,41 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 .menu-open .offcanvas a:nth-child(4){transition-delay:.26s}
 .menu-open .offcanvas a:nth-child(5){transition-delay:.32s}
 @media (prefers-reduced-motion:reduce){.offcanvas,.offcanvas a{transition:none!important;translate:none}}
+
+/* ==========================================================================
+   ROUND 9
+   ========================================================================== */
+/* type scale A: big serif only for page intros; one serif size for everything else; one small sans size */
+:root{--fs-l:clamp(22px,calc(14px + 1.4vw),34px);--fs-m:clamp(17px,calc(15px + .3vw),20px);--fs-s:13px;--fs-xs:13px}
+.special h3,.special__date,.cv h2{font-size:var(--fs-m);line-height:1.25}
+.special__type,.ph-note,.cal__t,.cal__s,.ti-col b,.band b,.cv__role,.cv__close{font-size:13px}
+.sp-dlg h2{font-size:var(--fs-l);line-height:1.1;margin-top:12px}
+
+/* Calendar specials: the whole row opens a pop-up with more info + "Κλείσε θέση" */
+.special{position:relative;cursor:pointer;transition:background .25s}
+.special__open{font:inherit;text-align:left;color:inherit}
+.special__open::after{content:"";position:absolute;inset:0}
+.special__open:focus-visible{outline:none}
+.special:has(.special__open:focus-visible){outline:2px solid currentColor;outline-offset:4px}
+.special:hover{background:rgba(40,40,42,.05)}
+.special:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.special:hover .btn{background:var(--orange);color:var(--ink)}
+.special:hover .btn{transform:translateX(4px)}
+.sp-dlg .cv__inner--text{grid-template-columns:1fr}
+.sp-dlg .cv__img{aspect-ratio:4/5}
+.sp-dlg__text p{font-size:var(--fs-m);line-height:1.35;margin:0 0 .8em}
+.sp-dlg .btn{margin-top:10px}
+
+/* Classes: the price pills are links to booking; black on hover */
+.packages a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border:1.5px solid currentColor;border-radius:999px;padding:18px 24px;font-size:var(--fs-m);transition:background .25s,color .25s}
+.packages a:hover,.packages a:focus-visible{background:var(--ink);color:var(--base);border-color:var(--ink)}
+.packages li.packages__li{border:0;padding:0;display:block}
+
+@media (max-width:768px){
+  /* phones: "Κλείσε θέση" in pink */
+  .special .btn{background:var(--pink);color:var(--ink)}
+  /* phones: small arrows on photo strips */
+  .film__btn{display:block;width:30px;height:30px;line-height:30px;font-size:12px;bottom:10px}
+  .film__prev{right:46px}.film__next{right:10px}
+}
+@media (max-width:768px){.sp-dlg .cv__img{max-width:none;aspect-ratio:3/2}}   /* phones: a short landscape photo on top of the pop-up */

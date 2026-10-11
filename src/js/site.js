@@ -160,6 +160,8 @@
   document.addEventListener('click', (e) => {
     if (!e.target.closest('a[href="#book"]')) return;
     e.preventDefault();
+    const from = e.target.closest('dialog');   // e.g. a workshop pop-up: close it, then open booking
+    if (from && from !== bookDlg) from.close();
     bookDlg.showModal();
   });
   /* ---------- landing film strip: arrows scroll by most of a screen; disabled at the ends ---------- */

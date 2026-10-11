@@ -36,12 +36,28 @@ file: calendar.html
       {%- set dp = s.date.split("-") %}
       <article class="special" data-date="{{ s.date }}">
         <div class="special__date">{{ dp[2] | int }} {{ u.months[(dp[1] | int) - 1] }}<small data-weekday>{{ s.time }}</small></div>
-        <div><span class="special__type special__type--{{ s.type }}">{{ u.types[s.type] }}</span><h3>{{ s.title }}</h3><p>{{ s.text | mdi | safe }}</p></div>
-        <div class="special__side"><span>{{ s.price }}</span><a class="btn" href="#book"><span class="gr">{{ u.book_place }}</span> →</a></div>
+        <div><span class="special__type special__type--{{ s.type }}">{{ u.types[s.type] }}</span><h3><button class="special__open" type="button" data-cv="sp-{{ loop.index }}">{{ s.title }}</button></h3><p>{{ s.text | mdi | safe }}</p></div>
+        <div class="special__side"><span>{{ s.price }}</span><span class="btn" aria-hidden="true"><span class="gr">{{ u.book_place }}</span> →</span></div>
       </article>
       {%- endfor %}
     </div>
   </div>
 </section>
+{#- each special opens a pop-up with more info + booking (the whole row is clickable) -#}
+{%- for s in pr.specials | sort(false, false, "date") %}{%- set dp = s.date.split("-") %}
+<dialog class="cv sp-dlg" id="sp-{{ loop.index }}" aria-labelledby="sp-{{ loop.index }}-h" data-date="{{ s.date }}">
+  <div class="cv__inner{% if not s.image %} cv__inner--text{% endif %}">
+    {%- if s.image %}<div class="cv__img"><img src="{{ s.image }}" alt="{{ s.image_alt }}" loading="lazy"></div>{% endif %}
+    <div>
+      <span class="special__type special__type--{{ s.type }}">{{ u.types[s.type] }}</span>
+      <h2 id="sp-{{ loop.index }}-h" tabindex="-1" autofocus>{{ s.title }}</h2>
+      <p class="cv__role">{{ dp[2] | int }} {{ u.months[(dp[1] | int) - 1] }} · {{ s.time }} · {{ s.price }}</p>
+      <div class="sp-dlg__text">{% for para in (s.details or s.text).split("\n\n") %}<p>{{ para | mdi | safe }}</p>{% endfor %}</div>
+      <a class="btn" href="#book"><span class="gr">{{ u.book_place }}</span> →</a>
+    </div>
+  </div>
+  <button class="cv__close" type="button">{{ u.close }}</button>
+</dialog>
+{%- endfor %}
 <img class="calendar-bottom" src="{{ t.bottom_image }}" alt="{{ t.bottom_alt }}" loading="lazy">
 <script type="application/json" id="days-json">{{ u.days | dump | safe }}</script>

@@ -17,7 +17,7 @@ file: classes.html
     </div>
     <ul class="packages swallow">
       {%- for k in t.monthly.packages %}
-      <li><span>{{ k.label }}</span><b>{{ k.price }}</b></li>
+      <li class="packages__li"><a href="#book"><span>{{ k.label }}</span><b>{{ k.price }}</b></a></li>
       {%- endfor %}
     </ul>
     {%- if t.monthly.image %}{% set sz = t.monthly.image | imgsize %}
