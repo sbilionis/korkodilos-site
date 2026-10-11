@@ -188,6 +188,12 @@
     }, { threshold: [0, 0.6] }).observe(w);
   });
 
+  /* ---------- Calendar: a click anywhere on a workshop row opens its pop-up ---------- */
+  $$('.special').forEach((row) => row.addEventListener('click', (e) => {
+    const open = $('.special__open', row);
+    if (open && !e.target.closest('.special__open')) open.click();
+  }));
+
   /* ---------- tutors: quick CV pop-up ---------- */
   $$('[data-cv]').forEach((b) => b.addEventListener('click', () => { const d = $('#' + b.dataset.cv); d && d.showModal(); }));
   $$('dialog.cv').forEach((d) => {
