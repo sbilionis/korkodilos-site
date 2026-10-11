@@ -39,6 +39,41 @@ export default function (eleventyConfig) {
   // the other language's URL for this page (used by the language switch fallback and hreflang)
   eleventyConfig.addFilter("otherLang", (url, lang) => (lang === "el" ? "/en" + url : url.replace(/^\/en/, "")));
 
+  // typesetting (Stavros's rule): a line never ends on a tiny word ("ο", "και", "the"…),
+  // and the last word of a paragraph/title never sits alone on its line.
+  // Works on the finished HTML, so it also covers everything Alex types in /admin. Text only — never tags or scripts.
+  const SHORT = new Set(("ο η το οι τα τον την της του των τις τους στο στη στην στον στα στις στους σε με να θα " +
+    "και κι ή αν ως ότι από για που πως μη μην δεν ένα μια μία ένας κάθε " +
+    "a an the and or of to in on at by for with as is it we our your you i").split(" "));
+  const NB = "\u00A0";
+  const glueShort = (t) => t.replace(/(?<=^|[\s(«“"])([^\s<>()«»“”"]{1,12})[ \t\n]+(?=\S|$)/g, (m, w) =>
+    (w.length <= 2 || SHORT.has(w.toLowerCase())) && !/^\d+$/.test(w) ? w + NB : m);
+  eleventyConfig.addTransform("typeset", function (html) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return html;
+    // 1. tiny words stick to the next word (text between tags only; skip script/style/textarea)
+    let skip = false;
+    html = html.split(/(<[^>]+>)/).map((part) => {
+      if (part.startsWith("<")) {
+        const m = part.match(/^<(\/?)(script|style|textarea)\b/i);
+        if (m) skip = !m[1];
+        return part;
+      }
+      return skip ? part : glueShort(part);
+    }).join("");
+    // 2. the last two words of each paragraph/title/list item stay together (when the last word is short)
+    return html.replace(/(<(p|h1|h2|h3|li|figcaption)\b[^>]*>)([\s\S]*?)(<\/\2>)/g, (m, open, tag, inner, close) => {
+      const parts = inner.split(/(<[^>]+>)/);
+      for (let i = parts.length - 1; i >= 0; i--) {
+        if (parts[i].startsWith("<") || !parts[i].trim()) continue;
+        const k = parts[i].search(/[ \t\n]+\S*\s*$/);
+        const tail = (parts[i].slice(Math.max(k, 0)) + parts.slice(i + 1).join("")).replace(/<[^>]+>/g, "").trim();
+        if (k > 0 && tail.length <= 12) parts[i] = parts[i].slice(0, k) + NB + parts[i].slice(k).replace(/^[ \t\n]+/, "");
+        break;
+      }
+      return open + parts.join("") + close;
+    });
+  });
+
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     templateFormats: ["njk"],

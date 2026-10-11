@@ -517,3 +517,19 @@ main>img:last-child{margin-bottom:40px}
 .actions--next{margin-top:60px}
 @media (max-width:768px){.actions--next{margin-top:40px}}
 [data-specials-section][hidden]{display:none}
+
+/* ==========================================================================
+   ROUND 7 — direct fixes
+   ========================================================================== */
+/* desktop oval menu: five ovals fill the screen height under the menu row (were bunched at the top) */
+@media (min-width:769px){
+  .offcanvas{justify-content:center;padding:110px 0 50px}   /* room for the tilted ovals under the menu row and above the bottom edge */
+  .offcanvas a{height:calc((100vh - 160px + 160px) / 5);height:calc((100svh - 160px + 160px) / 5);max-height:230px;margin:-2svh auto;font-size:min(40px,5.2svh)}   /* short laptop screens: smaller overlap + type */
+}
+/* "Κλείσε θέση" on specials: never bigger than the floating "Κλείσε μάθημα" pill */
+.special .btn{padding:10px 16px;font-size:12px}
+/* line breaks: no lonely last word, no line ending on a tiny word (see the nbsp transform in eleventy.config.mjs) */
+p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
+/* Home: the orange "Τι κάνουμε" box sits on the pink, which runs down to –DILOS (its top margin used to leak out as a grey stripe) */
+.section:has(> .container > .ti-block){display:flow-root}
+.ti-block{margin-top:0}
