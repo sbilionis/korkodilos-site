@@ -621,3 +621,11 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
   .film__prev{right:46px}.film__next{right:10px}
 }
 @media (max-width:768px){.sp-dlg .cv__img{max-width:none;aspect-ratio:3/2}}   /* phones: a short landscape photo on top of the pop-up */
+/* pop-ups close with × only (the round-9 size rule had brought the word back) */
+.cv__close{font-size:0}
+/* Calendar ends with the photo inside the page margins, calm landscape size, space before –DILOS */
+.calendar-end{padding-bottom:var(--sec)}
+.calendar-end .calendar-bottom{width:100%;height:auto;aspect-ratio:3/2;max-height:70vh;object-fit:cover}
+@media (max-width:768px){.calendar-end .calendar-bottom{aspect-ratio:4/5}}
+/* privacy / terms pages */
+.legal{min-height:60vh;padding-bottom:var(--sec)}

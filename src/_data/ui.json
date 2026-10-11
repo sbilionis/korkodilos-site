@@ -77,7 +77,9 @@
       "map_aria": "Πλαταιών 56, Κεραμεικός — άνοιγμα στο Google Maps",
       "book": "Κλείσε μάθημα",
       "book_soon": "Οι online κρατήσεις έρχονται σύντομα",
-      "book_subject": "Κράτηση"
+      "book_subject": "Κράτηση",
+      "privacy": "ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ",
+      "terms": "ΟΡΟΙ"
     }
   },
   "en": {
@@ -158,7 +160,9 @@
       "map_aria": "56 Plataion, Kerameikos — open in Google Maps",
       "book": "Book a class",
       "book_soon": "Online booking is coming soon",
-      "book_subject": "Booking"
+      "book_subject": "Booking",
+      "privacy": "PRIVACY POLICY",
+      "terms": "TERMS"
     }
   }
 }

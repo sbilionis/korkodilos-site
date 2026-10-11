@@ -1,0 +1,19 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+permalink: "{{ '' if lang == 'el' else 'en/' }}terms.html"
+layout: layouts/base.njk
+pageKey: terms
+file: terms.html
+---
+{%- set t = legal[lang].terms -%}
+<h1 class="visually-hidden">{{ t.label }}</h1>
+<section class="section section--fit section--top bg-base legal">
+  <div class="container">
+    <div class="content content--top content--sm">
+      {% set paras = t.paragraphs %}{% set label = t.label %}{% set cls = "lead-small" %}{% include "partials/paras.njk" %}
+    </div>
+  </div>
+</section>

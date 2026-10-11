@@ -1,4 +1,4 @@
-{%- set all = { home: home, studio: studio, classes: classes, calendar: calendar, contact: contact } -%}
+{%- set all = { home: home, studio: studio, classes: classes, calendar: calendar, contact: contact, privacy: { el: legal.el.privacy, en: legal.en.privacy }, terms: { el: legal.el.terms, en: legal.en.terms } } -%}
 {%- set t = all[pageKey][lang] if all[pageKey] else { title: ui[lang].thanks_title + ' — Korkodilos', description: ui[lang].thanks_text } -%}
 {%- set u = ui[lang] -%}
 <!doctype html>

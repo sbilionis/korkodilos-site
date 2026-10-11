@@ -59,5 +59,7 @@ file: calendar.html
   <button class="cv__close" type="button">{{ u.close }}</button>
 </dialog>
 {%- endfor %}
-<img class="calendar-bottom" src="{{ t.bottom_image }}" alt="{{ t.bottom_alt }}" loading="lazy">
+{%- if t.bottom_image %}
+<div class="container calendar-end"><img class="calendar-bottom" src="{{ t.bottom_image }}" alt="{{ t.bottom_alt }}" loading="lazy"></div>
+{%- endif %}
 <script type="application/json" id="days-json">{{ u.days | dump | safe }}</script>

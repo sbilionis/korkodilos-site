@@ -561,6 +561,61 @@ collections:
                 widget: string
                 i18n: true
         i18n: true
+      - name: legal
+        label: Πολιτική απορρήτου & Όροι
+        file: src/_data/legal.json
+        fields:
+          - name: privacy
+            label: Πολιτική απορρήτου
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Τίτλος καρτέλας (SEO)
+                widget: string
+                i18n: true
+              - name: description
+                label: Περιγραφή για Google (SEO)
+                widget: text
+                i18n: true
+              - name: label
+                label: Τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι (με **έντονα** για bold)
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+          - name: terms
+            label: Όροι
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Τίτλος καρτέλας (SEO)
+                widget: string
+                i18n: true
+              - name: description
+                label: Περιγραφή για Google (SEO)
+                widget: text
+                i18n: true
+              - name: label
+                label: Τίτλος
+                widget: string
+                i18n: true
+              - name: paragraphs
+                label: Παράγραφοι (με **έντονα** για bold)
+                widget: list
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
+        i18n: true
   - name: programme
     label: Πρόγραμμα & Ειδικά
     format: json
@@ -851,6 +906,14 @@ collections:
                 i18n: true
               - name: map_aria
                 label: "Footer: περιγραφή χάρτη (για αναγνώστες οθόνης)"
+                widget: string
+                i18n: true
+              - name: privacy
+                label: "Footer: σύνδεσμος πολιτικής απορρήτου"
+                widget: string
+                i18n: true
+              - name: terms
+                label: "Footer: σύνδεσμος όρων"
                 widget: string
                 i18n: true
           - name: see_programme

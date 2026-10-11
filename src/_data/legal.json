@@ -1,0 +1,38 @@
+{
+  "el": {
+    "privacy": {
+      "title": "Πολιτική απορρήτου — Korkodilos",
+      "description": "Πώς ο Korkodilos χειρίζεται τα στοιχεία που μας στέλνεις.",
+      "label": "Πολιτική απορρήτου",
+      "paragraphs": [
+        "Το κείμενο θα συμπληρωθεί σύντομα."
+      ]
+    },
+    "terms": {
+      "title": "Όροι — Korkodilos",
+      "description": "Όροι συμμετοχής, κρατήσεων και ακυρώσεων στον Korkodilos.",
+      "label": "Όροι",
+      "paragraphs": [
+        "Το κείμενο θα συμπληρωθεί σύντομα."
+      ]
+    }
+  },
+  "en": {
+    "privacy": {
+      "title": "Privacy policy — Korkodilos",
+      "description": "How Korkodilos handles the details you send us.",
+      "label": "Privacy policy",
+      "paragraphs": [
+        "This text will be added soon."
+      ]
+    },
+    "terms": {
+      "title": "Terms — Korkodilos",
+      "description": "Terms for classes, bookings and cancellations at Korkodilos.",
+      "label": "Terms",
+      "paragraphs": [
+        "This text will be added soon."
+      ]
+    }
+  }
+}
