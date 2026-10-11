@@ -1,0 +1,12 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for f in ["index.html", "studio.html", "classes.html", "calendar.html", "contact.html", "privacy.html", "terms.html"] %}
+{%- for l in ["el", "en"] %}
+  <url><loc>{{ site.url }}/{{ "" if l == "el" else "en/" }}{{ f }}</loc><xhtml:link rel="alternate" hreflang="el" href="{{ site.url }}/{{ f }}"/><xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/{{ f }}"/></url>
+{%- endfor %}
+{%- endfor %}
+</urlset>

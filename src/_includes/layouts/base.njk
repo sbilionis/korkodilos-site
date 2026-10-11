@@ -1,5 +1,6 @@
 {%- set all = { home: home, studio: studio, classes: classes, calendar: calendar, contact: contact, privacy: { el: legal.el.privacy, en: legal.en.privacy }, terms: { el: legal.el.terms, en: legal.en.terms } } -%}
-{%- set t = all[pageKey][lang] if all[pageKey] else { title: ui[lang].thanks_title + ' — Korkodilos', description: ui[lang].thanks_text } -%}
+{%- set t = all[pageKey][lang] if all[pageKey] else ({ title: ui[lang].notfound_title + ' — Korkodilos', description: ui[lang].notfound_text } if pageKey == 'notfound' else { title: ui[lang].thanks_title + ' — Korkodilos', description: ui[lang].thanks_text }) -%}
+{%- set here = site.url + ('/' if lang == 'el' else '/en/') + file -%}
 {%- set u = ui[lang] -%}
 <!doctype html>
 <html lang="{{ lang }}">
@@ -10,9 +11,21 @@
 <meta name="description" content="{{ t.description }}">
 <meta property="og:title" content="{{ t.title }}">
 <meta property="og:description" content="{{ t.description }}">
-<meta property="og:image" content="{{ site.og_image }}">
-<link rel="alternate" hreflang="el" href="/{{ file }}">
-<link rel="alternate" hreflang="en" href="/en/{{ file }}">
+<meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ here }}">
+<meta property="og:locale" content="{{ 'el_GR' if lang == 'el' else 'en_GB' }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- if pageKey == 'notfound' %}
+<base href="/">
+<meta name="robots" content="noindex">
+{%- elif pageKey == 'thanks' %}
+<meta name="robots" content="noindex">
+{%- else %}
+<link rel="canonical" href="{{ here }}">
+{%- endif %}
+<link rel="alternate" hreflang="el" href="{{ site.url }}/{{ file }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}/en/{{ file }}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/Canela-Light-Gr-Web.woff2" as="font" type="font/woff2" crossorigin>

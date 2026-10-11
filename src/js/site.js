@@ -12,7 +12,7 @@
   /* ---------- language: Greek pages at the root, English pages in /en/ ---------- */
   const EN = document.documentElement.lang === 'en';
   const BASE = new URL('..', document.currentScript.src).href;          // site root, from either folder
-  const FILE = location.pathname.split('/').pop() || 'index.html';
+  const FILE = page === 'notfound' ? 'index.html' : (location.pathname.split('/').pop() || 'index.html');   // 404: the switch goes to the home page
   // every word below comes from src/_data/ui.json → "chrome" and site.json (Alex edits both in /admin)
   let D = {};
   try { D = JSON.parse(document.getElementById('ui-json').textContent); } catch (e) {}

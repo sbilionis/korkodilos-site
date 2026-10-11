@@ -1047,6 +1047,10 @@ collections:
                 label: «υποχρεωτικό»
                 widget: string
                 i18n: true
+              - name: privacy_link
+                label: Σύνδεσμος προς την πολιτική απορρήτου
+                widget: string
+                i18n: true
               - name: privacy
                 label: Σημείωση απορρήτου
                 widget: text
@@ -1073,6 +1077,9 @@ collections:
         file: src/_data/site.json
         i18n: false
         fields:
+          - name: url
+            label: Διεύθυνση του site (π.χ. https://korkodilos.gr, χωρίς / στο τέλος)
+            widget: string
           - name: email
             label: Email
             widget: string

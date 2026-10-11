@@ -15,6 +15,6 @@
   <label class="kform__f kform__f--half"><span>{{ u.form.date }}</span><input name="preferred_date" placeholder="{{ u.form.date_hint }}"></label>
   {%- endif %}
   <label class="kform__f kform__f--wide"><span>{{ u.form.message }}{% if kind == "contact" %} *{% endif %}</span><textarea name="message" rows="4"{% if kind == "contact" %} required{% endif %}></textarea></label>
-  <p class="kform__note">{{ u.form.privacy }}</p>
+  <p class="kform__note">{{ u.form.privacy }} <a href="{{ '/privacy.html' if lang == 'el' else '/en/privacy.html' }}">{{ u.form.privacy_link }}</a></p>
   <button class="btn" type="submit"><span class="gr">{{ u.form.send }}</span> →</button>
 </form>

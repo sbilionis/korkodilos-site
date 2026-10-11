@@ -57,7 +57,8 @@
       "send": "Αποστολή",
       "required": "υποχρεωτικό",
       "privacy": "Θα χρησιμοποιήσουμε τα στοιχεία σου μόνο για να σου απαντήσουμε.",
-      "date_hint": "π.χ. Σάββατο 15/11"
+      "date_hint": "π.χ. Σάββατο 15/11",
+      "privacy_link": "Πολιτική απορρήτου →"
     },
     "thanks_title": "Ευχαριστούμε!",
     "thanks_text": "Λάβαμε το μήνυμά σου και θα σου απαντήσουμε σύντομα.",
@@ -80,7 +81,10 @@
       "book_subject": "Κράτηση",
       "privacy": "ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ",
       "terms": "ΟΡΟΙ"
-    }
+    },
+    "notfound_title": "Δεν βρέθηκε",
+    "notfound_text": "Αυτή η σελίδα δεν υπάρχει (ή μετακόμισε).",
+    "notfound_back": "Πίσω στην αρχική"
   },
   "en": {
     "bio": "Bio +",
@@ -140,7 +144,8 @@
       "send": "Send",
       "required": "required",
       "privacy": "We’ll only use your details to reply to you.",
-      "date_hint": "e.g. Saturday 15/11"
+      "date_hint": "e.g. Saturday 15/11",
+      "privacy_link": "Privacy policy →"
     },
     "thanks_title": "Thank you!",
     "thanks_text": "We got your message and will reply soon.",
@@ -163,6 +168,9 @@
       "book_subject": "Booking",
       "privacy": "PRIVACY POLICY",
       "terms": "TERMS"
-    }
+    },
+    "notfound_title": "Not found",
+    "notfound_text": "This page doesn’t exist (or it has moved).",
+    "notfound_back": "Back to the home page"
   }
 }

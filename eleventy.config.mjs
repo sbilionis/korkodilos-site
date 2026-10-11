@@ -76,6 +76,23 @@ export default function (eleventyConfig) {
     });
   });
 
+  // every <img> of ours gets its real width/height (no jumping while photos load), and — on Netlify —
+  // responsive sizes from the Netlify Image CDN, so phones download small photos (also for Alex's uploads)
+  const CDN = process.env.NETLIFY === "true";
+  const cdn = (src, w) => `/.netlify/images?url=${encodeURIComponent(src)}&w=${w}&q=78`;
+  eleventyConfig.addTransform("imgsizes", function (html) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return html;
+    return html.replace(/<img\b([^>]*?)\ssrc="(\/assets\/img\/[^"]+\.(?:jpe?g|png|webp))"([^>]*)>/g, (m, a, src, b) => {
+      let d;
+      try { d = imageSize(fs.readFileSync(path.join("src", src))); } catch (e) { return m; }
+      const size = /\swidth=/.test(a + b) ? "" : ` width="${d.width}" height="${d.height}"`;
+      if (!CDN) return `<img${a} src="${src}"${size}${b}>`;
+      const ws = [480, 800, 1200, 1600, 2000].filter((w) => w < d.width).concat(d.width);
+      const set = ws.map((w) => `${cdn(src, w)} ${w}w`).join(", ");
+      return `<img${a} src="${cdn(src, Math.min(1200, d.width))}" srcset="${set}" sizes="(max-width: 768px) 100vw, 60vw"${size}${b}>`;
+    });
+  });
+
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     templateFormats: ["njk"],
