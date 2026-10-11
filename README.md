@@ -25,11 +25,11 @@ never end a page on a dark section (KORKO/–DILOS are ink).
 
 ## One-time setup (Stavros)
 
-1. **GitHub** — easiest with GitHub Desktop: *File → Add local repository →* this folder → **Publish repository**, keep it **private**, name `korkodilos-site`.
+1. ✅ **GitHub** — done 11 Oct 2026: **public** repo github.com/sbilionis/korkodilos-site (public so Netlify doesn't bill each editor as a "Git contributor"; no fonts, passwords or private data in it). `gh` CLI is installed and logged in as sbilionis, so pushes work from the terminal.
 2. ~~Admin config~~ — done: `backend.repo` is `sbilionis/korkodilos-site`.
-3. **Netlify → the korkonew site → Site configuration → Build & deploy → Link repository** → GitHub → `korkodilos-site`.
+3. ✅ **Netlify** — done: korkonew deploys from GitHub `main` (Netlify GitHub app limited to this one repository).
    Build settings come from `netlify.toml` (build `npm run build`, publish `_site`). From now on every push (and every save in the admin) redeploys.
-4. **Forms** — Netlify → *Forms* → **Enable form detection**, then trigger a deploy. Two forms appear: `enquiry` (Corporate / Clay Party, field `type` says which) and `contact`.
+4. ✅ **Forms** — done: detection on, forms `contact` + `enquiry` active, email notification to korkodilos20@gmail.com for any form. Two forms appear: `enquiry` (Corporate / Clay Party, field `type` says which) and `contact`.
    *Forms → Form notifications → Add notification → Email notification* → `korkodilos20@gmail.com` (any form).
 5. **Admin login (GitHub OAuth)**
    - GitHub → *Settings → Developer settings → OAuth Apps → New OAuth App*: Homepage `https://korkonew.netlify.app`, Authorization callback `https://api.netlify.com/auth/done`. Copy the Client ID and generate a Client secret.
