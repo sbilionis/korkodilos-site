@@ -3,8 +3,8 @@
     "title": "Studio — Korkodilos",
     "description": "Το εργαστήριο κεραμικής του Αλέξανδρου Ντούρα στον Κεραμεικό: ένα μεγάλο κοινό τραπέζι, φυτά, φως, καμίνι — και οι δάσκαλοί μας.",
     "h1": "Studio",
-    "hero_image": "/assets/img/uploads/korko-studio-e1620639613575-1200x630-c.jpg",
-    "hero_alt": "Η δασκάλα ετοιμάζει τους πάγκους του εργαστηρίου",
+    "hero_image": "/assets/img/uploads/korko-4944.jpg",
+    "hero_alt": "Το εργαστήριο με τα κρεμαστά φωτιστικά και τις λευκές κουρτίνες",
     "intro": {
       "label": "Studio",
       "paragraphs": [
@@ -12,8 +12,8 @@
         "Φυτά, μυρωδιές, φυσικό φως, καθαρό ξύλο. Ο χώρος είναι κομμάτι της δημιουργίας: ζεστός, ανάλαφρος, φτιαγμένος για συγκέντρωση και πειραματισμό."
       ]
     },
-    "k_photo": "/assets/img/uploads/R1-07087-0014-757x1057-c.jpg",
-    "k_photo_alt": "Ξύλινοι πάγκοι εργασίας με φυτά και κεραμικά",
+    "k_photo": "/assets/img/uploads/korko-4931.jpg",
+    "k_photo_alt": "Βάζο με αμάραντο στο κοινό τραπέζι",
     "table": {
       "label": "Το τραπέζι",
       "paragraphs": [
@@ -34,20 +34,24 @@
     "tools": {
       "label": "Tools",
       "paragraphs": [
-        "Όλα τα εργαλεία είναι εδώ: πινέλα, φλόγιστρα, τροχοί χειρός, αερογράφοι, πηλοί, σμάλτα, χρώματα. Ψήνουμε στο δικό μας καμίνι, οπότε ό,τι φτιάξεις το παίρνεις σπίτι ψημένο και υαλωμένο."
+        "Όλα τα εργαλεία είναι εδώ: πινέλα, φλόγιστρα, τροχοί χειρός, αερογράφοι, φιλιέρα, πηλοί, σμάλτα, χρώματα. Ψήνουμε στο δικό μας καμίνι, οπότε ό,τι φτιάξεις το παίρνεις σπίτι ψημένο και υαλωμένο."
       ]
     },
     "team": {
       "label": "Who we are",
       "text": "Οι δάσκαλοι του εργαστηρίου."
+    },
+    "next": {
+      "text": "Δες τα μαθήματα",
+      "link": "classes.html"
     }
   },
   "en": {
     "title": "Studio — Korkodilos",
     "description": "Alexandros Douras’s ceramic studio in Kerameikos: one big shared table, plants, light, a kiln — and our teachers.",
     "h1": "Studio",
-    "hero_image": "/assets/img/uploads/korko-studio-e1620639613575-1200x630-c.jpg",
-    "hero_alt": "The teacher preparing the studio benches",
+    "hero_image": "/assets/img/uploads/korko-4944.jpg",
+    "hero_alt": "The studio with its hanging lights and white curtains",
     "intro": {
       "label": "Studio",
       "paragraphs": [
@@ -55,8 +59,8 @@
         "Plants, smells, daylight, clean wood. The space is part of the making: warm, light, built for focus and experiment."
       ]
     },
-    "k_photo": "/assets/img/uploads/R1-07087-0014-757x1057-c.jpg",
-    "k_photo_alt": "Wooden workbenches with plants and ceramics",
+    "k_photo": "/assets/img/uploads/korko-4931.jpg",
+    "k_photo_alt": "Vase with amaranth on the shared table",
     "table": {
       "label": "The table",
       "paragraphs": [
@@ -77,12 +81,16 @@
     "tools": {
       "label": "Tools",
       "paragraphs": [
-        "All the tools are here: brushes, torches, banding wheels, airbrushes, clays, glazes, colours. We fire in our own kiln, so whatever you make, you take home fired and glazed."
+        "All the tools are here: brushes, torches, banding wheels, airbrushes, an extruder, clays, glazes, colours. We fire in our own kiln, so whatever you make, you take home fired and glazed."
       ]
     },
     "team": {
       "label": "Who we are",
       "text": "The studio’s teachers."
+    },
+    "next": {
+      "text": "See the classes",
+      "link": "classes.html"
     }
   }
 }

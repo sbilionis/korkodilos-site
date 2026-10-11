@@ -494,3 +494,26 @@ main>img:last-child{margin-bottom:40px}
 .cal__t{display:block;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.03em;text-transform:uppercase;margin-top:6px;opacity:.75}
 .cal__s--other{background:var(--pink)}
 @media (max-width:768px){.cal-day .cal__s--other{border-radius:12px}}
+
+/* ==========================================================================
+   ROUND 6 — Home in the oval menu, Studio "next" button, Specials hide when empty
+   ========================================================================== */
+/* five ovals: Home (ink) on top, then the four pages in their colours; they start below the menu row */
+.offcanvas{justify-content:flex-start;padding-top:100px}
+.offcanvas a{height:calc((100vh - 136px) / 5 + 20px);height:calc((100svh - 136px) / 5 + 20px)}
+.offcanvas a:nth-child(1){background:var(--ink);color:var(--base);transform:rotate(10deg)}
+.offcanvas a:nth-child(2){background:var(--orange);transform:rotate(-10deg)}
+.offcanvas a:nth-child(3){background:var(--brown);transform:rotate(10deg)}
+.offcanvas a:nth-child(4){background:var(--green);transform:rotate(-10deg)}
+.offcanvas a:nth-child(5){background:var(--pink);transform:rotate(10deg)}
+.offcanvas a:hover,.offcanvas a:focus-visible{transform:rotate(0)}
+@media (max-width:768px){
+  .offcanvas{padding-top:calc(var(--gum) + 20px)}
+  .offcanvas a{height:calc((100vh - var(--gum) - 64px) / 5 + 18px);height:calc((100svh - var(--gum) - 64px) / 5 + 18px)}
+  .offcanvas a:nth-child(odd){transform:rotate(6deg)}
+  .offcanvas a:nth-child(even){transform:rotate(-6deg)}
+  .offcanvas a:hover,.offcanvas a:focus-visible{transform:rotate(0)}
+}
+.actions--next{margin-top:60px}
+@media (max-width:768px){.actions--next{margin-top:40px}}
+[data-specials-section][hidden]{display:none}

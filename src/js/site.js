@@ -13,13 +13,13 @@
   const EN = document.documentElement.lang === 'en';
   const BASE = new URL('..', document.currentScript.src).href;          // site root, from either folder
   const FILE = location.pathname.split('/').pop() || 'index.html';
-  const T = EN ? {
-    addr: '56 PLATAION, 104 35 ATHENS', map: 'MAP ↗', mapCta: '56 PLATAION · GOOGLE MAPS ↗', mapAria: '56 Plataion, Kerameikos — open in Google Maps',
-    book: 'Book a class', bookSoon: 'Online booking is coming soon', bookSubj: 'Booking', close: 'Close ×'
-  } : {
-    addr: 'ΠΛΑΤΑΙΩΝ 56, 104 35 ΑΘΗΝΑ', map: 'ΧΑΡΤΗΣ ↗', mapCta: 'ΠΛΑΤΑΙΩΝ 56 · GOOGLE MAPS ↗', mapAria: 'Πλαταιών 56, Κεραμεικός — άνοιγμα στο Google Maps',
-    book: 'Κλείσε μάθημα', bookSoon: 'Οι online κρατήσεις έρχονται σύντομα', bookSubj: 'Κράτηση', close: 'Κλείσιμο ×'
-  };
+  // every word below comes from src/_data/ui.json → "chrome" and site.json (Alex edits both in /admin)
+  let D = {};
+  try { D = JSON.parse(document.getElementById('ui-json').textContent); } catch (e) {}
+  const T = Object.assign({ label: 'CERAMIC STUDIO', menu: {} }, D.ui || {});
+  T.close = D.close || '×';
+  const M = Object.assign({ home: 'Home', studio: 'Studio', classes: 'Classes', calendar: 'Calendar', contact: 'Contact' }, T.menu);
+  const tel = (D.phone || '').replace(/[^+\d]/g, '');
 
   /* ---------- the K symbol: stem + two jaws, so it can open and close ---------- */
   // Stavros's animated symbol (assets/img/korko-mouth.svg, see korko-mouth-HANDOFF.md) — colour from currentColor
@@ -72,21 +72,22 @@
   /* ---------- markup: upper jaw (original header) ---------- */
   $('[data-jaw="top"]').outerHTML = `
   <header class="jaw-top" id="jawTop">
-    <a href="index.html" class="jaw-top__label">CERAMIC STUDIO</a>
+    <a href="index.html" class="jaw-top__label">${T.label}</a>
     <nav class="jaw-top__menu" aria-label="Main">
-      <a href="studio.html"${cur('studio')}>Studio</a>
-      <a href="classes.html"${cur('classes')}>Classes</a>
-      <a href="calendar.html"${cur('calendar')}>Calendar</a>
-      <a href="contact.html"${cur('contact')}>Contact</a>
+      <a href="studio.html"${cur('studio')}>${M.studio}</a>
+      <a href="classes.html"${cur('classes')}>${M.classes}</a>
+      <a href="calendar.html"${cur('calendar')}>${M.calendar}</a>
+      <a href="contact.html"${cur('contact')}>${M.contact}</a>
     </nav>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="offcanvas"><span></span></button>
     <div class="jaw-top__lang"><a href="${BASE}${FILE}" lang="el"${EN ? '' : ' aria-current="true"'}>GR</a><a href="${BASE}en/${FILE}" lang="en"${EN ? ' aria-current="true"' : ''}>EN</a></div>
     <div class="jaw-top__mouth"><a href="index.html" class="jaw-top__logo" aria-label="Korkodilos — home"><span></span></a></div>
     <nav class="offcanvas" id="offcanvas" aria-label="Menu" inert>
-      <a href="studio.html"${cur('studio')}>Studio</a>
-      <a href="classes.html"${cur('classes')}>Classes</a>
-      <a href="calendar.html"${cur('calendar')}>Calendar</a>
-      <a href="contact.html"${cur('contact')}>Contact</a>
+      <a href="index.html" class="offcanvas__home"${cur('home')}>${M.home}</a>
+      <a href="studio.html"${cur('studio')}>${M.studio}</a>
+      <a href="classes.html"${cur('classes')}>${M.classes}</a>
+      <a href="calendar.html"${cur('calendar')}>${M.calendar}</a>
+      <a href="contact.html"${cur('contact')}>${M.contact}</a>
     </nav>
   </header>`;
 
@@ -95,17 +96,17 @@
   <div class="jaw-bottom" id="jawBottom">
     <div class="jaw-bottom__logo"><div class="wrap"><span role="img" aria-label="—dilos"></span></div></div>
     <footer class="footer">
-      <a class="footer__map" href="https://www.google.com/maps/search/?api=1&query=Korkodilos%2C%20%CE%A0%CE%BB%CE%B1%CF%84%CE%B1%CE%B9%CF%8E%CE%BD%2056%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1" target="_blank" rel="noopener" aria-label="${T.mapAria}">
+      <a class="footer__map" href="${D.maps}" target="_blank" rel="noopener" aria-label="${T.map_aria}">
         <span class="footer__map-svg" data-map="${BASE}assets/img/map-kerameikos.svg"></span>
         <span class="footer__pin" aria-hidden="true">${K_SYMBOL('pin')}</span>
-        <span class="footer__map-cta">${T.mapCta}</span>
+        <span class="footer__map-cta">${T.map_cta}</span>
       </a>
       <div class="footer__cols">
-        <div class="footer__block">${T.addr}<br><a href="https://www.google.com/maps/search/?api=1&query=Korkodilos%2C%20%CE%A0%CE%BB%CE%B1%CF%84%CE%B1%CE%B9%CF%8E%CE%BD%2056%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1" target="_blank" rel="noopener">${T.map}</a></div>
+        <div class="footer__block">${T.addr}<br><a href="${D.maps}" target="_blank" rel="noopener">${T.map}</a></div>
         <div class="footer__block"><ul>
-          <li><a href="https://www.facebook.com/Korkodilos-112183953677104" target="_blank" rel="noopener">FACEBOOK</a></li>
-          <li><a href="https://www.instagram.com/korkodilosathens/" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="mailto:korkodilos20@gmail.com">EMAIL</a></li>
+          <li><a href="${D.facebook}" target="_blank" rel="noopener">FACEBOOK</a></li>
+          <li><a href="${D.instagram}" target="_blank" rel="noopener">INSTAGRAM</a></li>
+          <li><a href="mailto:${D.email}">EMAIL</a></li>
         </ul></div>
         <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a> · DEVELOPED BY <a href="https://bracket.gr" target="_blank" rel="noopener">BRACKET</a> · PHOTOS <a href="https://www.instagram.com/teapotgr/" target="_blank" rel="noopener">@teapotgr</a></p>
       </div>
@@ -145,11 +146,11 @@
   <dialog class="cv book-dlg" id="bookDlg" aria-labelledby="bookDlgH">
     <div class="cv__inner"><div>
       <h2 id="bookDlgH" tabindex="-1" autofocus>${T.book}</h2>
-      <p class="cv__role">${T.bookSoon}</p>
+      <p class="cv__role">${T.book_soon}</p>
       <ul>
-        <li><a href="mailto:korkodilos20@gmail.com?subject=${encodeURIComponent(T.bookSubj)}">korkodilos20@gmail.com</a></li>
+        <li><a href="mailto:${D.email}?subject=${encodeURIComponent(T.book_subject)}">${D.email}</a></li>
         <li><a href="https://ig.me/m/korkodilosathens" target="_blank" rel="noopener">Instagram DM ↗</a></li>
-        <li><a href="tel:+302100000000" class="ph" title="placeholder">+30 210 000 0000</a></li>
+        ${D.phone ? `<li><a href="tel:${tel}">${D.phone}</a></li>` : ''}
       </ul>
     </div></div>
     <button class="cv__close" type="button">${T.close}</button>

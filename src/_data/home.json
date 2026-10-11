@@ -9,12 +9,20 @@
         "alt": "Το κοινό τραπέζι με τα φωτιστικά και τα φυτά"
       },
       {
+        "image": "/assets/img/uploads/korko-6882.jpg",
+        "alt": "Από ψηλά: το εργαστήριο με τις λευκές κουρτίνες"
+      },
+      {
         "image": "/assets/img/uploads/k69.jpg",
         "alt": "Από ψηλά: μαθητές δουλεύουν γύρω από το τραπέζι"
       },
       {
         "image": "/assets/img/uploads/k20.jpg",
         "alt": "Μαθήτρια δουλεύει τον πηλό"
+      },
+      {
+        "image": "/assets/img/uploads/korko-4936.jpg",
+        "alt": "Βάζο με αμάραντο στο φως του παραθύρου"
       },
       {
         "image": "/assets/img/uploads/k62.jpg",
@@ -25,12 +33,20 @@
         "alt": "Χέρια βουτηγμένα σε υγρό πηλό"
       },
       {
+        "image": "/assets/img/uploads/korko-7241.jpg",
+        "alt": "Ράφια με κεραμικά και ζωγραφισμένα πρόσωπα"
+      },
+      {
         "image": "/assets/img/uploads/k52.jpg",
         "alt": "Κεραμικές φιγούρες πάνω στο τραπέζι"
       },
       {
         "image": "/assets/img/uploads/k37.jpg",
         "alt": "Ράφια με έργα και ξερά φυτά"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7584.jpg",
+        "alt": "Το τραπέζι στο απογευματινό φως"
       },
       {
         "image": "/assets/img/uploads/k21.jpg",
@@ -56,24 +72,24 @@
           "title": "Monthly 4×3",
           "text": "Ένα τρίωρο την εβδομάδα, για τέσσερις εβδομάδες. Διαλέγεις τη μέρα σου.",
           "price": "από €100 / μήνα",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-7200.jpg",
+          "image_alt": "Χέρια δουλεύουν ένα μπολ με εργαλείο",
           "link": "classes.html#monthly"
         },
         {
           "title": "Corporate Bonding",
           "text": "Η ομάδα σας γύρω από τον πηλό, στον χώρο μας ή στον δικό σας.",
           "price": "κατόπιν επικοινωνίας",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-7360.jpg",
+          "image_alt": "Παρέα δουλεύει γύρω από το τραπέζι",
           "link": "classes.html#corporate"
         },
         {
           "title": "Clay Parties",
           "text": "Κλείνεις τον χώρο και τον δάσκαλο, φέρνεις drinks και καλή διάθεση.",
           "price": "κατόπιν επικοινωνίας",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-6977.jpg",
+          "image_alt": "Ηλιοτρόπια σε κεραμικό βάζο με πιάτο",
           "link": "classes.html#parties"
         }
       ]
@@ -89,12 +105,20 @@
         "alt": "The shared table with the lamps and plants"
       },
       {
+        "image": "/assets/img/uploads/korko-6882.jpg",
+        "alt": "From above: the studio with its white curtains"
+      },
+      {
         "image": "/assets/img/uploads/k69.jpg",
         "alt": "From above: students working around the table"
       },
       {
         "image": "/assets/img/uploads/k20.jpg",
         "alt": "A student working the clay"
+      },
+      {
+        "image": "/assets/img/uploads/korko-4936.jpg",
+        "alt": "Vase with amaranth in the window light"
       },
       {
         "image": "/assets/img/uploads/k62.jpg",
@@ -105,12 +129,20 @@
         "alt": "Hands dipped in liquid clay"
       },
       {
+        "image": "/assets/img/uploads/korko-7241.jpg",
+        "alt": "Shelves with ceramics and painted faces"
+      },
+      {
         "image": "/assets/img/uploads/k52.jpg",
         "alt": "Ceramic figures on the table"
       },
       {
         "image": "/assets/img/uploads/k37.jpg",
         "alt": "Shelves with work and dried plants"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7584.jpg",
+        "alt": "The table in the afternoon light"
       },
       {
         "image": "/assets/img/uploads/k21.jpg",
@@ -136,24 +168,24 @@
           "title": "Monthly 4×3",
           "text": "One three-hour class a week, for four weeks. You choose your day.",
           "price": "from €100 / month",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-7200.jpg",
+          "image_alt": "Hands working a bowl with a tool",
           "link": "classes.html#monthly"
         },
         {
           "title": "Corporate Bonding",
           "text": "Your team around the clay, at our studio or at yours.",
           "price": "on request",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-7360.jpg",
+          "image_alt": "A group working around the table",
           "link": "classes.html#corporate"
         },
         {
           "title": "Clay Parties",
           "text": "Book the space and a teacher, bring drinks and a good mood.",
           "price": "on request",
-          "image": "",
-          "image_alt": "",
+          "image": "/assets/img/uploads/korko-6977.jpg",
+          "image_alt": "Sunflowers in a ceramic vase with a plate",
           "link": "classes.html#parties"
         }
       ]

@@ -11,8 +11,8 @@
     "getting_here": {
       "label": "Πώς θα έρθεις",
       "lines": [
-        "Μετρό Κεραμεικός, περίπου 8′ με τα πόδια.",
-        "Μετρό Μεταξουργείο, περίπου 9′."
+        "Μετρό Κεραμεικός, περίπου 5′ με τα πόδια.",
+        "Μετρό Μεταξουργείο, περίπου 5′ με τα πόδια."
       ],
       "maps_link": "Οδηγίες στο Google Maps ↗"
     },
@@ -39,8 +39,8 @@
     "getting_here": {
       "label": "How to get here",
       "lines": [
-        "Kerameikos metro, about 8′ on foot.",
-        "Metaxourgeio metro, about 9′."
+        "Kerameikos metro, about 5′ on foot.",
+        "Metaxourgeio metro, about 5′ on foot."
       ],
       "maps_link": "Directions on Google Maps ↗"
     },

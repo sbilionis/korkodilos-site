@@ -46,7 +46,6 @@
       "workshop": "Workshop",
       "series": "Νέα σειρά"
     },
-    "no_specials": "Αυτή τη στιγμή δεν έχουμε κάτι ειδικό στο πρόγραμμα. Τα νέα workshops και events ανακοινώνονται πρώτα στο [Instagram].",
     "form": {
       "name": "Όνομα",
       "email": "Email",
@@ -57,11 +56,29 @@
       "message": "Μήνυμα",
       "send": "Αποστολή",
       "required": "υποχρεωτικό",
-      "privacy": "Θα χρησιμοποιήσουμε τα στοιχεία σου μόνο για να σου απαντήσουμε."
+      "privacy": "Θα χρησιμοποιήσουμε τα στοιχεία σου μόνο για να σου απαντήσουμε.",
+      "date_hint": "π.χ. Σάββατο 15/11"
     },
     "thanks_title": "Ευχαριστούμε!",
     "thanks_text": "Λάβαμε το μήνυμά σου και θα σου απαντήσουμε σύντομα.",
-    "thanks_back": "Πίσω στην αρχική"
+    "thanks_back": "Πίσω στην αρχική",
+    "chrome": {
+      "label": "CERAMIC STUDIO",
+      "menu": {
+        "home": "Home",
+        "studio": "Studio",
+        "classes": "Classes",
+        "calendar": "Calendar",
+        "contact": "Contact"
+      },
+      "addr": "ΠΛΑΤΑΙΩΝ 56, 104 35 ΑΘΗΝΑ",
+      "map": "ΧΑΡΤΗΣ ↗",
+      "map_cta": "ΠΛΑΤΑΙΩΝ 56 · GOOGLE MAPS ↗",
+      "map_aria": "Πλαταιών 56, Κεραμεικός — άνοιγμα στο Google Maps",
+      "book": "Κλείσε μάθημα",
+      "book_soon": "Οι online κρατήσεις έρχονται σύντομα",
+      "book_subject": "Κράτηση"
+    }
   },
   "en": {
     "bio": "Bio +",
@@ -110,7 +127,6 @@
       "workshop": "Workshop",
       "series": "New series"
     },
-    "no_specials": "Nothing special on the programme right now. New workshops and events are announced first on [Instagram].",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -121,10 +137,28 @@
       "message": "Message",
       "send": "Send",
       "required": "required",
-      "privacy": "We’ll only use your details to reply to you."
+      "privacy": "We’ll only use your details to reply to you.",
+      "date_hint": "e.g. Saturday 15/11"
     },
     "thanks_title": "Thank you!",
     "thanks_text": "We got your message and will reply soon.",
-    "thanks_back": "Back to the home page"
+    "thanks_back": "Back to the home page",
+    "chrome": {
+      "label": "CERAMIC STUDIO",
+      "menu": {
+        "home": "Home",
+        "studio": "Studio",
+        "classes": "Classes",
+        "calendar": "Calendar",
+        "contact": "Contact"
+      },
+      "addr": "56 PLATAION, 104 35 ATHENS",
+      "map": "MAP ↗",
+      "map_cta": "56 PLATAION · GOOGLE MAPS ↗",
+      "map_aria": "56 Plataion, Kerameikos — open in Google Maps",
+      "book": "Book a class",
+      "book_soon": "Online booking is coming soon",
+      "book_subject": "Booking"
+    }
   }
 }

@@ -3,7 +3,7 @@
    The programme itself is built into the HTML from src/_data/programme.json
    (Alex edits it in /admin). This script only:
    - hides specials whose date has passed (the site isn't rebuilt every day),
-   - shows "nothing special right now" when none are left,
+   - hides the whole Specials section when none are left (it comes back when Alex adds a date),
    - writes the weekday in front of each special's time.
    ========================================================================== */
 (function () {
@@ -20,5 +20,5 @@
     const small = el.querySelector('[data-weekday]');
     if (small && days.length) small.textContent = days[(d.getDay() + 6) % 7] + ' · ' + small.textContent;
   });
-  if (!shown) list.querySelector('[data-empty]').hidden = false;
+  if (!shown) list.closest('[data-specials-section]').hidden = true;
 })();

@@ -16,14 +16,14 @@
         },
         {
           "label": "2 μήνες",
-          "price": "€XX"
+          "price": "€190"
         },
         {
           "label": "3 μήνες",
-          "price": "€XX"
+          "price": "€265"
         }
       ],
-      "note": "2–3 μήνες: η τιμή ανακοινώνεται σύντομα"
+      "note": "Στην τιμή περιλαμβάνονται όλα τα υλικά, τα εργαλεία, το ψήσιμο των έργων και ο ΦΠΑ 24%."
     },
     "levels": {
       "paragraphs": [
@@ -31,12 +31,12 @@
       ],
       "photos": [
         {
-          "image": "/assets/img/uploads/R1-07089-0032-713x475-c.jpg",
-          "alt": "Μεταφορά πηλού στο εργαστήριο"
+          "image": "/assets/img/uploads/korko-6264.jpg",
+          "alt": "Χέρια κόβουν ένα φύλλο πηλού με πλάστη"
         },
         {
-          "image": "/assets/img/uploads/R1-07088-0031-460x311-c.jpg",
-          "alt": "Κεραμικές φιγούρες μαθητών σε ξύλινο πάγκο"
+          "image": "/assets/img/uploads/korko-7209.jpg",
+          "alt": "Το τραπέζι με εργαλεία, χρώματα και έργα στη μέση"
         }
       ]
     },
@@ -72,14 +72,14 @@
         },
         {
           "label": "2 months",
-          "price": "€XX"
+          "price": "€190"
         },
         {
           "label": "3 months",
-          "price": "€XX"
+          "price": "€265"
         }
       ],
-      "note": "2–3 months: price coming soon"
+      "note": "All materials, tools, the firing of your pieces and 24% VAT are included in the price."
     },
     "levels": {
       "paragraphs": [
@@ -87,12 +87,12 @@
       ],
       "photos": [
         {
-          "image": "/assets/img/uploads/R1-07089-0032-713x475-c.jpg",
-          "alt": "Carrying clay in the studio"
+          "image": "/assets/img/uploads/korko-6264.jpg",
+          "alt": "Hands cutting a slab of clay with a rolling pin"
         },
         {
-          "image": "/assets/img/uploads/R1-07088-0031-460x311-c.jpg",
-          "alt": "Students’ ceramic figures on a wooden bench"
+          "image": "/assets/img/uploads/korko-7209.jpg",
+          "alt": "The table with tools, paints and work in progress"
         }
       ]
     },

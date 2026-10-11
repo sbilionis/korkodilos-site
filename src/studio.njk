@@ -69,6 +69,9 @@ file: studio.html
       </button>
       {%- endfor %}
     </div>
+    {%- if t.next and t.next.text %}
+    <div class="actions actions--next swallow"><a class="btn btn--light" href="{{ t.next.link }}"><span class="gr">{{ t.next.text }}</span> →</a></div>
+    {%- endif %}
   </div>
 </section>
 {%- for p in tutors[lang].people %}

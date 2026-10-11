@@ -12,7 +12,7 @@
   <label class="kform__f"><span>{{ u.form.company }}</span><input name="company" autocomplete="organization"></label>
   {%- endif %}
   <label class="kform__f kform__f--half"><span>{{ u.form.group }}</span><input type="number" name="group_size" min="1" inputmode="numeric"></label>
-  <label class="kform__f kform__f--half"><span>{{ u.form.date }}</span><input name="preferred_date" placeholder="{{ 'π.χ. Σάββατο 15/11' if lang == 'el' else 'e.g. Saturday 15/11' }}"></label>
+  <label class="kform__f kform__f--half"><span>{{ u.form.date }}</span><input name="preferred_date" placeholder="{{ u.form.date_hint }}"></label>
   {%- endif %}
   <label class="kform__f kform__f--wide"><span>{{ u.form.message }}{% if kind == "contact" %} *{% endif %}</span><textarea name="message" rows="4"{% if kind == "contact" %} required{% endif %}></textarea></label>
   <p class="kform__note">{{ u.form.privacy }}</p>

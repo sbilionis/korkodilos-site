@@ -28,7 +28,7 @@ file: calendar.html
     <p class="cal-note swallow">{{ t.note }}</p>
   </div>
 </section>
-<section class="section section--fit bg-base">
+<section class="section section--fit bg-base" data-specials-section>
   <div class="container">
     <div class="content content--sm"><p><em>{{ t.specials.label }}</em> {{ t.specials.text | mdi | safe }}</p></div>
     <div class="specials swallow" data-specials>
@@ -40,14 +40,6 @@ file: calendar.html
         <div class="special__side"><span>{{ s.price }}</span><a class="btn" href="#book"><span class="gr">{{ u.book_place }}</span> →</a></div>
       </article>
       {%- endfor %}
-      <p class="empty-note" data-empty hidden>{{ u.no_specials | replace("[Instagram]", '<a href="' + site.instagram + '" target="_blank" rel="noopener">Instagram</a>') | safe }}</p>
-    </div>
-  </div>
-</section>
-<section class="section section--fit bg-pink">
-  <div class="container">
-    <div class="content">
-      <p>{{ t.closing | mdi | safe }}</p>
     </div>
   </div>
 </section>

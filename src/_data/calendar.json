@@ -5,16 +5,15 @@
     "h1": "Calendar",
     "intro": {
       "label": "Calendar",
-      "text": "Ο **Korkodilos** έχει πρόγραμμα αλλά όχι ρουτίνα. Κάθε εβδομάδα, αυτές τις μέρες, το τραπέζι είναι στρωμένο."
+      "text": "Ο **Korkodilos** έχει πρόγραμμα αλλά όχι ρουτίνα. Κάθε εβδομάδα, αυτές τις μέρες, το τραπέζι είναι στρωμένο. Όλα τα μαθήματά μας είναι για όλα τα επίπεδα: δεν χρειάζεσαι καμία εμπειρία για να ξεκινήσεις να δημιουργείς με πηλό στο εργαστήριό μας."
     },
-    "note": "Monthly 4×3, για όλα τα επίπεδα",
+    "note": "Monthly 4×3",
     "specials": {
       "label": "Ειδικά",
       "text": "Workshops, events και νέες σειρές."
     },
-    "closing": "Όλα τα μαθήματα είναι για όλα τα επίπεδα, ακόμα και για πρώτη φορά.",
-    "bottom_image": "/assets/img/uploads/R1-07087-0011-1920x920-c.jpg",
-    "bottom_alt": "Κισσός σε κεραμική γλάστρα"
+    "bottom_image": "/assets/img/uploads/korko-4927.jpg",
+    "bottom_alt": "Το μακρύ κοινό τραπέζι με τα φωτιστικά"
   },
   "en": {
     "title": "Calendar — Korkodilos",
@@ -22,15 +21,14 @@
     "h1": "Calendar",
     "intro": {
       "label": "Calendar",
-      "text": "**Korkodilos** has a programme but no routine. Every week, on these days, the table is set."
+      "text": "**Korkodilos** has a programme but no routine. Every week, on these days, the table is set. All our classes are for all levels: you don’t need any experience to start making things with clay in our studio."
     },
-    "note": "Monthly 4×3, for all levels",
+    "note": "Monthly 4×3",
     "specials": {
       "label": "Specials",
       "text": "Workshops, events and new series."
     },
-    "closing": "All classes are for all levels, even for first-timers.",
-    "bottom_image": "/assets/img/uploads/R1-07087-0011-1920x920-c.jpg",
-    "bottom_alt": "Ivy in a ceramic pot"
+    "bottom_image": "/assets/img/uploads/korko-4927.jpg",
+    "bottom_alt": "The long shared table under the lights"
   }
 }

@@ -259,6 +259,20 @@ collections:
                 label: Κείμενο
                 widget: string
                 i18n: true
+          - name: next
+            label: Κουμπί στο τέλος της σελίδας
+            widget: object
+            i18n: true
+            fields:
+              - name: text
+                label: Κείμενο κουμπιού (κενό = χωρίς κουμπί)
+                widget: string
+                required: false
+                i18n: true
+              - name: link
+                label: Σύνδεσμος (π.χ. classes.html)
+                widget: string
+                i18n: duplicate
         i18n: true
       - name: classes
         label: Classes
@@ -427,10 +441,6 @@ collections:
                 label: Κείμενο
                 widget: string
                 i18n: true
-          - name: closing
-            label: Κείμενο στο τέλος
-            widget: text
-            i18n: true
           - name: bottom_image
             label: Φωτογραφία στο τέλος
             widget: image
@@ -725,6 +735,226 @@ collections:
                 widget: boolean
                 default: false
                 i18n: duplicate
+        i18n: true
+  - name: interface
+    label: Κείμενα μενού & κουμπιών
+    label_singular: Κείμενα
+    format: json
+    i18n: true
+    files:
+      - name: ui
+        label: Κείμενα μενού, κουμπιών, φόρμας
+        file: src/_data/ui.json
+        fields:
+          - name: chrome
+            label: Μενού, κουμπί «Κλείσε μάθημα», footer
+            widget: object
+            i18n: true
+            fields:
+              - name: label
+                label: Επάνω αριστερά (π.χ. CERAMIC STUDIO)
+                widget: string
+                i18n: true
+              - name: menu
+                label: Μενού
+                widget: object
+                i18n: true
+                fields:
+                  - name: home
+                    label: Αρχική
+                    widget: string
+                    i18n: true
+                  - name: studio
+                    label: Studio
+                    widget: string
+                    i18n: true
+                  - name: classes
+                    label: Classes
+                    widget: string
+                    i18n: true
+                  - name: calendar
+                    label: Calendar
+                    widget: string
+                    i18n: true
+                  - name: contact
+                    label: Contact
+                    widget: string
+                    i18n: true
+              - name: book
+                label: Κουμπί κράτησης (κάτω δεξιά)
+                widget: string
+                i18n: true
+              - name: book_soon
+                label: "Κουμπί κράτησης: μήνυμα στο παράθυρο"
+                widget: string
+                i18n: true
+              - name: book_subject
+                label: "Κουμπί κράτησης: θέμα του email"
+                widget: string
+                i18n: true
+              - name: addr
+                label: "Footer: διεύθυνση"
+                widget: string
+                i18n: true
+              - name: map
+                label: "Footer: σύνδεσμος χάρτη"
+                widget: string
+                i18n: true
+              - name: map_cta
+                label: "Footer: ετικέτα πάνω στον χάρτη"
+                widget: string
+                i18n: true
+              - name: map_aria
+                label: "Footer: περιγραφή χάρτη (για αναγνώστες οθόνης)"
+                widget: string
+                i18n: true
+          - name: see_programme
+            label: Κουμπί «Δες το πρόγραμμα»
+            widget: string
+            i18n: true
+          - name: book_place
+            label: Κουμπί «Κλείσε θέση» (ειδικά)
+            widget: string
+            i18n: true
+          - name: bio
+            label: Κουμπί βιογραφικού δασκάλου
+            widget: string
+            i18n: true
+          - name: close
+            label: Κουμπί κλεισίματος παραθύρου
+            widget: string
+            i18n: true
+          - name: bio_placeholder
+            label: Σημείωση όταν το βιογραφικό είναι δείγμα
+            widget: string
+            i18n: true
+          - name: image
+            label: Κείμενο σε κενή φωτογραφία
+            widget: string
+            i18n: true
+          - name: film_label
+            label: "Φωτογραφίες αρχικής: περιγραφή (αναγνώστες οθόνης)"
+            widget: string
+            i18n: true
+          - name: prev_photos
+            label: "Βελάκι: προηγούμενες φωτογραφίες"
+            widget: string
+            i18n: true
+          - name: next_photos
+            label: "Βελάκι: επόμενες φωτογραφίες"
+            widget: string
+            i18n: true
+          - name: days
+            label: Ημέρες (Δευτέρα → Κυριακή)
+            widget: list
+            i18n: true
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            field:
+              name: v
+              label: Κείμενο
+              widget: string
+          - name: days_short
+            label: Ημέρες σύντομα (κινητό)
+            widget: list
+            i18n: true
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            field:
+              name: v
+              label: Κείμενο
+              widget: string
+          - name: months
+            label: Μήνες (σύντομα)
+            widget: list
+            i18n: true
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            field:
+              name: v
+              label: Κείμενο
+              widget: string
+          - name: types
+            label: Είδη ειδικών
+            widget: object
+            i18n: true
+            fields:
+              - name: workshop
+                label: Workshop
+                widget: string
+                i18n: true
+              - name: event
+                label: Event
+                widget: string
+                i18n: true
+              - name: series
+                label: Νέα σειρά
+                widget: string
+                i18n: true
+          - name: form
+            label: Φόρμες
+            widget: object
+            i18n: true
+            fields:
+              - name: name
+                label: Όνομα
+                widget: string
+                i18n: true
+              - name: email
+                label: Email
+                widget: string
+                i18n: true
+              - name: phone
+                label: Τηλέφωνο
+                widget: string
+                i18n: true
+              - name: group
+                label: Πόσα άτομα
+                widget: string
+                i18n: true
+              - name: date
+                label: Ημερομηνία
+                widget: string
+                i18n: true
+              - name: company
+                label: Εταιρεία
+                widget: string
+                i18n: true
+              - name: message
+                label: Μήνυμα
+                widget: string
+                i18n: true
+              - name: date_hint
+                label: Ημερομηνία (παράδειγμα μέσα στο πεδίο)
+                widget: string
+                i18n: true
+              - name: send
+                label: Κουμπί αποστολής
+                widget: string
+                i18n: true
+              - name: required
+                label: «υποχρεωτικό»
+                widget: string
+                i18n: true
+              - name: privacy
+                label: Σημείωση απορρήτου
+                widget: text
+                i18n: true
+          - name: thanks_title
+            label: "Σελίδα «Ευχαριστούμε»: τίτλος"
+            widget: string
+            i18n: true
+          - name: thanks_text
+            label: "Σελίδα «Ευχαριστούμε»: κείμενο"
+            widget: text
+            i18n: true
+          - name: thanks_back
+            label: "Σελίδα «Ευχαριστούμε»: σύνδεσμος επιστροφής"
+            widget: string
+            i18n: true
         i18n: true
   - name: settings
     label: Ρυθμίσεις
