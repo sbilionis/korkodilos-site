@@ -637,3 +637,6 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
   .cv__inner{padding:18px 18px 24px;gap:20px}
   .cv__close{top:10px;right:10px}
 }
+/* the jaw band: one soft band under the menu row in the colours of the sections behind (see site.js) */
+.jaw-veil{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none}
+.menu-open .jaw-veil{visibility:hidden}

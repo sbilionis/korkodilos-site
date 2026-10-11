@@ -128,8 +128,13 @@
   const root = document.documentElement;
   const top = $('#jawTop'), bottom = $('#jawBottom');
   const logo = $('.jaw-top__logo span'), dilos = $('.jaw-bottom__logo span');
-  const swallow = $$('main .content, main .home-images > img, main .two-images > img, main .two-images-offset > img, main > img, main .photos > *, main .photo-k > *, main .swallow');   // what the jaw eats
-  const sections = $$('main > section, main > img');
+  const sections = $$('main > section, main > img, main > .calendar-end');
+  // what the jaw "eats": one soft band under the menu row, painted in the colours of the sections behind it.
+  // (It used to fade every paragraph and photo with a moving mask — beautiful, but phones had to redraw
+  //  all of them at every scroll step, which made scrolling heavy on mobile.)
+  top.insertAdjacentHTML('afterbegin', '<div class="jaw-veil" aria-hidden="true"></div>');
+  const veil = $('.jaw-veil', top);
+  let secBg = [], veilKey = '';
 
   /* ---------- menu ---------- */
   const burger = $('.burger'), off = $('#offcanvas');
@@ -215,6 +220,10 @@
     G = { logoTop, gum, logoH, jaw, teeth, maxLift: Math.max(0, logoTop + logoH - gum - teeth) };
     root.style.setProperty('--jaw', jaw + 'px');
     root.style.setProperty('--foot-h', Math.max(0, innerHeight - jaw - dilosH - 50) + 'px');
+    // colours behind the jaw band (a photo directly in the page sits on the page colour)
+    const pageBg = getComputedStyle(document.body).backgroundColor;
+    secBg = sections.map((sec) => { const c = getComputedStyle(sec).backgroundColor; return c === 'rgba(0, 0, 0, 0)' || c === 'transparent' ? pageBg : c; });
+    veilKey = '';
     // the lower jaw sits on the colour of the last section, like the original
     const last = sections[sections.length - 1];
     const bg = last && last.tagName === 'SECTION' ? getComputedStyle(last).backgroundColor : getComputedStyle(document.body).backgroundColor;
@@ -231,14 +240,21 @@
     const lift = Math.max(0, Math.min(G.maxLift, y, toEnd));
     top.style.setProperty('--lift', lift.toFixed(1));
 
-    // swallow content at the jaw line (soft edge) instead of letting it run over the letters
-    const line = G.logoTop + G.logoH - lift + 10;
-    for (const el of swallow) {
-      const r = el.getBoundingClientRect();
-      const c = line - r.top;
-      if (c < -40 || r.bottom < 0 || r.top > innerHeight) { el.style.webkitMaskImage = el.style.maskImage = ''; continue; }
-      const m = `linear-gradient(to bottom, transparent ${c.toFixed(1)}px, #000 ${(c + 16).toFixed(1)}px)`;
-      el.style.webkitMaskImage = el.style.maskImage = m;
+    // swallow content at the jaw line (soft edge): the band covers 0 → line, then fades out over 16px
+    const line = Math.round(G.logoTop + G.logoH - lift + 10);
+    const stops = [];
+    sections.forEach((sec, i) => {
+      const r = sec.getBoundingClientRect();
+      if (r.bottom <= 0 || r.top >= line + 16) return;
+      const a = Math.max(0, Math.round(r.top)), z = Math.min(line + 16, Math.round(r.bottom));
+      stops.push(`${secBg[i]} ${a}px ${z}px`);
+    });
+    const key = line + '|' + stops.join(',');
+    if (key !== veilKey) {
+      veilKey = key;
+      veil.style.height = (line + 16) + 'px';
+      veil.style.background = stops.length ? `linear-gradient(to bottom, ${stops.join(', ')})` : '';
+      veil.style.webkitMaskImage = veil.style.maskImage = `linear-gradient(to bottom, #000 ${line}px, transparent ${line + 16}px)`;
     }
 
     // label colour follows the section under the menu row

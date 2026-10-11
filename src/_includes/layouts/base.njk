@@ -30,7 +30,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/Canela-Light-Gr-Web.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/MonumentGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.css?v={{ build.v }}">
 </head>
 <body class="page-{{ pageKey }}" data-page="{{ pageKey }}">
 <div data-jaw="top"></div>
@@ -39,9 +39,9 @@
 </main>
 <div data-jaw="bottom"></div>
 <script type="application/json" id="ui-json">{{ { ui: u.chrome, close: u.close, email: site.email, phone: site.phone, instagram: site.instagram, facebook: site.facebook, maps: site.maps } | dump | safe }}</script>
-<script src="/js/site.js"></script>
+<script src="/js/site.js?v={{ build.v }}"></script>
 {%- if pageKey == "calendar" %}
-<script src="/js/programme.js"></script>
+<script src="/js/programme.js?v={{ build.v }}"></script>
 {%- endif %}
 </body>
 </html>
