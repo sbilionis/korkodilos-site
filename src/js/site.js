@@ -199,6 +199,19 @@
     if (open && !e.target.closest('.special__open')) open.click();
   }));
 
+  /* ---------- speed: fetch the other pages in the background, so the menu opens them at once ---------- */
+  const warm = () => {
+    const seen = new Set();
+    $$('#offcanvas a, .jaw-top__menu a').forEach((a) => {
+      if (a.origin !== location.origin || a.href === location.href || seen.has(a.href)) return;
+      seen.add(a.href);
+      fetch(a.href, { priority: 'low', credentials: 'same-origin' }).catch(() => {});
+    });
+  };
+  if (!(navigator.connection && navigator.connection.saveData)) {
+    addEventListener('load', () => ('requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 3000 }) : setTimeout(warm, 1500)));
+  }
+
   /* ---------- tutors: quick CV pop-up ---------- */
   $$('[data-cv]').forEach((b) => b.addEventListener('click', () => { const d = $('#' + b.dataset.cv); d && d.showModal(); }));
   $$('dialog.cv').forEach((d) => {

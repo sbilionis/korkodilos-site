@@ -16,7 +16,7 @@ file: index.html
       <div class="film" data-film>
         <div class="film__track" tabindex="0" aria-label="{{ u.film_label }}">
         {%- for ph in t.film %}{% set sz = ph.image | imgsize %}
-        <img src="{{ ph.image }}" alt="{{ ph.alt }}" width="{{ sz[0] }}" height="{{ sz[1] }}"{% if loop.index > 3 %} loading="lazy"{% endif %}>
+        <img src="{{ ph.image }}" alt="{{ ph.alt }}" width="{{ sz[0] }}" height="{{ sz[1] }}"{% if loop.index > 3 %} loading="lazy"{% elif loop.first %} fetchpriority="high"{% endif %}>
         {%- endfor %}
         </div>
         <button class="film__btn film__prev" type="button" aria-label="{{ u.prev_photos }}">←</button>
