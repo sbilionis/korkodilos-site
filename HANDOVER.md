@@ -87,3 +87,12 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - **Typesetting transform** in `eleventy.config.mjs`: short words (ο, και, με, the…) glue to the next word with a no-break space; the last word of p/h/li never sits alone. `text-wrap:pretty` in CSS.
 - **OPEN: title/text size scale** — options A/B/C in round7 §1 (recommended A). Stavros decides after checking on his phone.
 - Specials prices still €XX (Alex's email only had the 2/3-month package prices). English translation: OK for now.
+
+## 11. Rounds 8–9 (11 Oct 2026) — all on korkonew.netlify.app
+- Oval menu: words drawn above all ovals (ovals = `a::before`, word = `a>span`); desktop stack fills the screen (`--mh`); opens with fade + ovals dropping in (option B).
+- Type scale A applied (`--fs-l` max 34, `--fs-m` max 20, one 13px sans).
+- Calendar: whole workshop row opens a pop-up (`#sp-N`; fields `details`, `image`, `image_alt` in admin); page ends with the photo inside the margins (`.calendar-end`).
+- Classes: price pills = links to booking, black on hover. Phones: pink "Κλείσε θέση", small strip arrows, pop-ups full width (`.cv{max-width:none}` — the UA max-width is 100%-2em and 1em = 50px here).
+- Privacy policy / Terms pages (`legal.json`, el/en, empty) linked in the footer.
+- Option pages are published at /_proposals/ (noindex) — remove before the real domain goes live.
+- NEXT: domain details from Stavros → QA/debug pass → switch domain.
