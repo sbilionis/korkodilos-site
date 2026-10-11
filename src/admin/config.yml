@@ -135,6 +135,7 @@ collections:
                     label: Σύνδεσμος
                     widget: hidden
                     i18n: duplicate
+        i18n: true
       - name: studio
         label: Studio
         file: src/_data/studio.json
@@ -258,6 +259,7 @@ collections:
                 label: Κείμενο
                 widget: string
                 i18n: true
+        i18n: true
       - name: classes
         label: Classes
         file: src/_data/classes.json
@@ -378,6 +380,7 @@ collections:
                 label: Κουμπί (ανοίγει τη φόρμα)
                 widget: string
                 i18n: true
+        i18n: true
       - name: calendar
         label: Calendar (κείμενα)
         file: src/_data/calendar.json
@@ -436,6 +439,7 @@ collections:
             label: Περιγραφή φωτογραφίας
             widget: string
             i18n: true
+        i18n: true
       - name: contact
         label: Contact
         file: src/_data/contact.json
@@ -516,6 +520,7 @@ collections:
                 label: Τίτλος φόρμας
                 widget: string
                 i18n: true
+        i18n: true
   - name: programme
     label: Πρόγραμμα & Ειδικά
     format: json
@@ -662,6 +667,7 @@ collections:
                 label: Τιμή
                 widget: string
                 i18n: duplicate
+        i18n: true
   - name: team
     label: Δάσκαλοι
     format: json
@@ -719,6 +725,7 @@ collections:
                 widget: boolean
                 default: false
                 i18n: duplicate
+        i18n: true
   - name: settings
     label: Ρυθμίσεις
     format: json
