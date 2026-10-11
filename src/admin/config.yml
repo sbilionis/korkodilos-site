@@ -1,13 +1,13 @@
 # Korkodilos — admin for Alex (Sveltia CMS, Decap-compatible).
 # Saving in the admin commits to GitHub; Netlify rebuilds the site in ~1 minute.
 # Expanded (no YAML anchors/merges) so any YAML parser reads it the same way.
-# Repository: github.com/sbilionis/korkodilos-site (private).
+# Repository: github.com/sbilionis/korkodilos-site (public). Live at https://korkodilosathens.gr
 backend:
   name: github
   repo: sbilionis/korkodilos-site
   branch: main
-site_url: https://korkonew.netlify.app
-display_url: https://korkonew.netlify.app
+site_url: https://korkodilosathens.gr
+display_url: https://korkodilosathens.gr
 locale: en
 media_folder: src/assets/img/uploads
 public_folder: /assets/img/uploads

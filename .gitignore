@@ -3,3 +3,4 @@ _site/
 .DS_Store
 src/assets/fonts/
 .cache/
+_proposals/

@@ -12,8 +12,6 @@ export default function (eleventyConfig) {
   // files copied as they are
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets", "src/css": "css", "src/js": "js", "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy("src/admin");
-  // design options for Stavros (not linked from the site, not indexed): /_proposals/round7.html etc.
-  eleventyConfig.addPassthroughCopy({ "_proposals": "_proposals" });
 
   // **bold** and line breaks inside one paragraph (no block markup: the design controls the paragraphs)
   eleventyConfig.addFilter("mdi", (s) => md.renderInline(String(s || "")));
