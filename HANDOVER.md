@@ -15,13 +15,13 @@
 **Accounts & security — Stavros/Alex (Claude can only guide)**
 1. **2FA** on: GitHub sbilionis, GitHub KORKODILOS, Netlify, Papaki (Alex, account AN784-PK), korkodilos20@gmail.com, alexntouras@hotmail.gr. The single most important item.
 2. **New GitHub OAuth client secret** (old one appeared in a screenshot): GitHub → Settings → Developer settings → OAuth Apps → *Korkodilos admin* → Generate a new client secret → Netlify → project → Configuration → Security/Access → OAuth → GitHub → edit → paste → save → test /admin login → delete the old secret on GitHub. Stavros copies/pastes (Claude never handles secrets). Also set the OAuth app's Homepage URL to https://korkodilosathens.gr.
-3. **Netlify deploy notifications** → email to Stavros on every deploy (Project configuration → Notifications), so unexpected changes are noticed.
+3. ✅ **Netlify deploy notifications** — DONE 12 Oct: email to sbilionis@gmail.com on "deploy succeeds" and "deploy fails" (Project configuration → Notifications).
 4. *(optional)* **DNSSEC**: Netlify → Domain management → DNS settings → enable DNSSEC → copy the DS record → Papaki old panel → korkodilosathens.gr → "Διαχείριση DNSSEC (DS Εγγραφών)". Stavros clicks (DNS changes are blocked for Claude).
 5. **Alex cancels**: the old WordPress hosting (Bracket / Marios Ελεγζόγλου), the old **Cloudflare** account of the domain, the unused **MXroute** email, and the old **SSL certificate** product in Papaki.
 
 **Content — from Alex (he can enter most of it himself in /admin)**
 6. **Ariadni Στρογγυλά, Γεωργία Πιλάλη**: photos + bios (Δάσκαλοι → "Βιογραφικό σε παραγράφους", untick "δείγμα").
-7. **Privacy policy & Terms** texts (pages exist, empty: `legal.json`). Claude can draft them once Alex gives: legal business name, ΑΦΜ, ΓΕΜΗ, cancellation/refund rules — then a check by his accountant/lawyer. Terms become essential with the booking system.
+7. **Privacy policy & Terms** — DRAFTED + live 12 Oct (`legal.json`, el/en). Alex fills every **[BRACKET]** in /admin → "Πολιτική απορρήτου & Όροι": business name, ΑΦΜ, ΔΟΥ, ΓΕΜΗ, payment/deposit, 4×3 make-up + package validity, cancellation deadline/refund, pieces ready in X weeks / recycled after X months, minimum age, retention (default [2 years]), "last updated" date. Then a check by his accountant/lawyer.
 8. Check Claude's **English translation** of Alex's bio and the site texts (Stavros said "OK for now").
 9. Workshops: Alex adds real ones in Πρόγραμμα & Ειδικά (Greek **and** English tab).
 10. **Aeonik web licence** check (Greek sans font).
@@ -171,3 +171,4 @@ node -e 'const y=require("js-yaml"),fs=require("fs");const c=y.load(fs.readFileS
 - Classes: "everything included" note (`classes.monthly.note`, already in admin) moved directly under the price pills, serif `--fs-m`; "Δες το πρόγραμμα" below it.
 - Footer: "PHOTOS @teapotgr" removed (site.js).
 - Phone menu: ovals sized with `100dvh` (was svh) → no empty strip when the menu is opened after scrolling on iPhone (toolbar collapsed). Stavros to confirm on his phone.
+- Pop-ups (workshops, tutors, booking): `.cv{position:relative}` overrode the modal's fixed position → the page jumped to the top on open. Now `position:fixed`; page stays where it was.
