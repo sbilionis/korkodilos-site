@@ -134,3 +134,11 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - .gr registry switched 22:05; go-live commit pushed (site.json url, admin site_url/display_url, /_proposals no longer published — copies kept locally, git-ignored). Let's Encrypt certificate issued 22:29 (auto-renews). Tested over https: all pages el/en, http→https, www→apex, old WP links, 404, admin, sitemap/robots/canonical/og.
 - korkonew.netlify.app still works too. The project is now shown in Netlify as "korkodilosathens.gr".
 - After: Alex can cancel the old WordPress hosting (Bracket/Marios), the Cloudflare account and the old SSL product in Papaki.
+
+## 17. Alex's photo + text picks (12 Oct 2026) — live
+- Home carousel: 4936, 6882, 7584 (Alex wrote "75842"), 6987, 7360, 4885, 7241 · Corporate box: 7209 (Monthly 7200, Parties 6977 unchanged).
+- Studio: hero 4927 · next to K 4931 · "Το τραπέζι" 4952 (NEW slot `table.image`) · "Ο πηλός" 4929 · "Tools" 4904 (NEW slot `tools.image`).
+- Alex (tutor): photo 7368 + bio paragraphs (`tutors.json → bio`, shown instead of the list; English translation by Claude — Alex to check).
+- Classes strip: 6264, 6987, 4955, 4934, 4932, 4933 · Corporate 7592 · Parties 7360. Calendar unchanged.
+- "Photo with the eyes" = 4902 (wall drawing with two big eyes) → Contact, between details and form (`contact.json → photo`).
+- Git identity for this repo set locally: Stavros Bilionis <sbilionis@users.noreply.github.com>.
