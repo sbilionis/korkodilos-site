@@ -754,6 +754,7 @@ collections:
           - name: specials
             label: Ειδικά — workshops, events, νέες σειρές (όσα έχουν περάσει κρύβονται μόνα τους)
             widget: list
+            required: false
             i18n: true
             summary: "{{fields.date}} · {{fields.title}}"
             fields:
@@ -860,6 +861,7 @@ collections:
               - name: cv
                 label: "Βιογραφικό σε λίστα (Θέμα — Κείμενο)"
                 widget: list
+                required: false
                 i18n: true
                 summary: "{{fields.label}}"
                 fields:

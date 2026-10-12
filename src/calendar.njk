@@ -20,7 +20,7 @@ file: calendar.html
       <div class="cal-day">
         <div class="cal__h"><span class="l">{{ u.days[loop.index0] }}</span><span class="s">{{ u.days_short[loop.index0] }}</span></div>
         <div class="cal__d">
-          {%- for s in pr.week[key] %}<span class="cal__s{% if s.title and s.title != 'Monthly 4×3' %} cal__s--other{% endif %}"><span class="l">{{ s.time }}</span><span class="s">{{ s.time | replace(":00", "") }}</span>{% if s.title and s.title != 'Monthly 4×3' %}<em class="cal__t">{{ s.title }}</em>{% endif %}</span>{% endfor -%}
+          {%- for s in (pr.week[key] or []) %}<span class="cal__s{% if s.title and s.title != 'Monthly 4×3' %} cal__s--other{% endif %}"><span class="l">{{ s.time }}</span><span class="s">{{ s.time | replace(":00", "") }}</span>{% if s.title and s.title != 'Monthly 4×3' %}<em class="cal__t">{{ s.title }}</em>{% endif %}</span>{% endfor -%}
         </div>
       </div>
       {%- endfor %}
@@ -32,7 +32,7 @@ file: calendar.html
   <div class="container">
     <div class="content content--sm"><p><em>{{ t.specials.label }}</em> {{ t.specials.text | mdi | safe }}</p></div>
     <div class="specials swallow" data-specials>
-      {%- for s in pr.specials | sort(false, false, "date") %}
+      {%- for s in (pr.specials or []) | sort(false, false, "date") %}
       {%- set dp = s.date.split("-") %}
       <article class="special" data-date="{{ s.date }}">
         <div class="special__date">{{ dp[2] | int }} {{ u.months[(dp[1] | int) - 1] }}<small data-weekday>{{ s.time }}</small></div>
@@ -44,7 +44,7 @@ file: calendar.html
   </div>
 </section>
 {#- each special opens a pop-up with more info + booking (the whole row is clickable) -#}
-{%- for s in pr.specials | sort(false, false, "date") %}{%- set dp = s.date.split("-") %}
+{%- for s in (pr.specials or []) | sort(false, false, "date") %}{%- set dp = s.date.split("-") %}
 <dialog class="cv sp-dlg" id="sp-{{ loop.index }}" aria-labelledby="sp-{{ loop.index }}-h" data-date="{{ s.date }}">
   <div class="cv__inner{% if not s.image %} cv__inner--text{% endif %}">
     {%- if s.image %}<div class="cv__img"><img sizes="(max-width: 768px) 100vw, 220px" src="{{ s.image }}" alt="{{ s.image_alt }}" loading="lazy"></div>{% endif %}

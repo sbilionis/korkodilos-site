@@ -91,7 +91,7 @@ file: studio.html
       <div class="cv__bio">{% for b in p.bio %}<p>{{ b | mdi | safe }}</p>{% endfor %}</div>
       {%- else %}
       <ul>
-        {%- for c in p.cv %}
+        {%- for c in (p.cv or []) %}
         <li>{{ c.label }} — <span{% if p.cv_is_placeholder %} class="ph"{% endif %}>{{ c.value }}</span></li>
         {%- endfor %}
       </ul>
