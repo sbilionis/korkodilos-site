@@ -28,7 +28,7 @@
 
 **Small things to consider (ask Stavros first — show before apply)**
 - 6987 (Home carousel) and 6977 (Clay Parties box on Home) are near-identical sunflower photos.
-- The "everything included" note under the prices is small uppercase — make it bigger?
+- (done in round 10: the note is now serif, under the prices)
 - Re-run `npm audit` in a few months (remaining items are Eleventy's own build-time dependencies, no fix yet).
 - Remove the old candidate photos in `_proposals/cand` (git-ignored, local only) when no longer needed.
 
@@ -164,3 +164,10 @@ node -e 'const y=require("js-yaml"),fs=require("fs");const c=y.load(fs.readFileS
 - Updated image-size 2.0.4, markdown-it 14.3.2, sharp 0.35.5. Remaining npm audit items are inside Eleventy's own dependencies (braces/chokidar/sprintf-js/js-yaml), build-time only, no fixed 3.x release — accepted.
 - Still to do (accounts): 2FA on GitHub (sbilionis + KORKODILOS), Netlify, Papaki, korkodilos20@gmail.com, alexntouras@hotmail.gr; rotate the GitHub OAuth client secret; Netlify deploy notifications to Stavros; optional DNSSEC; cancel old WordPress hosting, Cloudflare, MXroute email, old SSL.
 - Alex's illustrated admin guide: claude.ai/artifact/MhC7xfPGxipgmcQ7Sn9N6m (+ PDF "Korkodilos – οδηγός admin για τον Αλέξανδρο.pdf" in CREATIVE CODING; source in _proposals/).
+
+## 19. Round 10 (12 Oct 2026) — live
+- From Stavros's marked-up screenshots. Options: `_proposals/round10.html` (git-ignored). Picks 1B, 2B.
+- Reading texts trimmed site-wide: smaller serif (`lead-small`, empty-note) max 29em ≈ where the Home philosophy heading ends; big serif `.content p` max 30em (wide screens only).
+- Classes: "everything included" note (`classes.monthly.note`, already in admin) moved directly under the price pills, serif `--fs-m`; "Δες το πρόγραμμα" below it.
+- Footer: "PHOTOS @teapotgr" removed (site.js).
+- Phone menu: ovals sized with `100dvh` (was svh) → no empty strip when the menu is opened after scrolling on iPhone (toolbar collapsed). Stavros to confirm on his phone.
