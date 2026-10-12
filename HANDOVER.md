@@ -142,3 +142,9 @@ Phone number (+30 210 000 0000), prices 2–3 month packages + workshops (€XX)
 - Classes strip: 6264, 6987, 4955, 4934, 4932, 4933 · Corporate 7592 · Parties 7360. Calendar unchanged.
 - "Photo with the eyes" = 4902 (wall drawing with two big eyes) → Contact, between details and form (`contact.json → photo`).
 - Git identity for this repo set locally: Stavros Bilionis <sbilionis@users.noreply.github.com>.
+
+## 18. Security (12 Oct 2026)
+- Done: admin loads Sveltia 0.221.1 with SRI (`integrity` in src/admin/index.html — recompute when upgrading); headers for all paths in netlify.toml (X-Frame-Options DENY, nosniff, HSTS incl. subdomains, Referrer-Policy, Permissions-Policy); Content-Security-Policy as a **meta tag in base.njk** (site pages only — the admin needs GitHub/Netlify/unpkg). Allowed: self + fonts project. Adding any outside script/style/font/image later means updating that policy.
+- Updated image-size 2.0.4, markdown-it 14.3.2, sharp 0.35.5. Remaining npm audit items are inside Eleventy's own dependencies (braces/chokidar/sprintf-js/js-yaml), build-time only, no fixed 3.x release — accepted.
+- Still to do (accounts): 2FA on GitHub (sbilionis + KORKODILOS), Netlify, Papaki, korkodilos20@gmail.com, alexntouras@hotmail.gr; rotate the GitHub OAuth client secret; Netlify deploy notifications to Stavros; optional DNSSEC; cancel old WordPress hosting, Cloudflare, MXroute email, old SSL.
+- Alex's illustrated admin guide: claude.ai/artifact/MhC7xfPGxipgmcQ7Sn9N6m (+ PDF "Korkodilos – οδηγός admin για τον Αλέξανδρο.pdf" in CREATIVE CODING; source in _proposals/).
