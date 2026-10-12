@@ -36,6 +36,9 @@ export default function (eleventyConfig) {
     return h ? (w / h).toFixed(digits) : "1";
   });
 
+  // does the weekly programme have any class at all? (none → the "on holiday" message on Calendar)
+  eleventyConfig.addFilter("hasSlots", (week) => Object.values(week || {}).some((d) => Array.isArray(d) && d.length > 0));
+
   // the other language's URL for this page (used by the language switch fallback and hreflang)
   eleventyConfig.addFilter("otherLang", (url, lang) => (lang === "el" ? "/en" + url : url.replace(/^\/en/, "")));
 

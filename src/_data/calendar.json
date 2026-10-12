@@ -7,10 +7,12 @@
       "label": "Calendar",
       "text": "Ο **Korkodilos** έχει πρόγραμμα αλλά όχι ρουτίνα. Κάθε εβδομάδα, αυτές τις μέρες, το τραπέζι είναι στρωμένο. Όλα τα μαθήματά μας είναι για όλα τα επίπεδα: δεν χρειάζεσαι καμία εμπειρία για να ξεκινήσεις να δημιουργείς με πηλό στο εργαστήριό μας."
     },
-    "note": "Monthly 4×3",
+    "closed": "Το εργαστήριο είναι σε διακοπές αυτή την περίοδο. Σύντομα περισσότερα.",
+    "note": "Κάθε ώρα είναι ένα μάθημα **Monthly 4×3**: ένα τρίωρο την εβδομάδα, για τέσσερις εβδομάδες. [Δες τις τιμές →](classes.html#monthly)",
     "specials": {
       "label": "Ειδικά",
-      "text": "Workshops, events και νέες σειρές."
+      "text": "Workshops, events και νέες σειρές.",
+      "empty": "Αυτή τη στιγμή δεν υπάρχουν ειδικά events. Έχε τον νου σου στο [Instagram] μας για το επόμενο drop."
     },
     "bottom_image": "/assets/img/uploads/korko-4927.jpg",
     "bottom_alt": "Το μακρύ κοινό τραπέζι με τα φωτιστικά"
@@ -23,10 +25,12 @@
       "label": "Calendar",
       "text": "**Korkodilos** has a programme but no routine. Every week, on these days, the table is set. All our classes are for all levels: you don’t need any experience to start making things with clay in our studio."
     },
-    "note": "Monthly 4×3",
+    "closed": "The studio is on holiday for now. More soon.",
+    "note": "Every slot is a **Monthly 4×3** class: one three-hour class a week, for four weeks. [See the prices →](classes.html#monthly)",
     "specials": {
       "label": "Specials",
-      "text": "Workshops, events and new series."
+      "text": "Workshops, events and new series.",
+      "empty": "No special events right now. Keep an eye on our [Instagram] for the next drop."
     },
     "bottom_image": "/assets/img/uploads/korko-4927.jpg",
     "bottom_alt": "The long shared table under the lights"

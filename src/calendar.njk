@@ -15,6 +15,7 @@ file: calendar.html
     <div class="content content--top content--sm">
       <p><em>{{ t.intro.label }}</em> {{ t.intro.text | mdi | safe }}</p>
     </div>
+    {%- if pr.week | hasSlots %}
     <div class="cal cal--days swallow">
       {%- for key in ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] %}
       <div class="cal-day">
@@ -25,7 +26,12 @@ file: calendar.html
       </div>
       {%- endfor %}
     </div>
-    <p class="cal-note swallow">{{ t.note }}</p>
+    {%- if t.note %}
+    <p class="cal-note swallow">{{ t.note | mdi | safe }}</p>
+    {%- endif %}
+    {%- else %}
+    <p class="empty-note cal-closed swallow">{{ t.closed | mdi | safe }}</p>
+    {%- endif %}
   </div>
 </section>
 <section class="section section--fit bg-base" data-specials-section>
@@ -40,6 +46,8 @@ file: calendar.html
         <div class="special__side"><span>{{ s.price }}</span><span class="btn" aria-hidden="true"><span class="gr">{{ u.book_place }}</span> →</span></div>
       </article>
       {%- endfor %}
+      {%- set insta = '<a href="' + site.instagram + '" target="_blank" rel="noopener">Instagram</a>' %}
+      <p class="empty-note" data-empty{% if (pr.specials or []).length %} hidden{% endif %}>{{ t.specials.empty | mdi | replace("[Instagram]", insta) | safe }}</p>
     </div>
   </div>
 </section>

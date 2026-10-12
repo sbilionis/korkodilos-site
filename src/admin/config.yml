@@ -474,9 +474,14 @@ collections:
                 label: Κείμενο
                 widget: text
                 i18n: true
+          - name: closed
+            label: Μήνυμα όταν δεν υπάρχει κανένα μάθημα στο εβδομαδιαίο πρόγραμμα (π.χ. διακοπές)
+            widget: text
+            i18n: true
           - name: note
-            label: Σημείωση κάτω από το πρόγραμμα
-            widget: string
+            label: "Σημείωση κάτω από το πρόγραμμα (κενό = καμία· [κείμενο](σύνδεσμος) για link)"
+            widget: text
+            required: false
             i18n: true
           - name: specials
             label: Ειδικά (τίτλος ενότητας)
@@ -490,6 +495,10 @@ collections:
               - name: text
                 label: Κείμενο
                 widget: string
+                i18n: true
+              - name: empty
+                label: "Μήνυμα όταν δεν υπάρχουν ειδικά ([Instagram] = σύνδεσμος στο Instagram)"
+                widget: text
                 i18n: true
           - name: bottom_image
             label: Φωτογραφία στο τέλος
