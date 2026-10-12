@@ -942,6 +942,14 @@ collections:
                 label: "Κουμπί κράτησης: θέμα του email"
                 widget: string
                 i18n: true
+              - name: book_student
+                label: "Κουμπί κράτησης: κείμενο για μαθητές με κωδικό"
+                widget: string
+                i18n: true
+              - name: book_student_cta
+                label: "Κουμπί κράτησης: κουμπί προς τις κρατήσεις"
+                widget: string
+                i18n: true
               - name: addr
                 label: "Footer: διεύθυνση"
                 widget: string
@@ -1160,6 +1168,9 @@ collections:
             widget: string
           - name: maps
             label: Google Maps (σύνδεσμος)
+            widget: string
+          - name: booking
+            label: Σύνδεσμος εφαρμογής κρατήσεων
             widget: string
           - name: og_image
             label: Φωτογραφία όταν μοιράζεται ο σύνδεσμος
