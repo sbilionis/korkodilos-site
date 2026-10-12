@@ -648,3 +648,21 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 .cal-closed{margin-top:40px}
 .empty-note[hidden]{display:none}
 .cal-note a,.empty-note a{text-decoration:underline;text-underline-offset:4px}
+
+/* ==========================================================================
+   Round 10 (12 Oct 2026) — Stavros's marked-up screenshots
+   ========================================================================== */
+/* reading texts (smaller serif) never run wider than ~29em (≈ where the Home heading ends) — Home philosophy, Calendar empty message, and any like them */
+.content p.lead-small,.lead-small,.empty-note{max-width:29em}
+/* menu opened after scrolling on iPhone: the toolbar has collapsed, so size the ovals on the screen as it is NOW
+   (dvh), not on the smallest screen (svh) — otherwise an empty strip is left at the bottom */
+@media (max-width:768px){
+  .offcanvas a{height:calc((100dvh - var(--gum) - 64px) / 5 + 18px)}
+}
+@media (min-width:769px){
+  .offcanvas{--mh:calc((100dvh - 130px) / 3.75)}
+}
+/* Classes (pick 1B): the "everything included" note sits right under the prices, in the serif reading size; the button below it */
+.ph-note--under{display:block;margin:-26px 0 30px;font-family:var(--serif);font-weight:300;font-size:var(--fs-m);line-height:1.35;letter-spacing:0;text-transform:none;opacity:1;max-width:29em}
+/* big serif paragraphs (pick 2B): about 30em on wide screens too */
+.content p{max-width:30em}

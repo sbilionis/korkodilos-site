@@ -23,11 +23,11 @@ file: classes.html
     {%- if t.monthly.image %}{% set sz = t.monthly.image | imgsize %}
     <div class="sec-photo swallow"><img sizes="(max-width: 768px) 100vw, 560px" src="{{ t.monthly.image }}" alt="{{ t.monthly.image_alt }}" loading="lazy" width="{{ sz[0] }}" height="{{ sz[1] }}"></div>
     {%- endif %}
+    {%- if t.monthly.note %}
+    <p class="ph-note ph-note--under swallow">{{ t.monthly.note }}</p>
+    {%- endif %}
     <div class="actions swallow">
       <a class="btn" href="calendar.html"><span class="gr">{{ u.see_programme }}</span> →</a>
-      {%- if t.monthly.note %}
-      <span class="ph-note">{{ t.monthly.note }}</span>
-      {%- endif %}
     </div>
   </div>
 </section>

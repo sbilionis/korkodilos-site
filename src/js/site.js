@@ -108,7 +108,7 @@
           <li><a href="${D.instagram}" target="_blank" rel="noopener">INSTAGRAM</a></li>
           <li><a href="mailto:${D.email}">EMAIL</a></li>
         </ul></div>
-        <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · <a href="privacy.html">${T.privacy || 'PRIVACY POLICY'}</a> · <a href="terms.html">${T.terms || 'TERMS'}</a> · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a> · PHOTOS <a href="https://www.instagram.com/teapotgr/" target="_blank" rel="noopener">@teapotgr</a></p>
+        <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · <a href="privacy.html">${T.privacy || 'PRIVACY POLICY'}</a> · <a href="terms.html">${T.terms || 'TERMS'}</a> · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a></p>
       </div>
     </footer>
   </div>`;
