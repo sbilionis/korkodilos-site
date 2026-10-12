@@ -37,28 +37,24 @@
           "alt": "Χέρια κόβουν ένα φύλλο πηλού"
         },
         {
-          "image": "/assets/img/uploads/korko-7209.jpg",
-          "alt": "Το τραπέζι με εργαλεία και χρώματα"
-        },
-        {
-          "image": "/assets/img/uploads/korko-7526.jpg",
-          "alt": "Ράφια με ζωγραφισμένα πρόσωπα"
-        },
-        {
-          "image": "/assets/img/uploads/korko-4924.jpg",
-          "alt": "Ράφια με έργα που περιμένουν το καμίνι"
-        },
-        {
           "image": "/assets/img/uploads/korko-6987.jpg",
-          "alt": "Ηλιοτρόπια σε κεραμικό βάζο"
+          "alt": "Ηλιοτρόπια σε κεραμικό βάζο με πιάτο"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4955.jpg",
+          "alt": "Οι πάγκοι με τους νεροχύτες δίπλα στο παράθυρο"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4934.jpg",
+          "alt": "Ο νεροχύτης με τα ανάγλυφα πλακάκια"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4932.jpg",
+          "alt": "Το τραπέζι με το φωτιστικό και τη σκάλα"
         },
         {
           "image": "/assets/img/uploads/korko-4933.jpg",
           "alt": "Ράφια με υλικά και σμάλτα"
-        },
-        {
-          "image": "/assets/img/uploads/korko-7211.jpg",
-          "alt": "Στη σκάλα του εργαστηρίου"
         }
       ]
     },
@@ -68,8 +64,8 @@
         "Ο πηλός φέρνει τους ανθρώπους κοντά. Σχεδιάζουμε εργαστήρια για εταιρείες και ομάδες κάθε μεγέθους, στον χώρο μας ή στον δικό σας, πάνω στους στόχους σας."
       ],
       "cta": "Ζήτησε προσφορά",
-      "image": "/assets/img/uploads/korko-4952.jpg",
-      "image_alt": "Το εργαστήριο στρωμένο για παρέα"
+      "image": "/assets/img/uploads/korko-7592.jpg",
+      "image_alt": "Το μακρύ τραπέζι στρωμένο για παρέα"
     },
     "parties": {
       "label": "Clay Parties",
@@ -77,8 +73,8 @@
         "Κλείνεις τον χώρο και τον δάσκαλο, διαλέγεις θέμα αν θες, φέρνεις drinks και καλή διάθεση. Ένα **private event** με πηλό: γενέθλια, bachelorette ή απλώς μια παρέα."
       ],
       "cta": "Οργάνωσε το party σου",
-      "image": "/assets/img/uploads/korko-7368.jpg",
-      "image_alt": "Αγκαλιά με ένα μεγάλο φυτό στο εργαστήριο"
+      "image": "/assets/img/uploads/korko-7360.jpg",
+      "image_alt": "Παρέα δουλεύει γύρω από το τραπέζι"
     }
   },
   "en": {
@@ -119,28 +115,24 @@
           "alt": "Hands cutting a slab of clay"
         },
         {
-          "image": "/assets/img/uploads/korko-7209.jpg",
-          "alt": "The table with tools and paints"
-        },
-        {
-          "image": "/assets/img/uploads/korko-7526.jpg",
-          "alt": "Shelves with painted faces"
-        },
-        {
-          "image": "/assets/img/uploads/korko-4924.jpg",
-          "alt": "Shelves of work waiting for the kiln"
-        },
-        {
           "image": "/assets/img/uploads/korko-6987.jpg",
-          "alt": "Sunflowers in a ceramic vase"
+          "alt": "Sunflowers in a ceramic vase with a plate"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4955.jpg",
+          "alt": "The benches and sinks by the window"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4934.jpg",
+          "alt": "The sink with the relief tiles"
+        },
+        {
+          "image": "/assets/img/uploads/korko-4932.jpg",
+          "alt": "The table with the lamp and the stairs"
         },
         {
           "image": "/assets/img/uploads/korko-4933.jpg",
           "alt": "Shelves of materials and glazes"
-        },
-        {
-          "image": "/assets/img/uploads/korko-7211.jpg",
-          "alt": "On the studio stairs"
         }
       ]
     },
@@ -150,8 +142,8 @@
         "Clay brings people together. We design workshops for companies and teams of any size, at our studio or at yours, around your goals."
       ],
       "cta": "Ask for a quote",
-      "image": "/assets/img/uploads/korko-4952.jpg",
-      "image_alt": "The studio set for a group"
+      "image": "/assets/img/uploads/korko-7592.jpg",
+      "image_alt": "The long table set for a group"
     },
     "parties": {
       "label": "Clay Parties",
@@ -159,8 +151,8 @@
         "Book the space and a teacher, pick a theme if you like, bring drinks and a good mood. A **private event** with clay: a birthday, a bachelorette or just friends."
       ],
       "cta": "Plan your party",
-      "image": "/assets/img/uploads/korko-7368.jpg",
-      "image_alt": "Holding a big plant in the studio"
+      "image": "/assets/img/uploads/korko-7360.jpg",
+      "image_alt": "A group working around the table"
     }
   }
 }

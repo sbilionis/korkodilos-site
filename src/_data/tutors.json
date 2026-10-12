@@ -5,8 +5,8 @@
         "id": "alex",
         "name": "Αλέξανδρος Ντούρας",
         "role": "Εικαστικός · Ιδρυτής",
-        "photo": "/assets/img/uploads/korko-alex-1.jpg",
-        "photo_alt": "Ο Αλέξανδρος Ντούρας με πήλινη μάσκα",
+        "photo": "/assets/img/uploads/korko-7368.jpg",
+        "photo_alt": "Ο Αλέξανδρος Ντούρας αγκαλιά με έναν κεραμικό κροκόδειλο",
         "cv": [
           {
             "label": "Σπουδές",
@@ -25,7 +25,13 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": false,
+        "bio": [
+          "Ο Αλέξανδρος Ντούρας είναι εικαστικός καλλιτέχνης με ειδίκευση στη γλυπτική και απόφοιτος της Ανώτατης Σχολής Καλών Τεχνών της Αθήνας.",
+          "Είναι ιδρυτής και δάσκαλος του **Korkodilos**, ενός εργαστηρίου που γεννήθηκε από την αγάπη του για τη δημιουργία, τον πειραματισμό και την επιθυμία να μοιράζεται ιδέες και γνώσεις με άλλους.",
+          "Η καλλιτεχνική του πρακτική κινείται ανάμεσα στη γλυπτική, την κεραμική, τον σχεδιασμό και την αρχιτεκτονική, ενώ έχει παρουσιάσει έργα του σε εκθέσεις στην Ελλάδα και το εξωτερικό.",
+          "Παράλληλα, έχει ιδρύσει τη **Laspi.Life**, μια εταιρεία σχεδιασμού και κατασκευής κατοικιών, μέσα από την οποία εξερευνά τη σχέση της τέχνης με την αρχιτεκτονική και τον χώρο."
+        ]
       },
       {
         "id": "ariadni",
@@ -51,7 +57,8 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": true,
+        "bio": []
       },
       {
         "id": "georgia",
@@ -77,7 +84,8 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": true,
+        "bio": []
       }
     ]
   },
@@ -87,8 +95,8 @@
         "id": "alex",
         "name": "Alexandros Douras",
         "role": "Artist · Founder",
-        "photo": "/assets/img/uploads/korko-alex-1.jpg",
-        "photo_alt": "Alexandros Douras with a clay mask",
+        "photo": "/assets/img/uploads/korko-7368.jpg",
+        "photo_alt": "Alexandros Ntouras holding a ceramic crocodile",
         "cv": [
           {
             "label": "Studies",
@@ -107,7 +115,13 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": false,
+        "bio": [
+          "Alexandros Ntouras is a visual artist specialising in sculpture and a graduate of the Athens School of Fine Arts.",
+          "He is the founder and teacher of **Korkodilos**, a studio born from his love of making and experimenting, and from the wish to share ideas and knowledge with others.",
+          "His practice moves between sculpture, ceramics, design and architecture, and he has shown work in exhibitions in Greece and abroad.",
+          "He has also founded **Laspi.Life**, a company that designs and builds homes, through which he explores the relationship between art, architecture and space."
+        ]
       },
       {
         "id": "ariadni",
@@ -133,7 +147,8 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": true,
+        "bio": []
       },
       {
         "id": "georgia",
@@ -159,7 +174,8 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true
+        "cv_is_placeholder": true,
+        "bio": []
       }
     ]
   }

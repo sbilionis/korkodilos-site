@@ -5,52 +5,32 @@
     "h1": "Korkodilos — εργαστήριο κεραμικής στον Κεραμεικό",
     "film": [
       {
-        "image": "/assets/img/uploads/k14.jpg",
-        "alt": "Το κοινό τραπέζι με τα φωτιστικά και τα φυτά"
+        "image": "/assets/img/uploads/korko-4936.jpg",
+        "alt": "Βάζο με αμάραντο στο φως του παραθύρου"
       },
       {
         "image": "/assets/img/uploads/korko-6882.jpg",
         "alt": "Από ψηλά: το εργαστήριο με τις λευκές κουρτίνες"
       },
       {
-        "image": "/assets/img/uploads/k69.jpg",
-        "alt": "Από ψηλά: μαθητές δουλεύουν γύρω από το τραπέζι"
-      },
-      {
-        "image": "/assets/img/uploads/k20.jpg",
-        "alt": "Μαθήτρια δουλεύει τον πηλό"
-      },
-      {
-        "image": "/assets/img/uploads/korko-4936.jpg",
-        "alt": "Βάζο με αμάραντο στο φως του παραθύρου"
-      },
-      {
-        "image": "/assets/img/uploads/k62.jpg",
-        "alt": "Ράφι με έργα από πηλό"
-      },
-      {
-        "image": "/assets/img/uploads/k70.jpg",
-        "alt": "Χέρια βουτηγμένα σε υγρό πηλό"
-      },
-      {
-        "image": "/assets/img/uploads/korko-7241.jpg",
-        "alt": "Ράφια με κεραμικά και ζωγραφισμένα πρόσωπα"
-      },
-      {
-        "image": "/assets/img/uploads/k52.jpg",
-        "alt": "Κεραμικές φιγούρες πάνω στο τραπέζι"
-      },
-      {
-        "image": "/assets/img/uploads/k37.jpg",
-        "alt": "Ράφια με έργα και ξερά φυτά"
-      },
-      {
         "image": "/assets/img/uploads/korko-7584.jpg",
         "alt": "Το τραπέζι στο απογευματινό φως"
       },
       {
-        "image": "/assets/img/uploads/k21.jpg",
-        "alt": "Ο νεροχύτης με τα σχέδια στον τοίχο"
+        "image": "/assets/img/uploads/korko-6987.jpg",
+        "alt": "Ηλιοτρόπια σε κεραμικό βάζο με πιάτο"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7360.jpg",
+        "alt": "Παρέα δουλεύει γύρω από το τραπέζι"
+      },
+      {
+        "image": "/assets/img/uploads/korko-4885.jpg",
+        "alt": "Κεραμικό γλυπτό στο τραπέζι, σχέδια στον τοίχο"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7241.jpg",
+        "alt": "Ράφια με κεραμικά και ζωγραφισμένα πρόσωπα"
       }
     ],
     "intro": "Ο **Korkodilos** είναι ένα εργαστήριο κεραμικής στον Κεραμεικό. Φίλοι γύρω από ένα ξύλινο τραπέζι, με τα χέρια στον πηλό. Αρχάριοι και έμπειροι, ο καθένας με τον ρυθμό του.",
@@ -80,8 +60,8 @@
           "title": "Corporate Bonding",
           "text": "Η ομάδα σας γύρω από τον πηλό, στον χώρο μας ή στον δικό σας.",
           "price": "κατόπιν επικοινωνίας",
-          "image": "/assets/img/uploads/korko-7360.jpg",
-          "image_alt": "Παρέα δουλεύει γύρω από το τραπέζι",
+          "image": "/assets/img/uploads/korko-7209.jpg",
+          "image_alt": "Το τραπέζι με εργαλεία, χρώματα και έργα στη μέση",
           "link": "classes.html#corporate"
         },
         {
@@ -101,52 +81,32 @@
     "h1": "Korkodilos — ceramic studio in Kerameikos, Athens",
     "film": [
       {
-        "image": "/assets/img/uploads/k14.jpg",
-        "alt": "The shared table with the lamps and plants"
+        "image": "/assets/img/uploads/korko-4936.jpg",
+        "alt": "Vase with amaranth in the window light"
       },
       {
         "image": "/assets/img/uploads/korko-6882.jpg",
         "alt": "From above: the studio with its white curtains"
       },
       {
-        "image": "/assets/img/uploads/k69.jpg",
-        "alt": "From above: students working around the table"
-      },
-      {
-        "image": "/assets/img/uploads/k20.jpg",
-        "alt": "A student working the clay"
-      },
-      {
-        "image": "/assets/img/uploads/korko-4936.jpg",
-        "alt": "Vase with amaranth in the window light"
-      },
-      {
-        "image": "/assets/img/uploads/k62.jpg",
-        "alt": "A shelf of clay pieces"
-      },
-      {
-        "image": "/assets/img/uploads/k70.jpg",
-        "alt": "Hands dipped in liquid clay"
-      },
-      {
-        "image": "/assets/img/uploads/korko-7241.jpg",
-        "alt": "Shelves with ceramics and painted faces"
-      },
-      {
-        "image": "/assets/img/uploads/k52.jpg",
-        "alt": "Ceramic figures on the table"
-      },
-      {
-        "image": "/assets/img/uploads/k37.jpg",
-        "alt": "Shelves with work and dried plants"
-      },
-      {
         "image": "/assets/img/uploads/korko-7584.jpg",
         "alt": "The table in the afternoon light"
       },
       {
-        "image": "/assets/img/uploads/k21.jpg",
-        "alt": "The sink with the drawings on the wall"
+        "image": "/assets/img/uploads/korko-6987.jpg",
+        "alt": "Sunflowers in a ceramic vase with a plate"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7360.jpg",
+        "alt": "A group working around the table"
+      },
+      {
+        "image": "/assets/img/uploads/korko-4885.jpg",
+        "alt": "A ceramic sculpture on the table, drawings on the wall"
+      },
+      {
+        "image": "/assets/img/uploads/korko-7241.jpg",
+        "alt": "Shelves with ceramics and painted faces"
       }
     ],
     "intro": "**Korkodilos** is a ceramic studio in Kerameikos, Athens. Friends around a wooden table, hands in the clay. Beginners and experienced makers, each at their own pace.",
@@ -176,8 +136,8 @@
           "title": "Corporate Bonding",
           "text": "Your team around the clay, at our studio or at yours.",
           "price": "on request",
-          "image": "/assets/img/uploads/korko-7360.jpg",
-          "image_alt": "A group working around the table",
+          "image": "/assets/img/uploads/korko-7209.jpg",
+          "image_alt": "The table with tools, paints and work in progress",
           "link": "classes.html#corporate"
         },
         {

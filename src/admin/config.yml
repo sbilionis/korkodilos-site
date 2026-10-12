@@ -202,6 +202,16 @@ collections:
                   name: p
                   label: Παράγραφος
                   widget: text
+              - name: image
+                label: "Φωτογραφία (κενό = χωρίς)"
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
           - name: clay
             label: Ο πηλός
             widget: object
@@ -246,6 +256,16 @@ collections:
                   name: p
                   label: Παράγραφος
                   widget: text
+              - name: image
+                label: "Φωτογραφία (κενό = χωρίς)"
+                widget: image
+                required: false
+                i18n: duplicate
+              - name: image_alt
+                label: Περιγραφή φωτογραφίας
+                widget: string
+                required: false
+                i18n: true
           - name: team
             label: Who we are (τίτλος ενότητας)
             widget: object
@@ -560,6 +580,16 @@ collections:
                 label: Τίτλος φόρμας
                 widget: string
                 i18n: true
+          - name: photo
+            label: "Φωτογραφία ανάμεσα στα στοιχεία και τη φόρμα (κενό = χωρίς)"
+            widget: image
+            required: false
+            i18n: duplicate
+          - name: photo_alt
+            label: Περιγραφή φωτογραφίας
+            widget: string
+            required: false
+            i18n: true
         i18n: true
       - name: legal
         label: Πολιτική απορρήτου & Όροι
@@ -818,8 +848,17 @@ collections:
                 widget: string
                 required: false
                 i18n: true
+              - name: bio
+                label: Βιογραφικό σε παραγράφους (αν υπάρχει, φαίνεται αντί για τη λίστα)
+                widget: list
+                required: false
+                i18n: true
+                field:
+                  name: p
+                  label: Παράγραφος
+                  widget: text
               - name: cv
-                label: Βιογραφικό
+                label: "Βιογραφικό σε λίστα (Θέμα — Κείμενο)"
                 widget: list
                 i18n: true
                 summary: "{{fields.label}}"

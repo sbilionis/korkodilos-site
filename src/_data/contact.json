@@ -25,7 +25,9 @@
     },
     "form": {
       "label": "Γράψε μας"
-    }
+    },
+    "photo": "/assets/img/uploads/korko-4902.jpg",
+    "photo_alt": "Ο τοίχος με τα ζωγραφισμένα μάτια, ράφια και φυτά"
   },
   "en": {
     "title": "Contact — Korkodilos",
@@ -53,6 +55,8 @@
     },
     "form": {
       "label": "Write to us"
-    }
+    },
+    "photo": "/assets/img/uploads/korko-4902.jpg",
+    "photo_alt": "The wall with the painted eyes, shelves and plants"
   }
 }

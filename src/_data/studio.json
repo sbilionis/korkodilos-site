@@ -3,7 +3,7 @@
     "title": "Studio — Korkodilos",
     "description": "Το εργαστήριο κεραμικής του Αλέξανδρου Ντούρα στον Κεραμεικό: ένα μεγάλο κοινό τραπέζι, φυτά, φως, καμίνι — και οι δάσκαλοί μας.",
     "h1": "Studio",
-    "hero_image": "/assets/img/uploads/korko-4929.jpg",
+    "hero_image": "/assets/img/uploads/korko-4927.jpg",
     "hero_alt": "Το μακρύ κοινό τραπέζι κάτω από τα φωτιστικά",
     "intro": {
       "label": "Studio",
@@ -20,12 +20,14 @@
         "Στην καρδιά του, ένα μεγάλο κοινό τραπέζι, σαν εκείνα όπου τρώμε και κουβεντιάζουμε. Εδώ δημιουργούμε: διαφορετικοί άνθρωποι δίπλα δίπλα, που βλέπουν ο ένας τη δουλειά του άλλου.",
         "Γύρω του, πάγκοι, βρύσες και ό,τι χρειάζεται. Στον επάνω όροφο, ένα δεύτερο, πιο ελεύθερο εργαστήριο για παράλληλα μαθήματα, νέα υλικά και έργα μεγάλης κλίμακας.",
         "Ο **Korkodilos** συνομιλεί με το **design** και την τέχνη: στα γραφιστικά, στον χώρο, στα μαθήματα, στα **masterclasses** και στις συνεργασίες του."
-      ]
+      ],
+      "image": "/assets/img/uploads/korko-4952.jpg",
+      "image_alt": "Ο χώρος με το τραπέζι, τις καρέκλες και τα φυτά"
     },
     "clay": {
       "label": "Ο πηλός",
-      "image": "/assets/img/uploads/korko-above.jpg",
-      "image_alt": "Κάτοψη: μαθητές δουλεύουν τον πηλό στο κοινό τραπέζι",
+      "image": "/assets/img/uploads/korko-4929.jpg",
+      "image_alt": "Το εργαστήριο με τα κρεμαστά φωτιστικά και τη σκάλα",
       "paragraphs": [
         "Γνωρίζουμε το υλικό. Ανακαλύπτουμε τις ιδιότητές του. Εξερευνούμε τις δυνατότητές του. Μαθαίνουμε να αντιδρούμε γρήγορα στην εύπλαστη φύση του. Παρατηρούμε τις μεταμορφώσεις του. Αποτυπώνουμε το σχέδιο. Υλοποιούμε το προσχέδιο. Κάνουμε έργο τη φαντασία μας.",
         "Η εκμάθηση γίνεται μέσα από το παιχνίδι. Το παιχνίδι μας φέρνει κοντά. Δημιουργεί οικειότητα και εμπεριέχει το στοιχείο της έκπληξης. Ο **Korkodilos** θέτει από την αρχή στόχους και μαθαίνει στο μαθητή να τους υλοποιεί με ηρεμία και συγκέντρωση. Κατά τη διάρκεια του μαθήματος μπλέκουμε το υλικό με την ιστορία της Τέχνης και τις προσωπικές μας αναφορές. Για τον **Korkodilos**, η κεραμική είναι μια διαδικασία με αργό βηματισμό."
@@ -35,7 +37,9 @@
       "label": "Tools",
       "paragraphs": [
         "Όλα τα εργαλεία είναι εδώ: πινέλα, φλόγιστρα, τροχοί χειρός, αερογράφοι, φιλιέρα, πηλοί, σμάλτα, χρώματα. Ψήνουμε στο δικό μας καμίνι, οπότε ό,τι φτιάξεις το παίρνεις σπίτι ψημένο και υαλωμένο."
-      ]
+      ],
+      "image": "/assets/img/uploads/korko-4904.jpg",
+      "image_alt": "Το πίσω μέρος του εργαστηρίου με τα ράφια"
     },
     "team": {
       "label": "Who we are",
@@ -50,7 +54,7 @@
     "title": "Studio — Korkodilos",
     "description": "Alexandros Douras’s ceramic studio in Kerameikos: one big shared table, plants, light, a kiln — and our teachers.",
     "h1": "Studio",
-    "hero_image": "/assets/img/uploads/korko-4929.jpg",
+    "hero_image": "/assets/img/uploads/korko-4927.jpg",
     "hero_alt": "The long shared table under the lights",
     "intro": {
       "label": "Studio",
@@ -67,12 +71,14 @@
         "At its heart, one big shared table, like the ones we eat and talk around. Here we make: different people side by side, watching each other’s work.",
         "Around it, benches, sinks and everything you need. Upstairs, a second, freer studio for parallel classes, new materials and large-scale work.",
         "**Korkodilos** is in constant conversation with **design** and art: in its graphics, its space, its classes, its **masterclasses** and its collaborations."
-      ]
+      ],
+      "image": "/assets/img/uploads/korko-4952.jpg",
+      "image_alt": "The room with the table, chairs and plants"
     },
     "clay": {
       "label": "Clay",
-      "image": "/assets/img/uploads/korko-above.jpg",
-      "image_alt": "From above: students working clay at the shared table",
+      "image": "/assets/img/uploads/korko-4929.jpg",
+      "image_alt": "The studio with the hanging lights and the stairs",
       "paragraphs": [
         "We get to know the material. We discover its properties. We explore its possibilities. We learn to react quickly to its malleable nature. We watch it transform. We draw the design. We make the sketch real. We turn our imagination into work.",
         "We learn through play. Play brings us together. It creates intimacy and carries an element of surprise. **Korkodilos** sets goals from the start and teaches each student to reach them calmly and with focus. During class we mix the material with art history and our own references. For **Korkodilos**, ceramics is a slow-paced process."
@@ -82,7 +88,9 @@
       "label": "Tools",
       "paragraphs": [
         "All the tools are here: brushes, torches, banding wheels, airbrushes, an extruder, clays, glazes, colours. We fire in our own kiln, so whatever you make, you take home fired and glazed."
-      ]
+      ],
+      "image": "/assets/img/uploads/korko-4904.jpg",
+      "image_alt": "The back of the studio with the shelves"
     },
     "team": {
       "label": "Who we are",

@@ -640,3 +640,7 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 /* the jaw band: one soft band under the menu row in the colours of the sections behind (see site.js) */
 .jaw-veil{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none}
 .menu-open .jaw-veil{visibility:hidden}
+/* tutor pop-up: a written bio instead of the short list */
+.cv__bio p{font-size:var(--fs-m);line-height:1.4;margin:0 0 .8em}
+/* Contact: the photo with the eyes sits between the details and the form */
+.contact-photo{margin:60px 0 50px}

@@ -37,6 +37,9 @@ file: studio.html
     <div class="content">
       {% set paras = t.table.paragraphs %}{% set label = t.table.label %}{% include "partials/paras.njk" %}
     </div>
+    {%- if t.table.image %}
+    <div class="sec-photo swallow"><img sizes="(max-width: 768px) 100vw, 560px" src="{{ t.table.image }}" alt="{{ t.table.image_alt }}" loading="lazy"></div>
+    {%- endif %}
   </div>
 </section>
 <section class="section section--fit bg-pink">
@@ -54,6 +57,9 @@ file: studio.html
     <div class="content">
       {% set paras = t.tools.paragraphs %}{% set label = t.tools.label %}{% include "partials/paras.njk" %}
     </div>
+    {%- if t.tools.image %}
+    <div class="sec-photo swallow"><img sizes="(max-width: 768px) 100vw, 560px" src="{{ t.tools.image }}" alt="{{ t.tools.image_alt }}" loading="lazy"></div>
+    {%- endif %}
   </div>
 </section>
 <section class="section section--fit bg-green" id="who">
@@ -81,11 +87,15 @@ file: studio.html
     <div>
       <h2 id="cv-{{ p.id }}-h" tabindex="-1" autofocus>{{ p.name }}</h2>
       <p class="cv__role">{{ p.role }}</p>
+      {%- if p.bio and p.bio.length %}
+      <div class="cv__bio">{% for b in p.bio %}<p>{{ b | mdi | safe }}</p>{% endfor %}</div>
+      {%- else %}
       <ul>
         {%- for c in p.cv %}
         <li>{{ c.label }} — <span{% if p.cv_is_placeholder %} class="ph"{% endif %}>{{ c.value }}</span></li>
         {%- endfor %}
       </ul>
+      {%- endif %}
       {%- if p.cv_is_placeholder %}
       <p class="ph-note" style="margin-top:22px">{{ u.bio_placeholder }}</p>
       {%- endif %}

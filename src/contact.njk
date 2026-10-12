@@ -31,6 +31,9 @@ file: contact.html
         <p>{% for l in t.hours.lines %}{{ l | mdi | safe }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
       </div>
     </div>
+    {%- if t.photo %}
+    <div class="sec-photo contact-photo swallow"><img sizes="(max-width: 768px) 100vw, 560px" src="{{ t.photo }}" alt="{{ t.photo_alt }}" loading="lazy"></div>
+    {%- endif %}
     <div class="contact-form swallow">
       <h2 class="contact-form__h">{{ t.form.label }}</h2>
       {% set fname = "contact" %}{% set kind = "contact" %}{% include "partials/form.njk" %}
