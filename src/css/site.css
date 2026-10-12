@@ -440,7 +440,7 @@ html,body{overflow-x:clip}
 /* Home: the portrait only sticks on desktop (on phones it slid over the text below) */
 @media (max-width:768px){.portrait figure{position:static}}
 /* pop-ups: a round × in the corner that never overlaps the title; no focus box on open */
-.cv{position:relative}
+.cv{position:fixed}   /* pop-ups stay on screen where you are (relative made the page jump to the top on open) */
 .cv__close{top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--base);font-size:0;line-height:40px;text-align:center}
 .cv__close::before{content:"×";font-size:22px;font-family:var(--sans)}
 .cv h2,.cv__role{padding-right:56px}
