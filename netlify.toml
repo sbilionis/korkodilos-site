@@ -6,6 +6,18 @@
   NODE_VERSION = "20"
 
 
+# security headers for every address (site and admin):
+# never shown inside another site's frame, no guessing of file types, browser always uses https,
+# links to other sites don't reveal the full address, and no access to camera/mic/location etc.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
 # design option pages: not for Google
 [[headers]]
   for = "/_proposals/*"

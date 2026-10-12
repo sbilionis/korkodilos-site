@@ -8,7 +8,10 @@
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <!-- Sveltia CMS (Decap-compatible). Config: /admin/config.yml. Pinned version: update deliberately. -->
-  <script src="https://unpkg.com/@sveltia/cms@0.221.1/dist/sveltia-cms.js"></script>
+  <!-- Sveltia CMS (Decap-compatible). Config: /admin/config.yml. Pinned version: update deliberately.
+       integrity = fingerprint of exactly this file (checked identical on unpkg and jsDelivr, 12 Oct 2026):
+       if the file on the CDN ever changes, the browser refuses to run it. When upgrading Sveltia, recompute:
+       curl -sL <url> | openssl dgst -sha384 -binary | openssl base64 -A -->
+  <script src="https://unpkg.com/@sveltia/cms@0.221.1/dist/sveltia-cms.js" integrity="sha384-JQ+XsKx/UzwdTiNnFStza3XtqqQoVtyNPApkfvwlzZDfhe7giE9CnfQrpHqgv3k6" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
