@@ -1,7 +1,7 @@
 {
   "el": {
     "title": "Korkodilos — Εργαστήριο κεραμικής στον Κεραμεικό",
-    "description": "Εργαστήριο κεραμικής στον Κεραμεικό, Αθήνα. Μηνιαία μαθήματα για όλα τα επίπεδα (4×3), corporate bonding και clay parties.",
+    "description": "Εργαστήριο κεραμικής στον Κεραμεικό, Αθήνα. Μηνιαία μαθήματα για όλα τα επίπεδα (4×3), corporate bonding και clay parties. Γεια",
     "h1": "Korkodilos — εργαστήριο κεραμικής στον Κεραμεικό",
     "film": [
       {
@@ -68,7 +68,7 @@
           "title": "Clay Parties",
           "text": "Κλείνεις τον χώρο και τον δάσκαλο, φέρνεις drinks και καλή διάθεση.",
           "price": "κατόπιν επικοινωνίας",
-          "image": "/assets/img/uploads/D9E1EBAA-4F2E-4A90-821F-5C2D5BDC2B71.webp",
+          "image": "/assets/img/uploads/korko-6977.jpg",
           "image_alt": "Ηλιοτρόπια σε κεραμικό βάζο με πιάτο",
           "link": "classes.html#parties"
         }
@@ -144,7 +144,7 @@
           "title": "Clay Parties",
           "text": "Book the space and a teacher, bring drinks and a good mood.",
           "price": "on request",
-          "image": "/assets/img/uploads/D9E1EBAA-4F2E-4A90-821F-5C2D5BDC2B71.webp",
+          "image": "/assets/img/uploads/korko-6977.jpg",
           "image_alt": "Sunflowers in a ceramic vase with a plate",
           "link": "classes.html#parties"
         }
