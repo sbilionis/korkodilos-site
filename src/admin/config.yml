@@ -11,6 +11,17 @@ display_url: https://korkodilosathens.gr
 locale: en
 media_folder: src/assets/img/uploads
 public_folder: /assets/img/uploads
+# photos are made smaller in Alex's browser BEFORE upload: max 2400px, WebP (≈10× smaller, much faster to upload;
+# also turns iPhone HEIC photos into a format every browser shows). The site itself uses at most 2000px.
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2400
+          height: 2400
 i18n:
   structure: single_file
   locales:
