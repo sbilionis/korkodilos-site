@@ -1,120 +1,110 @@
 {
-  "el": {
-    "week": {
-      "mon": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "tue": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "wed": [
-        {
-          "time": "11:00–14:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "thu": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "fri": [
-        {
-          "time": "11:00–14:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "sat": [
-        {
-          "time": "12:00–15:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "18:00–21:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "sun": [
-        {
-          "time": "12:00–15:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "18:00–21:00",
-          "title": "Monthly 4×3"
-        }
-      ]
+ "el": {
+  "week": {
+   "mon": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "tue": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "wed": [
+    {
+     "time": "11:00–14:00",
+     "title": "Monthly 4×3"
     },
-    "specials": []
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "thu": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "fri": [],
+   "sat": [
+    {
+     "time": "12:00–15:00",
+     "title": "Monthly 4×3"
+    },
+    {
+     "time": "18:00–21:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "sun": [
+    {
+     "time": "12:00–15:00",
+     "title": "Monthly 4×3"
+    },
+    {
+     "time": "18:00–21:00",
+     "title": "Monthly 4×3"
+    }
+   ]
   },
-  "en": {
-    "week": {
-      "mon": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "tue": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "wed": [
-        {
-          "time": "11:00–14:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "thu": [
-        {
-          "time": "19:00–22:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "fri": [
-        {
-          "time": "11:00–14:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "sat": [
-        {
-          "time": "12:00–15:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "18:00–21:00",
-          "title": "Monthly 4×3"
-        }
-      ],
-      "sun": [
-        {
-          "time": "12:00–15:00",
-          "title": "Monthly 4×3"
-        },
-        {
-          "time": "18:00–21:00",
-          "title": "Monthly 4×3"
-        }
-      ]
+  "specials": []
+ },
+ "en": {
+  "week": {
+   "mon": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "tue": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "wed": [
+    {
+     "time": "11:00–14:00",
+     "title": "Monthly 4×3"
     },
-    "specials": []
-  }
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "thu": [
+    {
+     "time": "19:00–22:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "fri": [],
+   "sat": [
+    {
+     "time": "12:00–15:00",
+     "title": "Monthly 4×3"
+    },
+    {
+     "time": "18:00–21:00",
+     "title": "Monthly 4×3"
+    }
+   ],
+   "sun": [
+    {
+     "time": "12:00–15:00",
+     "title": "Monthly 4×3"
+    },
+    {
+     "time": "18:00–21:00",
+     "title": "Monthly 4×3"
+    }
+   ]
+  },
+  "specials": []
+ }
 }

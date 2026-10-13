@@ -35,10 +35,10 @@
       },
       {
         "id": "ariadni",
-        "name": "Αριάδνη Στρογγυλά",
-        "role": "Δασκάλα",
-        "photo": "",
-        "photo_alt": "",
+        "name": "Αριάδνη Στροφύλλα",
+        "role": "Εικαστικός · Δασκάλα",
+        "photo": "/assets/img/uploads/tutor-ariadni.jpg",
+        "photo_alt": "Η Αριάδνη Στροφύλλα με πινέλο στο εργαστήριο",
         "cv": [
           {
             "label": "Σπουδές",
@@ -57,15 +57,19 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true,
-        "bio": []
+        "cv_is_placeholder": false,
+        "bio": [
+          "Η Αριάδνη Στροφύλλα (γενν. 1995) είναι εικαστικός με έδρα την Αθήνα. Είναι κάτοχος πτυχίου BA (Hons) Καλών Τεχνών στη Ζωγραφική και τη Χαρακτική από τη Σχολή Καλών Τεχνών της Γλασκώβης.",
+          "Από το 2017, το έργο της επικεντρώνεται κυρίως στις τεχνικές γλυπτικής κεραμικής — σε συνδυασμό με στοιχεία άλλων υλικοτήτων όπως μελισσοκέρι, ήχο, μέταλλο, cob και εναλλακτικούς τρόπους ψησίματος — διερευνώντας τη μεταμόρφωση της ύλης, τους μη ανθρώπινους τρόπους επικοινωνίας και την αισθητηριακή αντίληψη των εντόμων, απορρίπτοντας παράλληλα τις ανθρωποκεντρικές ιεραρχίες.",
+          "Μεταξύ των πρόσφατων εκθέσεών της περιλαμβάνονται: Nóema Craft Prize (Αθήνα, Ιούλιος 2026), Open Floating Sea Palace (Στοκχόλμη, Αύγουστος 2025), Imaginarium Park: BIONICLE (Αθήνα, Ιούλιος 2025), Radical Rest (Αθήνα, Ιούνιος 2025), Trifles & Troupes | Everything Lies Under the Surface (Αθήνα, Νοέμβριος 2024). Διδάσκει κεραμική σε διάφορα ιδρύματα από το 2018."
+        ]
       },
       {
         "id": "georgia",
         "name": "Γεωργία Πιλάλη",
-        "role": "Δασκάλα",
-        "photo": "",
-        "photo_alt": "",
+        "role": "Εικαστικός · Δασκάλα",
+        "photo": "/assets/img/uploads/tutor-georgia.jpg",
+        "photo_alt": "Η Γεωργία Πιλάλη δουλεύει σε έναν τοίχο",
         "cv": [
           {
             "label": "Σπουδές",
@@ -84,8 +88,26 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true,
-        "bio": []
+        "cv_is_placeholder": false,
+        "bio": [
+          "Η Γεωργία Πιλάλη είναι εικαστικός με έδρα την Αθήνα, απόφοιτη της Σχολής Καλών Τεχνών και του μεταπτυχιακού προγράμματος «Τέχνη και Δημόσια Σφαίρα» του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης.",
+          "Η καλλιτεχνική της πρακτική εστιάζει στην υλικότητα, τη φόρμα και τη σχέση του έργου με τον χώρο και την ανθρώπινη εμπειρία. Μέσα από τον πειραματισμό με διαφορετικά υλικά και μέσα, από τον πηλό, το ξύλο και το μέταλλο έως τις ψηφιακές εκτυπώσεις, διερευνά έννοιες όπως αυτή της ιδιωτικότητας και της εσωτερικότητας, καθώς και τη σχέση ανάμεσα στο προσωπικό και το συλλογικό.",
+          "Έργα της έχουν παρουσιαστεί σε ατομική έκθεση, ομαδικές εκθέσεις και καλλιτεχνικά projects. Έχει λάβει έπαινο σε φοιτητική Μπιενάλε, ενώ έργο της ανήκει στη μόνιμη συλλογή του Ελληνικού Ανοικτού Πανεπιστημίου. Παράλληλα, έχει εμπειρία στη διδασκαλία εικαστικών και στον σχεδιασμό εκπαιδευτικών προγραμμάτων."
+        ]
+      },
+      {
+        "id": "zahos",
+        "cv": [],
+        "cv_is_placeholder": false,
+        "bio": [
+          "Ο Ζάχος Σιάγκας είναι εικαστικός με έδρα την Αθήνα. Σπούδασε Χημεία στο Πανεπιστήμιο Πατρών, όπου εκπόνησε τη διπλωματική του εργασία στον τομέα της Περιβαλλοντικής Χημείας. Μετά την ολοκλήρωση των σπουδών του, συνέχισε την εκπαίδευσή του στην Ανώτατη Σχολή Καλών Τεχνών της Αθήνας.",
+          "Εργάζεται κυρίως με την κεραμική και τα υαλώματα, προσεγγίζοντας τη χημεία των υαλωμάτων τόσο ως επιστημονικό σύστημα όσο και ως εκφραστικό μέσο. Το έργο του έχει παρουσιαστεί σε ομαδικές εκθέσεις στην Ελλάδα και στο εξωτερικό.",
+          "Στο επίκεντρο της καλλιτεχνικής του πρακτικής βρίσκεται ο συνεχής πειραματισμός με τις δυνατότητες του πηλού και η αλληλεπίδρασή του με άλλα υλικά, αντιμετωπίζοντας το καμίνι ως πεδίο δοκιμών, όπου οι αλλαγές της ύλης αποκαλύπτουν νέες αισθητικές και εννοιολογικές διαστάσεις."
+        ],
+        "name": "Ζάχος Σιάγκας",
+        "role": "Εικαστικός · Δάσκαλος",
+        "photo": "/assets/img/uploads/tutor-zahos.jpg",
+        "photo_alt": "Ο Ζάχος Σιάγκας"
       }
     ]
   },
@@ -125,10 +147,10 @@
       },
       {
         "id": "ariadni",
-        "name": "Ariadni Strongyla",
-        "role": "Teacher",
-        "photo": "",
-        "photo_alt": "",
+        "name": "Ariadni Strofylla",
+        "role": "Artist · Teacher",
+        "photo": "/assets/img/uploads/tutor-ariadni.jpg",
+        "photo_alt": "Ariadni Strofylla with a brush in the studio",
         "cv": [
           {
             "label": "Studies",
@@ -147,15 +169,19 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true,
-        "bio": []
+        "cv_is_placeholder": false,
+        "bio": [
+          "Ariadni Strofylla (b. 1995) is an artist based in Athens. She holds a BA (Hons) in Fine Art, Painting & Printmaking, from the Glasgow School of Art.",
+          "Since 2017 her work has focused mainly on sculptural ceramic techniques — combined with other materials such as beeswax, sound, metal, cob and alternative firing methods — exploring the transformation of matter, non-human ways of communicating and the sensory perception of insects, while rejecting anthropocentric hierarchies.",
+          "Recent exhibitions include: Nóema Craft Prize (Athens, July 2026), Open Floating Sea Palace (Stockholm, August 2025), Imaginarium Park: BIONICLE (Athens, July 2025), Radical Rest (Athens, June 2025), Trifles & Troupes | Everything Lies Under the Surface (Athens, November 2024). She has taught ceramics at various institutions since 2018."
+        ]
       },
       {
         "id": "georgia",
         "name": "Georgia Pilali",
-        "role": "Teacher",
-        "photo": "",
-        "photo_alt": "",
+        "role": "Artist · Teacher",
+        "photo": "/assets/img/uploads/tutor-georgia.jpg",
+        "photo_alt": "Georgia Pilali working on a wall",
         "cv": [
           {
             "label": "Studies",
@@ -174,8 +200,26 @@
             "value": "Monthly 4×3, workshops…"
           }
         ],
-        "cv_is_placeholder": true,
-        "bio": []
+        "cv_is_placeholder": false,
+        "bio": [
+          "Georgia Pilali is an artist based in Athens, a graduate of the School of Fine Arts and of the master’s programme “Art and the Public Sphere” at the Aristotle University of Thessaloniki.",
+          "Her practice focuses on materiality, form and the relationship of the work with space and human experience. Experimenting with different materials and media — from clay, wood and metal to digital prints — she explores ideas of privacy and interiority, and the relationship between the personal and the collective.",
+          "Her work has been shown in a solo exhibition, group exhibitions and art projects. She received a commendation at a student Biennale, and a work of hers is in the permanent collection of the Hellenic Open University. She also has experience teaching art and designing educational programmes."
+        ]
+      },
+      {
+        "id": "zahos",
+        "cv": [],
+        "cv_is_placeholder": false,
+        "bio": [
+          "Zahos Siagkas is an artist based in Athens. He studied Chemistry at the University of Patras, where he wrote his thesis in Environmental Chemistry, and went on to study at the Athens School of Fine Arts.",
+          "He works mainly with ceramics and glazes, approaching glaze chemistry both as a scientific system and as a means of expression. His work has been shown in group exhibitions in Greece and abroad.",
+          "At the heart of his practice is constant experimentation with the possibilities of clay and how it interacts with other materials — treating the kiln as a testing ground, where changes in matter reveal new aesthetic and conceptual dimensions."
+        ],
+        "name": "Zahos Siagkas",
+        "role": "Artist · Teacher",
+        "photo_alt": "Zahos Siagkas",
+        "photo": "/assets/img/uploads/tutor-zahos.jpg"
       }
     ]
   }
