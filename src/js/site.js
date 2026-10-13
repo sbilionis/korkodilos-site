@@ -146,7 +146,7 @@
   burger.addEventListener('click', () => menu(!root.classList.contains('menu-open')));
   addEventListener('keydown', (e) => e.key === 'Escape' && menu(false));
 
-  /* ---------- booking: PLACEHOLDER until the booking app (separate project) ---------- */
+  /* ---------- booking: new people write to us; students sign in to the booking app (book.korkodilosathens.gr) ---------- */
   document.body.insertAdjacentHTML('beforeend', `
   <dialog class="cv book-dlg" id="bookDlg" aria-labelledby="bookDlgH">
     <div class="cv__inner"><div>
@@ -157,6 +157,8 @@
         <li><a href="https://ig.me/m/korkodilosathens" target="_blank" rel="noopener">Instagram DM ↗</a></li>
         ${D.phone ? `<li><a href="tel:${tel}">${D.phone}</a></li>` : ''}
       </ul>
+      ${D.booking ? `<p class="book-dlg__student">${T.book_student || ''}</p>
+      <a class="btn" href="${D.booking}">${T.book_student_cta || 'Login'} <span aria-hidden="true">→</span></a>` : ''}
     </div></div>
     <button class="cv__close" type="button">${T.close}</button>
   </dialog>`);
