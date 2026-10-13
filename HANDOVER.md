@@ -172,3 +172,9 @@ node -e 'const y=require("js-yaml"),fs=require("fs");const c=y.load(fs.readFileS
 - Footer: "PHOTOS @teapotgr" removed (site.js).
 - Phone menu: ovals sized with `100dvh` (was svh) → no empty strip when the menu is opened after scrolling on iPhone (toolbar collapsed). Stavros to confirm on his phone.
 - Pop-ups (workshops, tutors, booking): `.cv{position:relative}` overrode the modal's fixed position → the page jumped to the top on open. Now `position:fixed`; page stays where it was.
+
+## 20. Admin photo uploads (13 Oct 2026) — live
+- Alex (on a computer) saw "Processing a file. This may take a while" when picking a new photo → slow step is in his browser (likely iPhone **HEIC**: Sveltia downloads a HEIC decoder and decodes the full photo), then the full-size upload to GitHub.
+- Added to `src/admin/config.yml`: `media_libraries.default.config.transformations.raster_image` = WebP, quality 85, max 2400×2400 → every photo is shrunk + converted in the browser before upload (~10× smaller; HEIC becomes viewable everywhere). Sveltia validates this option (checked: a wrong value shows a config error). Build handles `.webp` uploads (tested).
+- Tip for Alex if HEIC is still slow: export iPhone photos as JPEG first (Photos → File → Export), or iPhone Settings → Camera → Formats → Most Compatible.
+- Stavros is checking which photo Alex was uploading.
