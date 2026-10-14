@@ -31,6 +31,10 @@
       {
         "image": "/assets/img/uploads/korko-7241.jpg",
         "alt": "Ράφια με κεραμικά και ζωγραφισμένα πρόσωπα"
+      },
+      {
+        "image": "/assets/img/uploads/k18.jpg",
+        "alt": "lemons with ceramics"
       }
     ],
     "intro": "Ο **Korkodilos** είναι ένα εργαστήριο κεραμικής στον Κεραμεικό. Φίλοι γύρω από ένα ξύλινο τραπέζι, με τα χέρια στον πηλό. Αρχάριοι και έμπειροι, ο καθένας με τον ρυθμό του.",
@@ -107,6 +111,9 @@
       {
         "image": "/assets/img/uploads/korko-7241.jpg",
         "alt": "Shelves with ceramics and painted faces"
+      },
+      {
+        "image": "/assets/img/uploads/k18.jpg"
       }
     ],
     "intro": "**Korkodilos** is a ceramic studio in Kerameikos, Athens. Friends around a wooden table, hands in the clay. Beginners and experienced makers, each at their own pace.",
