@@ -108,7 +108,6 @@
           <li><a href="${D.instagram}" target="_blank" rel="noopener">INSTAGRAM</a></li>
           <li><a href="mailto:${D.email}">EMAIL</a></li>
         </ul></div>
-        <a class="btn footer__book" href="#book"><span class="gr">${T.book}</span> →</a>
         <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · <a href="privacy.html">${T.privacy || 'PRIVACY POLICY'}</a> · <a href="terms.html">${T.terms || 'TERMS'}</a> · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a></p>
       </div>
     </footer>
@@ -170,8 +169,13 @@
     e.preventDefault();
     const from = e.target.closest('dialog');   // e.g. a workshop pop-up: close it, then open booking
     if (from && from !== bookDlg) from.close();
-    bookDlg.showModal();
+    // phones: the pill rests as a small slider (just the K); a tap slides it open, then the booking box opens
+    const slide = e.target.closest('#bookBadge') && matchMedia('(max-width: 768px)').matches && !badge.classList.contains('is-open') &&
+      !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (slide) { badge.classList.add('is-open'); setTimeout(() => bookDlg.showModal(), 480); }
+    else bookDlg.showModal();
   });
+  bookDlg.addEventListener('close', () => setTimeout(() => badge.classList.remove('is-open'), 250));
   /* ---------- landing film strip: arrows scroll by most of a screen; disabled at the ends ---------- */
   $$('[data-film]').forEach((f) => {
     const track = $('.film__track', f), prev = $('.film__prev', f), next = $('.film__next', f);
@@ -213,12 +217,6 @@
   };
   if (!(navigator.connection && navigator.connection.saveData)) {
     addEventListener('load', () => ('requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 3000 }) : setTimeout(warm, 1500)));
-  }
-
-  /* ---------- ROUND 11 PROPOSAL (V=b builds only): on phones the book pill shrinks to the K while scrolling ---------- */
-  if (root.classList.contains('v-b')) {
-    let pt;
-    addEventListener('scroll', () => { badge.classList.add('pill-mini'); clearTimeout(pt); pt = setTimeout(() => badge.classList.remove('pill-mini'), 900); }, { passive: true });
   }
 
   /* ---------- tutors: quick CV pop-up ---------- */

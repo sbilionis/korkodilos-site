@@ -42,18 +42,6 @@ file: index.html
     </div>
   </div>
 </section>
-{%- if v.set %}
-{#- ROUND 11 PROPOSAL: students' work gallery -#}
-{%- set gal = [["k49.jpg","Κεραμικές φιγούρες μαθητών"],["k26.jpg","Γλυπτό βάζο με ξερά φυτά"],["k88.jpg","Έργα μαθητών στα χέρια τους"],["k38.jpg","Φρουτιέρα από πηλό"],["k15.jpg","Πήλινα γράμματα"],["k16.jpg","Ράφια με έργα μαθητών"]] %}
-<section class="section section--fit bg-base gal-sec">
-  <div class="container">
-    <div class="content content--sm"><p><em>Από το τραπέζι μας</em> Μερικά από τα έργα που έφτιαξαν οι μαθητές μας.</p></div>
-    <div class="gal gal--{{ v.set }} swallow">
-      {%- for g in gal %}<img src="/assets/img/uploads/{{ g[0] }}" sizes="(max-width: 768px) 70vw, 30vw" alt="{{ g[1] }}" loading="lazy">{% endfor %}
-    </div>
-  </div>
-</section>
-{%- endif %}
 <section class="section section--fit bg-pink">
   <div class="container">
     <div class="ti-block swallow">
@@ -66,27 +54,3 @@ file: index.html
     </div>
   </div>
 </section>
-{%- if v.set %}
-{#- ROUND 11 PROPOSAL: upcoming workshops (real ones from the calendar; samples only in the proposal build) -#}
-{%- set wsl = programme[lang].specials if programme[lang].specials.length else [{date:"2026-10-24",time:"Σάββατο 11:00–15:00",title:"Καλούπια από γύψο",price:"€45",type:"workshop"},{date:"2026-11-07",time:"Σάββατο 12:00–15:00",title:"Τροχός για αρχάριους",price:"€40",type:"workshop"},{date:"2026-11-13",time:"Παρασκευή 19:30–22:30",title:"Clay & wine night",price:"€35",type:"event"}] %}
-{%- if v.set == "a" %}
-<section class="section section--fit bg-base ws-sec">
-  <div class="container">
-    <div class="content content--sm"><p><em>Επόμενα workshops</em> Τα επόμενα ειδικά μαθήματα στο τραπέζι μας.</p></div>
-    <div class="ws-rows swallow">
-      {%- for s in wsl %}{%- set dp = s.date.split("-") %}
-      <a class="ws-row" href="calendar.html"><span class="ws-row__d">{{ dp[2] | int }} {{ ui[lang].months[(dp[1] | int) - 1] }}</span><span class="ws-row__t">{{ s.title }}<small>{{ s.time }}</small></span><span class="ws-row__p">{{ s.price }} <i>→</i></span></a>
-      {%- endfor %}
-    </div>
-    <div class="actions swallow"><a class="btn" href="calendar.html"><span class="gr">Όλο το πρόγραμμα</span> →</a></div>
-  </div>
-</section>
-{%- else %}
-{%- set s = wsl[0] %}{%- set dp = s.date.split("-") %}
-<section class="section section--fit bg-base ws-sec">
-  <div class="container">
-    <a class="ws-banner swallow" href="calendar.html"><span class="ws-banner__l">Επόμενο workshop</span><span class="ws-banner__d">{{ dp[2] | int }} {{ ui[lang].months[(dp[1] | int) - 1] }}</span><span class="ws-banner__t">{{ s.title }}<small>{{ s.time }} · {{ s.price }}</small></span><span class="ws-banner__a">Δες το →</span></a>
-  </div>
-</section>
-{%- endif %}
-{%- endif %}

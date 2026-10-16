@@ -34,13 +34,12 @@
 
 **Later**: booking system (separate project) → then link the booking pill/buttons to it and add Terms.
 
-## Round 11 (16 Oct 2026) — IN PROGRESS on git branch `round11` (not merged, not live)
-- Fixed live first (on main): removed Alex's test word "Γεια" from the Home Google description; Greek/English description for the lemons photo (k18).
-- Proposals page: http://localhost:8052/_proposals/round11.html (git-ignored `_proposals/round11*`). Three local builds: today `_site` (:8052), all-A `V=a npx eleventy --output=_site_a` (:8053, launch `korkodilos-site-a`), all-B `_site_b` (:8054, `korkodilos-site-b`).
-- Variant switch: `src/_data/v.js` (env V) → `<html class="v-a|v-b">`; CSS block "ROUND 11 PROPOSALS" in site.css; template switches `{% if v.set %}` in index.njk (gallery + workshops) and studio.njk (tutors early in B, clay photo as side photo); site.js: `.footer__book` button + pill-mini on scroll (v-b only).
-- Items: 1 section titles (A Canela line / B Monument caps + rule) · 2 phone book button (A K only / B shrinks while scrolling) · 3 phone footer (A map fills / B bigger info + Κλείσε μάθημα) · 4 Studio text beside photo (A order kept / B tutors up) · 5 desktop weekly calendar (A bigger / B rows) · 6 students' work on Home (A grid / B strip) · 7 workshops on Home (A list / B banner, hidden when none).
-- **Done, needs no pick:** 8 Google business details (LocalBusiness JSON-LD in base.njk, Home + Contact, from site.json).
-- After picks: make the chosen CSS unconditional, delete the other option + `v.js` + all `v.set` switches, add admin fields for new content (gallery photos, workshops labels), check 320–1680px, merge `round11` into main, push, check live.
+## Round 11 (16 Oct 2026) — picks APPLIED on git branch `round11`, waiting for Stavros's OK to go live
+- Live already (main): "Γεια" removed from the Home Google description; lemons photo described (el/en).
+- On `round11`: **1A** section titles = the small label becomes a Canela title on its own line (CSS on `.content p > em:first-child`); **2** phone book button = small slider (K circle in a short pill with a dot), tap → slides open to "Κλείσε μάθημα →" (~0.45 s) → booking box opens; closes back after (`.book-badge.is-open`, handler in site.js; desktop unchanged; reduced-motion opens directly); **3** phone footer = the orange map fills the space under the address (map `flex:1`, so the mouth still closes); **4** Studio = text beside its photo on desktop (≥900px, `:has(> .sec-photo)`), clay photo is now a side photo, **tutors right after the intro**; **5B** desktop weekly calendar = one row per day (like phones); **8** Google business details (LocalBusiness JSON-LD, Home + Contact, from site.json).
+- **Parked for a later phase** (not on the site): Home students' work gallery (Stavros: a swipe strip "like B") and upcoming workshops on Home → `src/_includes/parked-home-gallery-workshops.njk` (styles in commit 74ec5d9).
+- Checked: 10 widths 320–1440, el + en, no text over photos / clipping / sideways scroll. Proposals page (git-ignored): `_proposals/round11.html`.
+- To go live: `git checkout main && git merge round11 && git push`, then check https://korkodilosathens.gr (Alex's admin saves are on main — pull first).
 
 ## 3. Stavros's working rules (important)
 - **Show before applying** design changes: make options, show them (side-by-side desktop + 375px, real fonts/photos — iframes of the real pages work well, see `_proposals/round9.html`), let Stavros pick, apply only the picks. Direct, explicit requests can be applied straight away.
