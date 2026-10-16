@@ -1,7 +1,7 @@
 # Korkodilos website — handover for the next chat
 
 > Paste into a new chat: **"Read `CREATIVE CODING/korkodilos-site/HANDOVER.md` and continue the Korkodilos website."**
-> Updated 12 Oct 2026. Sections 1–8 = the current state + next steps. Sections 9+ = dated log of what was done and why.
+> Updated 16 Oct 2026 (round 11 live). Sections 1–8 = the current state + next steps. Sections 9+ = dated log of what was done and why.
 > Design history (why things look the way they do): `CREATIVE CODING/korkodilos-website/HANDOVER.md` §3–4h.
 
 ## 1. Where we are
@@ -34,12 +34,35 @@
 
 **Later**: booking system (separate project) → then link the booking pill/buttons to it and add Terms.
 
-## Round 11 (16 Oct 2026) — picks APPLIED on git branch `round11`, waiting for Stavros's OK to go live
-- Live already (main): "Γεια" removed from the Home Google description; lemons photo described (el/en).
-- On `round11`: **1A** section titles = the small label becomes a Canela title on its own line (CSS on `.content p > em:first-child`); **2** phone book button = small slider (K circle in a short pill with a dot), tap → slides open to "Κλείσε μάθημα →" (~0.45 s) → booking box opens; closes back after (`.book-badge.is-open`, handler in site.js; desktop unchanged; reduced-motion opens directly); **3** phone footer = the orange map fills the space under the address (map `flex:1`, so the mouth still closes); **4** Studio = text beside its photo on desktop (≥900px, `:has(> .sec-photo)`), clay photo is now a side photo, **tutors right after the intro**; **5B** desktop weekly calendar = one row per day (like phones); **8** Google business details (LocalBusiness JSON-LD, Home + Contact, from site.json).
-- **Parked for a later phase** (not on the site): Home students' work gallery (Stavros: a swipe strip "like B") and upcoming workshops on Home → `src/_includes/parked-home-gallery-workshops.njk` (styles in commit 74ec5d9).
-- Checked: 10 widths 320–1440, el + en, no text over photos / clipping / sideways scroll. Proposals page (git-ignored): `_proposals/round11.html`.
-- To go live: `git checkout main && git merge round11 && git push`, then check https://korkodilosathens.gr (Alex's admin saves are on main — pull first).
+## Round 11 (16 Oct 2026) — LIVE since 16 Oct 2026
+- **1A** section titles: the small label becomes a Canela title on its own line (CSS on `.content p > em:first-child`).
+- **2** phone book button: a small slider (K circle in a short pill with a dot). Tap → it slides open to "Κλείσε μάθημα →" (~0.45 s) → the booking box opens; it closes back afterwards (`.book-badge.is-open`, handler in site.js). Desktop is unchanged; reduced-motion opens directly.
+- **3** phone footer: the orange map fills the space under the address (map `flex:1`, so the mouth still closes).
+- **4** Studio: text beside its photo on desktop (≥900px, `:has(> .sec-photo)`); the clay photo is a side photo; **tutors come right after the intro**.
+- **5B** desktop weekly calendar: one row per day (like phones).
+- **8** Google business details: LocalBusiness JSON-LD on Home + Contact, from site.json.
+- Also: "Γεια" removed from the Home Google description; lemons photo described (el/en).
+- Checked before going live: 10 widths 320–1440, el + en; no text over photos, no clipping, no sideways scroll. Proposals page (git-ignored): `_proposals/round11.html` + screenshots in `_proposals/round11/`.
+
+**Safety copy of the site BEFORE round 11** (commit 55ec8a4):
+- git tag **`live-2026-10-16-before-round11`** on GitHub
+- source zip: `~/Downloads/Korkodilos backups/live-2026-10-16-before-round11.zip`
+
+To go back:
+- *Fastest (no code):* Netlify → korkonew → Deploys → the last deploy before "Round 11 picks" → **Publish deploy**. The next push or admin save publishes the new code again.
+- *Permanent:* `git pull`, then `git revert --no-edit 74ec5d9^..b34a30d`, then `git push`. This undoes only the design round; Alex's later saves stay.
+- *One piece only:* `git checkout live-2026-10-16-before-round11 -- src/studio.njk`, then commit and push.
+
+**NEXT PHASE (parked, Stavros's picks):**
+- Home students' work gallery as a swipe strip "like B, with the line".
+- Upcoming workshops on Home.
+
+Markup is in `src/_includes/parked-home-gallery-workshops.njk` (not included anywhere); the styles are in commit 74ec5d9. Each needs admin fields for Alex, then show-before-apply.
+
+**START HERE in the next chat:**
+1. `git pull` (Alex saves from /admin).
+2. Run `npm start` → http://localhost:8052 (launch config `korkodilos-site`).
+3. Ask Stavros what's next. Options: the parked gallery/workshops, the §2 open items, the booking link-up.
 
 ## 3. Stavros's working rules (important)
 - **Show before applying** design changes: make options, show them (side-by-side desktop + 375px, real fonts/photos — iframes of the real pages work well, see `_proposals/round9.html`), let Stavros pick, apply only the picks. Direct, explicit requests can be applied straight away.
