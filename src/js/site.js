@@ -108,6 +108,7 @@
           <li><a href="${D.instagram}" target="_blank" rel="noopener">INSTAGRAM</a></li>
           <li><a href="mailto:${D.email}">EMAIL</a></li>
         </ul></div>
+        <a class="btn footer__book" href="#book"><span class="gr">${T.book}</span> →</a>
         <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · <a href="privacy.html">${T.privacy || 'PRIVACY POLICY'}</a> · <a href="terms.html">${T.terms || 'TERMS'}</a> · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a></p>
       </div>
     </footer>
@@ -212,6 +213,12 @@
   };
   if (!(navigator.connection && navigator.connection.saveData)) {
     addEventListener('load', () => ('requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 3000 }) : setTimeout(warm, 1500)));
+  }
+
+  /* ---------- ROUND 11 PROPOSAL (V=b builds only): on phones the book pill shrinks to the K while scrolling ---------- */
+  if (root.classList.contains('v-b')) {
+    let pt;
+    addEventListener('scroll', () => { badge.classList.add('pill-mini'); clearTimeout(pt); pt = setTimeout(() => badge.classList.remove('pill-mini'), 900); }, { passive: true });
   }
 
   /* ---------- tutors: quick CV pop-up ---------- */

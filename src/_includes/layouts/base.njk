@@ -3,7 +3,7 @@
 {%- set here = site.url + ('/' if lang == 'el' else '/en/') + file -%}
 {%- set u = ui[lang] -%}
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}"{% if v.set %} class="v-{{ v.set }}"{% endif %}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -34,6 +34,27 @@
 <link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/Canela-Light-Gr-Web.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://unrivaled-queijadas-404cd2.netlify.app/fonts/MonumentGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css?v={{ build.v }}">
+{%- if pageKey == "home" or pageKey == "contact" %}
+{#- Google business details (address, map pin, contact) — built from site.json, so changes in /admin flow through -#}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": site.url + "/#studio",
+  "name": "Korkodilos",
+  "alternateName": "Korkodilos ceramic studio",
+  "description": t.description,
+  "url": site.url + ("/" if lang == "el" else "/en/"),
+  "image": site.url + site.og_image,
+  "logo": site.url + "/assets/img/apple-touch-icon.png",
+  "telephone": site.phone | replace(" ", ""),
+  "email": site.email,
+  "address": { "@type": "PostalAddress", "streetAddress": "Πλαταιών 56", "addressLocality": "Αθήνα", "addressRegion": "Κεραμεικός", "postalCode": "10435", "addressCountry": "GR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 37.9830054, "longitude": 23.7151154 },
+  "hasMap": site.maps,
+  "sameAs": [site.instagram, site.facebook],
+  "inLanguage": lang
+} | dump | safe }}</script>
+{%- endif %}
 </head>
 <body class="page-{{ pageKey }}" data-page="{{ pageKey }}">
 <div data-jaw="top"></div>

@@ -668,3 +668,72 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
 .ph-note--under{display:block;margin:-26px 0 30px;font-family:var(--serif);font-weight:300;font-size:var(--fs-m);line-height:1.35;letter-spacing:0;text-transform:none;opacity:1;max-width:29em}
 /* big serif paragraphs (pick 2B): about 30em on wide screens too */
 .content p{max-width:30em}
+
+/* ==========================================================================
+   ROUND 11 PROPOSALS (only active in V=a / V=b builds: html.v-a / html.v-b)
+   Remove the unpicked option after Stavros chooses; make the picked one unconditional.
+   ========================================================================== */
+/* 1 · section titles — A: Canela title on its own line · B: Monument caps title with a rule */
+.v-a .content p > em:first-child{display:block;font-family:var(--serif);font-style:normal;font-weight:300;font-size:clamp(34px,calc(18px + 2.6vw),56px);line-height:1.05;letter-spacing:0;text-transform:none;vertical-align:0;margin:0 0 .45em}
+.v-b .content p > em:first-child{display:block;font-family:var(--sans);font-style:normal;font-size:clamp(15px,calc(12px + .5vw),20px);letter-spacing:.07em;text-transform:uppercase;vertical-align:0;margin:0 0 .9em;padding-top:14px;border-top:1.5px solid currentColor}
+/* 2 · book button on phones — A: round K only · B: K only while scrolling (JS adds .pill-mini) */
+@media (max-width:768px){
+  .v-a .book-badge{padding:5px}
+  .v-a .book-badge__label{display:none}
+  .v-b .book-badge.pill-mini{padding:5px}
+  .v-b .book-badge.pill-mini .book-badge__label{display:none}
+}
+/* 3 · phone footer — A: the orange map on every page · B: bigger info + a booking button */
+@media (max-width:768px){
+  .v-a body:not(.page-contact) .footer__map{display:block;order:2;flex:1 1 auto;min-height:150px}   /* fills only the empty space → the mouth still closes */
+  .v-a .footer__cols{flex:none}
+  .v-b .footer__block{font-size:18px;line-height:1.35}
+  .v-b .footer__book{display:inline-flex;margin:28px 15px 0;grid-column:1/-1;justify-self:start}
+}
+.footer__book{display:none}
+/* 4 · shorter Studio — text beside its photo (A and B; B also moves the tutors up) */
+@media (min-width:900px){
+  .v-a .page-studio .container:has(> .sec-photo),.v-b .page-studio .container:has(> .sec-photo){display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(30px,5vw,80px);align-items:center;padding-bottom:var(--sec)}
+  .v-a .page-studio .container:has(> .sec-photo) > .content,.v-b .page-studio .container:has(> .sec-photo) > .content{padding-bottom:0}
+  .v-a .page-studio .container:has(> .sec-photo) .content p,.v-b .page-studio .container:has(> .sec-photo) .content p{font-size:var(--fs-m);line-height:1.35}
+  .v-a .page-studio .sec-photo,.v-b .page-studio .sec-photo{margin:var(--sec) 0 0;max-width:none}
+  .v-a .page-studio .sec-photo img,.v-b .page-studio .sec-photo img{width:100%;max-height:72vh;object-fit:cover}
+}
+/* 5 · weekly calendar on desktop — A: bigger slots · B: one row per day, like on phones */
+@media (min-width:769px){
+  .v-a .cal--days{gap:14px}
+  .v-a .cal-day .cal__h{font-size:var(--fs-s);padding-bottom:14px}
+  .v-a .cal__s{font-size:var(--fs-m);padding:18px 16px;border-radius:14px}
+  .v-b .cal--days{grid-template-columns:1fr;gap:0;border-top:1.5px solid currentColor;max-width:980px}
+  .v-b .cal-day{display:grid;grid-template-columns:200px 1fr;align-items:center;gap:18px;padding:14px 0;border-bottom:1.5px solid currentColor}
+  .v-b .cal-day .cal__h{border-bottom:0;padding:0;margin:0;font-size:var(--fs-s)}
+  .v-b .cal-day .cal__d{flex-direction:row;flex-wrap:wrap;gap:10px}
+  .v-b .cal-day .cal__s{font-size:var(--fs-m);padding:10px 20px;border-radius:99px}
+}
+/* 6 · students' work — A: 3×2 grid of squares · B: a strip you swipe */
+.gal{padding:20px 0 0}
+.gal--a{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gal--a img{width:100%;aspect-ratio:1;object-fit:cover}
+.gal--b{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gal--b::-webkit-scrollbar{display:none}
+.gal--b img{flex:none;height:clamp(240px,46vh,460px);width:auto;scroll-snap-align:start}
+@media (max-width:768px){.gal--a{grid-template-columns:1fr 1fr;gap:8px}}
+/* 7 · workshops on Home — A: list rows · B: one banner for the next one */
+.ws-rows{border-top:1.5px solid currentColor;margin-top:10px}
+.ws-row{display:grid;grid-template-columns:140px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1.5px solid currentColor}
+.ws-row__d{font-size:var(--fs-l);line-height:1}
+.ws-row__t{font-size:var(--fs-m);line-height:1.25}
+.ws-row__t small,.ws-banner__t small{display:block;font-family:var(--sans);font-size:var(--fs-xs);letter-spacing:.04em;text-transform:uppercase;opacity:.7;margin-top:6px}
+.ws-row__p{font-size:var(--fs-m);white-space:nowrap}
+.ws-row i,.ws-banner__a{font-style:normal;font-family:var(--sans)}
+.ws-sec .actions{margin-top:24px}
+.ws-banner{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:28px;align-items:center;padding:28px 32px;border-radius:4px;background:var(--orange);margin-top:var(--sec)}
+.ws-banner__l{font-family:var(--sans);font-size:var(--fs-xs);letter-spacing:.05em;text-transform:uppercase}
+.ws-banner__d{font-size:var(--fs-l);line-height:1}
+.ws-banner__t{font-size:var(--fs-m)}
+.ws-banner__a{font-size:var(--fs-xs);letter-spacing:.05em;text-transform:uppercase}
+@media (max-width:768px){
+  .ws-row{grid-template-columns:90px minmax(0,1fr);gap:6px 14px}
+  .ws-row__p{grid-column:2}
+  .ws-banner{grid-template-columns:1fr;gap:10px;padding:24px 20px}
+}

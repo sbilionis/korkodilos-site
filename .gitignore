@@ -4,3 +4,5 @@ _site/
 src/assets/fonts/
 .cache/
 _proposals/
+_site_a/
+_site_b/

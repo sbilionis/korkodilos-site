@@ -24,6 +24,26 @@ file: studio.html
     </div>
   </div>
 </section>
+{%- if v.set == "b" %}
+<section class="section section--fit bg-green who--early" id="who">
+  <div class="container">
+    <div class="content"><p><em>{{ t.team.label }}</em> {{ t.team.text | mdi | safe }}</p></div>
+    <div class="tutors swallow">
+      {%- for p in tutors[lang].people %}
+      <button class="tutor" type="button" data-cv="cv-{{ p.id }}">
+        <span class="tutor__img">{% if p.photo %}<img sizes="(max-width: 768px) 50vw, 30vw" src="{{ p.photo }}" alt="{{ p.photo_alt }}" loading="lazy">{% else %}{% set kid = "t" + loop.index %}{% include "partials/k-static.njk" %}{% endif %}</span>
+        <span class="tutor__name">{{ p.name }}</span>
+        <span class="tutor__role">{{ p.role }}</span>
+        <span class="tutor__cv">{{ u.bio }}</span>
+      </button>
+      {%- endfor %}
+    </div>
+    {%- if t.next and t.next.text %}
+    <div class="actions actions--next swallow"><a class="btn btn--light" href="{{ t.next.link }}"><span class="gr">{{ t.next.text }}</span> →</a></div>
+    {%- endif %}
+  </div>
+</section>
+{%- endif %}
 <section class="section section--fit bg-base">
   <div class="container">
     <div class="photo-k">{% set sz = t.k_photo | imgsize %}
@@ -45,11 +65,14 @@ file: studio.html
 <section class="section section--fit bg-pink">
   <div class="container">
     <div class="content">
-      {%- if t.clay.image %}{% set sz = t.clay.image | imgsize %}
+      {%- if t.clay.image and not v.set %}{% set sz = t.clay.image | imgsize %}
       <p><img class="offset-top aligncenter" src="{{ t.clay.image }}" alt="{{ t.clay.image_alt }}" loading="lazy" width="414" height="{{ (414 * sz[1] / sz[0]) | round }}"></p>
       {%- endif %}
       {% set paras = t.clay.paragraphs %}{% set label = t.clay.label %}{% include "partials/paras.njk" %}
     </div>
+    {%- if t.clay.image and v.set %}
+    <div class="sec-photo swallow"><img sizes="(max-width: 768px) 100vw, 560px" src="{{ t.clay.image }}" alt="{{ t.clay.image_alt }}" loading="lazy"></div>
+    {%- endif %}
   </div>
 </section>
 <section class="section section--fit bg-base">
@@ -62,6 +85,7 @@ file: studio.html
     {%- endif %}
   </div>
 </section>
+{%- if v.set != "b" %}
 <section class="section section--fit bg-green" id="who">
   <div class="container">
     <div class="content"><p><em>{{ t.team.label }}</em> {{ t.team.text | mdi | safe }}</p></div>
@@ -80,6 +104,7 @@ file: studio.html
     {%- endif %}
   </div>
 </section>
+{%- endif %}
 {%- for p in tutors[lang].people %}
 <dialog class="cv" id="cv-{{ p.id }}" aria-labelledby="cv-{{ p.id }}-h">
   <div class="cv__inner">
