@@ -152,6 +152,8 @@
     <div class="cv__inner"><div>
       <h2 id="bookDlgH" tabindex="-1" autofocus>${T.book}</h2>
       <p class="cv__role">${T.book_soon}</p>
+      ${D.booking && T.book_join_cta ? `<a class="btn" href="${D.booking}/#/join">${T.book_join_cta} <span aria-hidden="true">→</span></a>
+      <p class="book-dlg__or">${T.book_or || ''}</p>` : ''}
       <ul>
         <li><a href="mailto:${D.email}?subject=${encodeURIComponent(T.book_subject)}">${D.email}</a></li>
         <li><a href="https://ig.me/m/korkodilosathens" target="_blank" rel="noopener">Instagram DM ↗</a></li>

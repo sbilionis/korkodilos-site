@@ -306,6 +306,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .book-dlg .cv__inner{grid-template-columns:1fr}
 .book-dlg ul{margin-top:10px}
 .book-dlg a{text-decoration:underline;text-underline-offset:4px}
+.book-dlg__or{font-size:var(--fs-s,15px);margin:24px 0 6px;opacity:.75}
 .book-dlg__student{font-size:var(--fs-m);line-height:1.35;margin:28px 0 14px;padding-top:22px;border-top:1.5px solid currentColor}
 .book-dlg .btn{text-decoration:none}
 /* contact */
