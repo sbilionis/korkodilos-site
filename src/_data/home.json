@@ -1,7 +1,7 @@
 {
   "el": {
     "title": "Korkodilos — Εργαστήριο κεραμικής στον Κεραμεικό",
-    "description": "Εργαστήριο κεραμικής στον Κεραμεικό, Αθήνα. Μηνιαία μαθήματα για όλα τα επίπεδα (4×3), corporate bonding και clay parties. Γεια",
+    "description": "Εργαστήριο κεραμικής στον Κεραμεικό, Αθήνα. Μηνιαία μαθήματα για όλα τα επίπεδα (4×3), corporate bonding και clay parties.",
     "h1": "Korkodilos — εργαστήριο κεραμικής στον Κεραμεικό",
     "film": [
       {
@@ -34,7 +34,7 @@
       },
       {
         "image": "/assets/img/uploads/k18.jpg",
-        "alt": "lemons with ceramics"
+        "alt": "Λεμόνια και κεραμικά πάνω στο ξύλινο τραπέζι"
       }
     ],
     "intro": "Ο **Korkodilos** είναι ένα εργαστήριο κεραμικής στον Κεραμεικό. Φίλοι γύρω από ένα ξύλινο τραπέζι, με τα χέρια στον πηλό. Αρχάριοι και έμπειροι, ο καθένας με τον ρυθμό του.",
@@ -113,7 +113,8 @@
         "alt": "Shelves with ceramics and painted faces"
       },
       {
-        "image": "/assets/img/uploads/k18.jpg"
+        "image": "/assets/img/uploads/k18.jpg",
+        "alt": "Lemons and ceramics on the wooden table"
       }
     ],
     "intro": "**Korkodilos** is a ceramic studio in Kerameikos, Athens. Friends around a wooden table, hands in the clay. Beginners and experienced makers, each at their own pace.",
