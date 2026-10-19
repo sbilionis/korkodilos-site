@@ -707,3 +707,6 @@ p,li,h1,h2,h3,figcaption,.ti-col__p,.special p{text-wrap:pretty}
   .cal-day .cal__d{flex-direction:row;flex-wrap:wrap;gap:10px}
   .cal-day .cal__s{font-size:var(--fs-m);padding:10px 20px;border-radius:99px}
 }
+
+/* student sign-in in the phone menu: a quieter line under the pages */
+.offcanvas__login span{font-size:.55em;letter-spacing:.02em;opacity:.8}

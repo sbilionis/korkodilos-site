@@ -88,6 +88,7 @@
       <a href="classes.html"${cur('classes')}><span>${M.classes}</span></a>
       <a href="calendar.html"${cur('calendar')}><span>${M.calendar}</span></a>
       <a href="contact.html"${cur('contact')}><span>${M.contact}</span></a>
+      ${D.booking ? `<a href="${D.booking}" class="offcanvas__login"><span>${T.student_login || 'Login'}</span></a>` : ''}
     </nav>
   </header>`;
 
@@ -107,6 +108,7 @@
           <li><a href="${D.facebook}" target="_blank" rel="noopener">FACEBOOK</a></li>
           <li><a href="${D.instagram}" target="_blank" rel="noopener">INSTAGRAM</a></li>
           <li><a href="mailto:${D.email}">EMAIL</a></li>
+          ${D.booking ? `<li><a href="${D.booking}">${(T.student_login || 'Login').toUpperCase()} →</a></li>` : ''}
         </ul></div>
         <p class="footer__credits">KORKODILOS© 2020–${new Date().getFullYear()} · <a href="privacy.html">${T.privacy || 'PRIVACY POLICY'}</a> · <a href="terms.html">${T.terms || 'TERMS'}</a> · DESIGNED BY <a href="https://ogustinathens.gr" target="_blank" rel="noopener">OGUST</a></p>
       </div>
